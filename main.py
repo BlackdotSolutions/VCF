@@ -19,10 +19,10 @@ class Searcher(BaseModel):
 
 
 class Attribute(BaseModel):
-    ImageUri: Optional[str]
+    Imageuri: Optional[str]
     Uri: Optional[str]
-    First_name: Optional[str]
-    Last_name: Optional[str]
+    FirstName: Optional[str]
+    LastName: Optional[str]
 
 
 class Entity(BaseModel):
@@ -41,7 +41,11 @@ class Result(BaseModel):
     url: str
 
 
-@app.get("/searchers/", response_model=List[Searcher])
+class SearchResults(BaseModel):
+    searchResults: List[Result]
+
+
+@app.get("/searchers/", response_model=List[Searcher], response_model_exclude_none=True)
 async def get_searchers():
     searchers = [
         {
@@ -54,7 +58,7 @@ async def get_searchers():
     return searchers
 
 
-@app.get("/searchers/gravatar/results")
+@app.get("/searchers/gravatar/results", response_model=SearchResults, response_model_exclude_none=True)
 async def get_gravatar(query: str):
     g = Gravatar(query)
     gravatar_url = g.get_image()
@@ -80,7 +84,7 @@ async def get_gravatar(query: str):
                         "id": str(uuid.uuid4()),
                         "type": "EntityImage",
                         "attributes": {
-                            "ImageUri": entry["thumbnailUrl"],
+                            "Imageuri": entry["thumbnailUrl"],
                             "Uri": entry["thumbnailUrl"]
                         }
                     },
@@ -88,8 +92,8 @@ async def get_gravatar(query: str):
                         "id": str(uuid.uuid4()),
                         "type": "EntityPerson",
                         "attributes": {
-                            "First name": entry["name"]["givenName"],
-                            "Last name": entry["name"]["familyName"]
+                            "FirstName": entry["name"]["givenName"],
+                            "LastName": entry["name"]["familyName"]
                         }
                     }
                 ],
