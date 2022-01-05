@@ -1,7 +1,7 @@
 # import code for encoding urls and generating md5 hashes
 
 import uuid
-from typing import List, Optional
+from typing import List, Optional, Union
 
 import requests
 from fastapi import FastAPI, Response, status
@@ -52,6 +52,14 @@ class Result(BaseModel):
 
 class SearchResults(BaseModel):
     searchResults: List[Result]
+
+
+class Error(BaseModel):
+    message: str
+
+
+class ErrorList(BaseModel):
+    errors: List[Error]
 
 
 def account_to_entity(account):
@@ -135,7 +143,8 @@ async def get_searchers():
     return searchers
 
 
-@app.get("/searchers/gravatar/results", response_model=SearchResults, response_model_exclude_none=True,
+@app.get("/searchers/gravatar/results", response_model=Union[SearchResults, ErrorList],
+         response_model_exclude_none=True,
          status_code=status.HTTP_200_OK)
 async def get_gravatar(query: str, response: Response):
     g = Gravatar(query)
@@ -145,7 +154,7 @@ async def get_gravatar(query: str, response: Response):
 
     if r.status_code != 200:
         response.status_code = r.status_code
-        return r.reason
+        return {"errors": [{"message": r.reason}]}
     else:
         print(r)
         data = r.json()
