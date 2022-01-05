@@ -4,7 +4,7 @@ import uuid
 from typing import List, Optional, Union
 
 import requests
-from fastapi import FastAPI, Response, status
+from fastapi import FastAPI, status
 from libgravatar import Gravatar
 from pydantic import BaseModel
 
@@ -162,9 +162,9 @@ async def get_searchers():
 @app.get("/searchers/gravatar/results", response_model=Union[SearchResults, ErrorList],
          response_model_exclude_none=True,
          status_code=status.HTTP_200_OK)
-async def get_gravatar(query: str, response: Response):
+async def get_gravatar(query: str):
     g = Gravatar(query)
-    gravatar_url = g.get_image()
+    # gravatar_url = g.get_image()  # TODO: Learn how to create Image entities
     gravatar_profile = g.get_profile(data_format="json")
     r = requests.get(gravatar_profile)
 
@@ -174,9 +174,9 @@ async def get_gravatar(query: str, response: Response):
         print(r)
         data = r.json()
 
-        searchResults = []
+        search_results = []
         for entry in data["entry"]:
-            person_UUID = str(uuid.uuid3(uuid.NAMESPACE_DNS, entry['id']))
+            person_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, entry['id']))
 
             result = {
                 "key": str(uuid.uuid4()),
@@ -195,7 +195,7 @@ async def get_gravatar(query: str, response: Response):
                     #     }
                     # },
                     {
-                        "id": person_UUID,
+                        "id": person_uuid,
                         "type": "EntityPerson",
                         "attributes": {
                             "FirstName": entry["name"]["givenName"],
@@ -218,7 +218,7 @@ async def get_gravatar(query: str, response: Response):
                     if entity is not None:
                         result["entities"].append(entity)
 
-            entity = email_to_entity(query.lower())
+            entity: dict = email_to_entity(query.lower())
             result["entities"].append(entity)
 
             if "emails" in entry:
@@ -227,16 +227,16 @@ async def get_gravatar(query: str, response: Response):
                         entity = email_to_entity(email["value"].lower())
                         result["entities"].append(entity)
 
-
             for entity in result["entities"].copy():
-                if entity["id"] != person_UUID:
-                    relationship = create_relationship(person_UUID, entity["id"])
+                if entity["id"] != person_uuid:
+                    relationship: dict = create_relationship(person_uuid, entity["id"])
                     result["entities"].append(relationship)
 
-                searchResults.append(result)
-                output = {"searchResults": searchResults}
-            # print(output)
-            return output
+            search_results.append(result)
+
+        output = {"searchResults": search_results}
+        # print(output)
+        return output
 
     # Open url in default browser
     # webbrowser.open(gravatar_url, new=2)
