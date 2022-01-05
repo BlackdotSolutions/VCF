@@ -80,14 +80,14 @@ async def get_gravatar(query: str):
                 "summary": f"Id: {entry['id']}\nUsername: {entry['preferredUsername']}",
                 "source": "Gravatar",
                 "entities": [
-                    {
-                        "id": str(uuid.uuid4()),
-                        "type": "EntityImage",
-                        "attributes": {
-                            "Imageuri": entry["thumbnailUrl"],
-                            "Uri": entry["thumbnailUrl"]
-                        }
-                    },
+                    # {
+                    #     "id": str(uuid.uuid4()),
+                    #     "type": "EntityImage",
+                    #     "attributes": {
+                    #         "Imageuri": entry["thumbnailUrl"],
+                    #         "Uri": entry["thumbnailUrl"]
+                    #     }
+                    # },
                     {
                         "id": str(uuid.uuid4()),
                         "type": "EntityPerson",
