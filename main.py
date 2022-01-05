@@ -23,6 +23,13 @@ class Attribute(BaseModel):
     Uri: Optional[str]
     FirstName: Optional[str]
     LastName: Optional[str]
+    Url: Optional[str]
+    UserName: Optional[str]
+    Username: Optional[str]
+    UserId: Optional[str]
+    Site: Optional[str]
+    ScreenName: Optional[str]
+    Verified: Optional[str]
 
 
 class Entity(BaseModel):
@@ -45,7 +52,7 @@ class SearchResults(BaseModel):
     searchResults: List[Result]
 
 
-async def account_to_entity(account):
+def account_to_entity(account):
     shortname = account["shortname"]
 
     shortname_to_entity = {
@@ -92,11 +99,12 @@ async def account_to_entity(account):
         entity = {
             "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, account["url"])),
             "type": shortname_to_entity[shortname],
-            "attributes": {}
+            "attributes": dict()
         }
 
         for att, src in attributes[shortname].items():
             entity["attributes"][att] = account[src]
+
         return entity
 
 
@@ -135,14 +143,14 @@ async def get_gravatar(query: str):
                 "summary": f"Id: {entry['id']}\nUsername: {entry['preferredUsername']}",
                 "source": "Gravatar",
                 "entities": [
-                    # {
-                    #     "id": str(uuid.uuid4()),
-                    #     "type": "EntityImage",
-                    #     "attributes": {
-                    #         "Imageuri": entry["thumbnailUrl"],
-                    #         "Uri": entry["thumbnailUrl"]
-                    #     }
-                    # },
+                    {
+                        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, entry["thumbnailUrl"])),
+                        "type": "EntityImage",
+                        "attributes": {
+                            "Imageuri": entry["thumbnailUrl"],
+                            "Uri": entry["thumbnailUrl"]
+                        }
+                    },
                     {
                         "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, entry['id'])),
                         "type": "EntityPerson",
@@ -156,12 +164,13 @@ async def get_gravatar(query: str):
             }
 
             for account in entry["accounts"]:
-                entity = await account_to_entity(account)
+                entity = account_to_entity(account)
                 if entity is not None:
                     result["entities"].append(entity)
 
             searchResults.append(result)
             output = {"searchResults": searchResults}
+        print(output)
         return output
 
 # Open url in default browser
