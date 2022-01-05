@@ -4,7 +4,7 @@ import uuid
 from typing import List, Optional
 
 import requests
-from fastapi import FastAPI
+from fastapi import FastAPI, Response, status
 from libgravatar import Gravatar
 from pydantic import BaseModel
 
@@ -27,7 +27,7 @@ class Attribute(BaseModel):
     UserName: Optional[str]
     Username: Optional[str]
     UserId: Optional[str]
-    Id:Optional[str]
+    Id: Optional[str]
     Site: Optional[str]
     ScreenName: Optional[str]
     Verified: Optional[str]
@@ -135,15 +135,17 @@ async def get_searchers():
     return searchers
 
 
-@app.get("/searchers/gravatar/results", response_model=SearchResults, response_model_exclude_none=True)
-async def get_gravatar(query: str):
+@app.get("/searchers/gravatar/results", response_model=SearchResults, response_model_exclude_none=True,
+         status_code=status.HTTP_200_OK)
+async def get_gravatar(query: str, response: Response):
     g = Gravatar(query)
     gravatar_url = g.get_image()
     gravatar_profile = g.get_profile(data_format="json")
     r = requests.get(gravatar_profile)
 
     if r.status_code != 200:
-        return r
+        response.status_code = r.status_code
+        return r.reason
     else:
         print(r)
         data = r.json()
