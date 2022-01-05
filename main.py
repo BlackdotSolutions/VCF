@@ -45,6 +45,61 @@ class SearchResults(BaseModel):
     searchResults: List[Result]
 
 
+async def account_to_entity(account):
+    shortname = account["shortname"]
+
+    shortname_to_entity = {
+        "flickr": "EntityFlickrProfile",
+        "facebook": "EntityFacebookProfile",
+        "goodreads": "EntityOnlineIdentity",
+        "tumblr": "EntityOnlineIdentity",
+        "twitter": "EntityTwitterProfile",
+        "wordpress": "EntityWebPage"}
+
+    attributes = {
+        "facebook": {
+            "Url": "url",
+            "Username": "username"
+        },
+        "flickr": {
+            "Url": "url",
+            "Username": "username"
+        },
+        "goodreads": {
+            "Url": "url",
+            "Site": "domain",
+            "UserName": "userid"
+        },
+        "tumblr": {
+            "Url": "url",
+            "Site": "domain",
+            "UserName": "username",
+            "ScreenName": "display"
+        },
+        "twitter": {
+            "Url": "url",
+            "Username": "username",
+            "Verified": "verified"
+        },
+        "wordpress": {
+            "Url": "url"
+        }
+    }
+
+    if shortname not in shortname_to_entity.keys():
+        return None
+    else:
+        entity = {
+            "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, account["url"])),
+            "type": shortname_to_entity[shortname],
+            "attributes": {}
+        }
+
+        for att, src in attributes[shortname].items():
+            entity["attributes"][att] = account[src]
+        return entity
+
+
 @app.get("/searchers/", response_model=List[Searcher], response_model_exclude_none=True)
 async def get_searchers():
     searchers = [
@@ -89,7 +144,7 @@ async def get_gravatar(query: str):
                     #     }
                     # },
                     {
-                        "id": str(uuid.uuid4()),
+                        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, entry['id'])),
                         "type": "EntityPerson",
                         "attributes": {
                             "FirstName": entry["name"]["givenName"],
@@ -99,6 +154,12 @@ async def get_gravatar(query: str):
                 ],
                 "url": entry["profileUrl"]
             }
+
+            for account in entry["accounts"]:
+                entity = await account_to_entity(account)
+                if entity is not None:
+                    result["entities"].append(entity)
+
             searchResults.append(result)
             output = {"searchResults": searchResults}
         return output
