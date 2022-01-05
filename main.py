@@ -32,6 +32,9 @@ class Attribute(BaseModel):
     ScreenName: Optional[str]
     Verified: Optional[str]
     EmailAddress: Optional[str]
+    FromId: Optional[str]
+    ToId: Optional[str]
+    Direction: Optional[str]
 
 
 class Entity(BaseModel):
@@ -130,6 +133,19 @@ def email_to_entity(email: str):
     return entity
 
 
+def create_relationship(from_id, to_id):
+    relationship = {
+        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, from_id + to_id)),
+        "type": "RelationshipRelationship",
+        "attributes": {
+            "FromId": from_id,
+            "ToId": to_id,
+            "Direction": "FromTo"
+        }
+    }
+    return relationship
+
+
 @app.get("/searchers/", response_model=List[Searcher], response_model_exclude_none=True)
 async def get_searchers():
     searchers = [
@@ -153,20 +169,20 @@ async def get_gravatar(query: str, response: Response):
     r = requests.get(gravatar_profile)
 
     if r.status_code != 200:
-        response.status_code = r.status_code
-        return {"errors": [{"message": r.reason}]}
+        return {"errors": [{"message": r.json()}]}
     else:
         print(r)
         data = r.json()
 
         searchResults = []
         for entry in data["entry"]:
+            person_UUID = str(uuid.uuid3(uuid.NAMESPACE_DNS, entry['id']))
 
             result = {
                 "key": str(uuid.uuid4()),
                 "title": entry["displayName"],
                 "subTitle": entry["name"]["formatted"],
-                "summary": f"Id: {entry['id']}\nUsername: {entry['preferredUsername']}",
+                "summary": f"Id: {entry['id']} | Username: {entry['preferredUsername']}",
                 "source": "Gravatar",
                 "entities": [
                     # {
@@ -179,34 +195,48 @@ async def get_gravatar(query: str, response: Response):
                     #     }
                     # },
                     {
-                        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, entry['id'])),
+                        "id": person_UUID,
                         "type": "EntityPerson",
                         "attributes": {
                             "FirstName": entry["name"]["givenName"],
                             "LastName": entry["name"]["familyName"]
                         }
+                    },
+                    {
+                        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, entry["profileUrl"])),
+                        "type": "EntityWebPage",
+                        "attributes": {
+                            "Url": entry["profileUrl"]
+                        }
                     }
                 ],
                 "url": entry["profileUrl"]
             }
-
-            for account in entry["accounts"]:
-                entity = account_to_entity(account)
-                if entity is not None:
-                    result["entities"].append(entity)
+            if "accounts" in entry:
+                for account in entry["accounts"]:
+                    entity = account_to_entity(account)
+                    if entity is not None:
+                        result["entities"].append(entity)
 
             entity = email_to_entity(query.lower())
             result["entities"].append(entity)
 
-            for email in entry["emails"]:
-                if email["value"].lower() != query.lower():
-                    entity = email_to_entity(email["value"].lower())
-                    result["entities"].append(entity)
+            if "emails" in entry:
+                for email in entry["emails"]:
+                    if email["value"].lower() != query.lower():
+                        entity = email_to_entity(email["value"].lower())
+                        result["entities"].append(entity)
 
-            searchResults.append(result)
-            output = {"searchResults": searchResults}
 
-        return output
+            for entity in result["entities"].copy():
+                if entity["id"] != person_UUID:
+                    relationship = create_relationship(person_UUID, entity["id"])
+                    result["entities"].append(relationship)
 
-# Open url in default browser
-# webbrowser.open(gravatar_url, new=2)
+                searchResults.append(result)
+                output = {"searchResults": searchResults}
+            # print(output)
+            return output
+
+    # Open url in default browser
+    # webbrowser.open(gravatar_url, new=2)
