@@ -27,9 +27,11 @@ class Attribute(BaseModel):
     UserName: Optional[str]
     Username: Optional[str]
     UserId: Optional[str]
+    Id:Optional[str]
     Site: Optional[str]
     ScreenName: Optional[str]
     Verified: Optional[str]
+    EmailAddress: Optional[str]
 
 
 class Entity(BaseModel):
@@ -70,7 +72,7 @@ def account_to_entity(account):
         },
         "flickr": {
             "Url": "url",
-            "Username": "username"
+            "Id": "username"
         },
         "goodreads": {
             "Url": "url",
