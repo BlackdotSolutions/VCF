@@ -1,13 +1,9 @@
 # import code for encoding urls and generating md5 hashes
 
-import binascii
-import io
-import urllib.request
 import uuid
 from typing import List, Optional
 
 import requests
-from PIL import Image
 from fastapi import FastAPI
 from libgravatar import Gravatar
 from pydantic import BaseModel
@@ -141,10 +137,7 @@ async def get_gravatar(query: str):
 
         searchResults = []
         for entry in data["entry"]:
-            img_data = urllib.request.urlopen('http://pastebin.ca/raw/2311595').read()
-            r_data = binascii.unhexlify(data)
-            stream = io.BytesIO(r_data)
-            img = Image.open(stream)
+
             result = {
                 "key": str(uuid.uuid4()),
                 "title": entry["displayName"],
@@ -152,15 +145,15 @@ async def get_gravatar(query: str):
                 "summary": f"Id: {entry['id']}\nUsername: {entry['preferredUsername']}",
                 "source": "Gravatar",
                 "entities": [
-                    {
-                        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, entry["thumbnailUrl"])),
-                        "type": "EntityImage",
-                        "attributes": {
-                            "Imageuri": entry["thumbnailUrl"],
-                            "Uri": entry["thumbnailUrl"],
-                            "Data": img
-                        }
-                    },
+                    # {
+                    #     "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, entry["thumbnailUrl"])),
+                    #     "type": "EntityImage",
+                    #     "attributes": {
+                    #         "Imageuri": entry["thumbnailUrl"],
+                    #         "Uri": entry["thumbnailUrl"],
+                    #         "Data": img_data
+                    #     }
+                    # },
                     {
                         "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, entry['id'])),
                         "type": "EntityPerson",
