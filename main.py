@@ -30,7 +30,6 @@ class Attribute(BaseModel):
     Site: Optional[str]
     ScreenName: Optional[str]
     Verified: Optional[str]
-    Data: Optional[bytes]
 
 
 class Entity(BaseModel):
@@ -109,6 +108,18 @@ def account_to_entity(account):
         return entity
 
 
+def email_to_entity(email: str):
+    entity = {
+        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, email)),
+        "type": "EntityEmail",
+        "attributes": {
+            "EmailAddress": email
+        }
+    }
+
+    return entity
+
+
 @app.get("/searchers/", response_model=List[Searcher], response_model_exclude_none=True)
 async def get_searchers():
     searchers = [
@@ -171,9 +182,17 @@ async def get_gravatar(query: str):
                 if entity is not None:
                     result["entities"].append(entity)
 
+            entity = email_to_entity(query.lower())
+            result["entities"].append(entity)
+
+            for email in entry["emails"]:
+                if email["value"].lower() != query.lower():
+                    entity = email_to_entity(email["value"].lower())
+                    result["entities"].append(entity)
+
             searchResults.append(result)
             output = {"searchResults": searchResults}
-        print(output)
+
         return output
 
 # Open url in default browser
