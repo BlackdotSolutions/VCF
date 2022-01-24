@@ -17,6 +17,7 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
+
 class Searcher(BaseModel):
     """The structure of Searchers, used to create the data source option(s) in Videris"""
     id: str
@@ -27,14 +28,14 @@ class Searcher(BaseModel):
 
 class Attribute(BaseModel):
     """All possible attributes that entities Videris accepts (not yet complete)"""
-    Data: Optional[str] # Images
+    Data: Optional[str]  # Images
     DateOfDeath: Optional[str]
     Description: Optional[str]
     Direction: Optional[str]
     Dob: Optional[str]
     EmailAddress: Optional[str]
     FirstName: Optional[str]
-    FromId: Optional[str] # Relationships
+    FromId: Optional[str]  # Relationships
     Gender: Optional[str]
     Id: Optional[str]
     Imageuri: Optional[str]
@@ -45,7 +46,7 @@ class Attribute(BaseModel):
     Salutation: Optional[str]
     ScreenName: Optional[str]
     Site: Optional[str]
-    ToId: Optional[str] # Relationships
+    ToId: Optional[str]  # Relationships
     Uri: Optional[str]
     Url: Optional[str]
     UserId: Optional[str]
