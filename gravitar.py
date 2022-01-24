@@ -35,6 +35,7 @@ class Attribute(BaseModel):
     FromId: Optional[str]
     ToId: Optional[str]
     Direction: Optional[str]
+    Data: Optional[str]
 
 
 class Entity(BaseModel):
@@ -185,15 +186,15 @@ async def get_gravatar(query: str):
                 "summary": f"Id: {entry['id']} | Username: {entry['preferredUsername']}",
                 "source": "Gravatar",
                 "entities": [
-                    # {
-                    #     "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, entry["thumbnailUrl"])),
-                    #     "type": "EntityImage",
-                    #     "attributes": {
-                    #         "Imageuri": entry["thumbnailUrl"],
-                    #         "Uri": entry["thumbnailUrl"],
-                    #         "Data": img_data
-                    #     }
-                    # },
+                    {
+                        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, entry["thumbnailUrl"])),
+                        "type": "EntityImage",
+                        "attributes": {
+                            "Imageuri": entry["thumbnailUrl"],
+                            "Uri": entry["thumbnailUrl"],
+                            "Data": entry["thumbnailUrl"]
+                        }
+                    },
                     {
                         "id": person_uuid,
                         "type": "EntityPerson",
