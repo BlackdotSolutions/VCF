@@ -1,7 +1,6 @@
-
 import uuid
 from typing import List, Optional, Union
-
+import json
 import requests
 from fastapi import FastAPI, status
 from pydantic import BaseModel
@@ -36,6 +35,10 @@ class Attribute(BaseModel):
     Nationality: Optional[str]
     Name: Optional[str]
     Description: Optional[str]
+    DateOfDeath: Optional[str]
+    Dob: Optional[str]
+    Salutation: Optional[str]
+    OtherNames: Optional[str]
 
 
 class Entity(BaseModel):
@@ -47,11 +50,11 @@ class Entity(BaseModel):
 class Result(BaseModel):
     key: str
     title: str
-    subTitle: str
-    summary: str
+    subTitle: Optional[str]
+    summary: Optional[str]
     source: str
-    entities: List[Entity]
-    url: str
+    entities: Optional[List[Entity]]
+    url: Optional[str]
 
 
 class SearchResults(BaseModel):
@@ -67,15 +70,17 @@ class ErrorList(BaseModel):
 
 
 def build_entity(entity_type, data):
+    ent_type = entity_type[6:].replace("Organisation", "Org")
+
     attributes = {
         "EntityPerson": {
             "Dob": "start_date",
-            "DateOfDeath": "end_ate"
+            "DateOfDeath": "end_date"
 
         },
         "EntityOrganisation": {
-            "Url": "url",
-            "Id": "username"
+            "Name": "name",
+            "Description": "blurb"
         }
     }
 
@@ -84,19 +89,18 @@ def build_entity(entity_type, data):
             "FirstName": "name_first",
             "LastName": "name_last",
             "OtherNames": "name_middle",
-            "Salutation": "name_prefix",
-            "Dob": "start_date",
-            "DateOfDeath": "end_date",
-            "Gender": "gender_id"
-        },
-        "EntityOrganisation": {
-            "Name": "url",
-            "Description": "blurb"
+            "Salutation": "name_prefix"
+            # ,
+            # "Gender": "gender_id"
         }
+        # ,
+        # "EntityOrganisation": {
+        #
+        # }
     }
-
+    # print(data)
     entity = {
-        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, data["id"])),
+        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, str(data["id"]))),
         "type": entity_type,
         "attributes": dict()
     }
@@ -104,8 +108,11 @@ def build_entity(entity_type, data):
     for att, src in attributes[entity_type].items():
         entity["attributes"][att] = data["attributes"][src]
 
-    for att, src in extensions[entity_type].items():
-        entity["attributes"][att] = data["extensions"][entity_type[6:]][src]
+    try:
+        for att, src in extensions[entity_type].items():
+            entity["attributes"][att] = data["attributes"]["extensions"][ent_type][src]
+    except KeyError:
+        pass
 
     if data["attributes"]["website"]:
         webpage = {
@@ -158,7 +165,7 @@ async def get_entities(query: str):
     if r.status_code != 200:
         return {"errors": [{"message": r.json()}]}
     else:
-        print(r)
+        # print(r)
         data = r.json()
 
         search_results = []
@@ -170,20 +177,19 @@ async def get_entities(query: str):
             else:
                 break
 
-            entity_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, entry['id']))
-
+            entity_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(entry['id'])))
+            # print(entry)
             result = {
                 "key": str(uuid.uuid3(uuid.NAMESPACE_DNS, query + str(i))),
-                "title": entry["name"],
-                "subTitle": entry["blurb"],
-                "summary": entry["summary"],
+                "title": entry["attributes"]["name"],
+                "subTitle": entry["attributes"]["blurb"],
+                "summary": entry["attributes"]["summary"],
                 "source": "Little Sis",
-                "entities": [
-                ],
+                "entities": [],
                 "url": entry["links"]["self"]
             }
 
-            [result["entities"].append(ent) for ent in build_entity(entity_type, data)]
+            [result["entities"].append(ent) for ent in build_entity(entity_type, entry)]
 
             for entity in result["entities"].copy():
                 if entity["id"] != entity_uuid:
@@ -193,6 +199,4 @@ async def get_entities(query: str):
             search_results.append(result)
 
         output = {"searchResults": search_results}
-        # print(output)
         return output
-
