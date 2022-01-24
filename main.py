@@ -1,5 +1,3 @@
-# import code for encoding urls and generating md5 hashes
-
 import uuid
 from typing import List, Optional, Union
 
@@ -35,7 +33,13 @@ class Attribute(BaseModel):
     FromId: Optional[str]
     ToId: Optional[str]
     Direction: Optional[str]
-    Data: Optional[str]
+    Nationality: Optional[str]
+    Name: Optional[str]
+    Description: Optional[str]
+    DateOfDeath: Optional[str]
+    Dob: Optional[str]
+    Salutation: Optional[str]
+    OtherNames: Optional[str]
 
 
 class Entity(BaseModel):
@@ -47,11 +51,11 @@ class Entity(BaseModel):
 class Result(BaseModel):
     key: str
     title: str
-    subTitle: str
-    summary: str
+    subTitle: Optional[str]
+    summary: Optional[str]
     source: str
-    entities: List[Entity]
-    url: str
+    entities: Optional[List[Entity]]
+    url: Optional[str]
 
 
 class SearchResults(BaseModel):
@@ -66,7 +70,78 @@ class ErrorList(BaseModel):
     errors: List[Error]
 
 
-def account_to_entity(account):
+def email_to_entity(email: str):
+    entity = {
+        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, email)),
+        "type": "EntityEmail",
+        "attributes": {
+            "EmailAddress": email
+        }
+    }
+
+    return entity
+
+
+def littlesis_build_entity(entity_type, data):
+    ent_type = entity_type[6:].replace("Organisation", "Org")
+
+    attributes = {
+        "EntityPerson": {
+            "Dob": "start_date",
+            "DateOfDeath": "end_date"
+
+        },
+        "EntityOrganisation": {
+            "Name": "name",
+            "Description": "blurb"
+        }
+    }
+
+    extensions = {
+        "EntityPerson": {
+            "FirstName": "name_first",
+            "LastName": "name_last",
+            "OtherNames": "name_middle",
+            "Salutation": "name_prefix"
+            # ,
+            # "Gender": "gender_id"
+        }
+        # ,
+        # "EntityOrganisation": {
+        #
+        # }
+    }
+    # print(data)
+    entity = {
+        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, str(data["id"]))),
+        "type": entity_type,
+        "attributes": dict()
+    }
+
+    for att, src in attributes[entity_type].items():
+        entity["attributes"][att] = data["attributes"][src]
+
+    try:
+        for att, src in extensions[entity_type].items():
+            entity["attributes"][att] = data["attributes"]["extensions"][ent_type][src]
+    except KeyError:
+        pass
+
+    if data["attributes"]["website"]:
+        webpage = {
+            "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, data["attributes"]["website"])),
+            "type": "EntityWebPage",
+            "attributes": {
+                "Url": data["attributes"]["website"]
+            }
+        }
+
+        return [entity, webpage]
+    else:
+        return [entity]
+
+
+def gravitar_account_to_entity(account):
     shortname = account["shortname"]
 
     shortname_to_entity = {
@@ -122,18 +197,6 @@ def account_to_entity(account):
         return entity
 
 
-def email_to_entity(email: str):
-    entity = {
-        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, email)),
-        "type": "EntityEmail",
-        "attributes": {
-            "EmailAddress": email
-        }
-    }
-
-    return entity
-
-
 def create_relationship(from_id, to_id):
     relationship = {
         "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, from_id + to_id)),
@@ -151,6 +214,12 @@ def create_relationship(from_id, to_id):
 async def get_searchers():
     searchers = [
         {
+            "id": "littlesis",
+            "name": "Little Sis",
+            "hint": "Search for a person"
+            # , "tooltip": "Find Gravatar profile by email address"
+        },
+        {
             "id": "gravatar",
             "name": "Gravatar",
             "hint": "Search by email address",
@@ -158,6 +227,54 @@ async def get_searchers():
         }
     ]
     return searchers
+
+
+@app.get("/searchers/littlesis/results", response_model=Union[SearchResults, ErrorList],
+         response_model_exclude_none=True,
+         status_code=status.HTTP_200_OK)
+async def get_littlesis(query: str):
+    endpoint = r"https://littlesis.org/api/entities/search?q=" + query
+
+    r = requests.get(endpoint)
+
+    if r.status_code != 200:
+        return {"errors": [{"message": r.json()}]}
+    else:
+        # print(r)
+        data = r.json()
+
+        search_results = []
+        for i, entry in enumerate(data["data"]):
+            if "Person" in entry["attributes"]["types"]:
+                entity_type = "EntityPerson"
+            elif "Organization" in entry["attributes"]["types"]:
+                entity_type = "EntityOrganisation"
+            else:
+                break
+
+            entity_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(entry['id'])))
+            # print(entry)
+            result = {
+                "key": str(uuid.uuid3(uuid.NAMESPACE_DNS, query + str(i))),
+                "title": entry["attributes"]["name"],
+                "subTitle": entry["attributes"]["blurb"],
+                "summary": entry["attributes"]["summary"],
+                "source": "Little Sis",
+                "entities": [],
+                "url": entry["links"]["self"]
+            }
+
+            [result["entities"].append(ent) for ent in littlesis_build_entity(entity_type, entry)]
+
+            for entity in result["entities"].copy():
+                if entity["id"] != entity_uuid:
+                    relationship: dict = create_relationship(entity_uuid, entity["id"])
+                    result["entities"].append(relationship)
+
+            search_results.append(result)
+
+        output = {"searchResults": search_results}
+        return output
 
 
 @app.get("/searchers/gravatar/results", response_model=Union[SearchResults, ErrorList],
@@ -215,7 +332,7 @@ async def get_gravatar(query: str):
             }
             if "accounts" in entry:
                 for account in entry["accounts"]:
-                    entity = account_to_entity(account)
+                    entity = gravitar_account_to_entity(account)
                     if entity is not None:
                         result["entities"].append(entity)
 
