@@ -17,7 +17,7 @@ The adaptors are written in Python 3.10 and make use of the FastAPI framework wh
 
 Install the required packages:
 
-    pip install fastapi "uvicorn[standard]" requests libgravatar pydantic
+    pip install -r requirements.txt
     
 Run API on the uvicorn server:
 
