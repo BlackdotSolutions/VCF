@@ -13,7 +13,7 @@ LittleSis.org is a free database of who-knows-who at the heights of business and
 This adaptor allows Videris users to search for people or orgnaisations by name. Results will be returned for each match along with the relevant entities representing the person or organisation and their website (if available).
 
 # Enabling the adaptors
-The adaptors are written in Python and make use of the FastAPI framework which runs on a uvicorn server. 
+The adaptors are written in Python 3.10 and make use of the FastAPI framework which runs on a uvicorn server. 
 
 Install the required packages:
 
