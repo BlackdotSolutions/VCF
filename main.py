@@ -164,8 +164,8 @@ def littlesis_build_entity(entity_type, data):
         return [entity]
 
 
-# ============================ Gravitar functions ============================
-def gravitar_account_to_entity(account):
+# ============================ Gravatar functions ============================
+def gravatar_account_to_entity(account):
     shortname = account["shortname"]
 
     shortname_to_entity = {
@@ -291,13 +291,13 @@ async def get_littlesis(query: str):
         return output
 
 
-# ============================ Gravitar Endpoint ============================
+# ============================ Gravatar Endpoint ============================
 @app.get("/searchers/gravatar/results", response_model=Union[SearchResults, ErrorList],
          response_model_exclude_none=True,
          status_code=status.HTTP_200_OK)
 async def get_gravatar(query: str):
     g = Gravatar(query)
-    # gravatar_url = g.get_image()  # TODO: Learn how to create Image entities
+    gravatar_url = g.get_image(160, "mp", False, "r")  # TODO: Learn how to create Image entities
     gravatar_profile = g.get_profile(data_format="json")
     r = requests.get(gravatar_profile)
 
@@ -322,7 +322,7 @@ async def get_gravatar(query: str):
                         "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, entry["thumbnailUrl"])),
                         "type": "EntityImage",
                         "attributes": {
-                            "Imageuri": entry["thumbnailUrl"],
+                            "Imageuri": gravatar_url,
                             "Uri": entry["thumbnailUrl"],
                             "Data": entry["thumbnailUrl"]
                         }
@@ -347,7 +347,7 @@ async def get_gravatar(query: str):
             }
             if "accounts" in entry:
                 for account in entry["accounts"]:
-                    entity = gravitar_account_to_entity(account)
+                    entity = gravatar_account_to_entity(account)
                     if entity is not None:
                         result["entities"].append(entity)
 
