@@ -1,3 +1,12 @@
+"""
+To start the API, in a terminal window run:
+
+    uvicorn main:app --host <ip address>
+
+E.g.
+
+    uvicorn main:app --host 192.168.2.25
+"""
 import uuid
 from typing import List, Optional, Union
 
@@ -7,7 +16,6 @@ from libgravatar import Gravatar
 from pydantic import BaseModel
 
 app = FastAPI()
-
 
 class Searcher(BaseModel):
     """The structure of Searchers, used to create the data source option(s) in Videris"""
@@ -222,7 +230,6 @@ def gravatar_account_to_entity(account):
 
 
 # ============================ Shared Endpoint ============================
-
 @app.get("/searchers/", response_model=List[Searcher], response_model_exclude_none=True)
 async def get_searchers():
     searchers = [
