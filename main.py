@@ -10,6 +10,7 @@ app = FastAPI()
 
 
 class Searcher(BaseModel):
+    """The structure of Searchers, used to create the data source option(s) in Videris"""
     id: str
     name: str
     hint: Optional[str] = None
@@ -17,38 +18,43 @@ class Searcher(BaseModel):
 
 
 class Attribute(BaseModel):
-    Imageuri: Optional[str]
-    Uri: Optional[str]
+    """All possible attributes that entities Videris accepts (not yet complete)"""
+    Data: Optional[str] # Images
+    DateOfDeath: Optional[str]
+    Description: Optional[str]
+    Direction: Optional[str]
+    Dob: Optional[str]
+    EmailAddress: Optional[str]
     FirstName: Optional[str]
+    FromId: Optional[str] # Relationships
+    Gender: Optional[str]
+    Id: Optional[str]
+    Imageuri: Optional[str]
     LastName: Optional[str]
+    Name: Optional[str]
+    Nationality: Optional[str]
+    OtherNames: Optional[str]
+    Salutation: Optional[str]
+    ScreenName: Optional[str]
+    Site: Optional[str]
+    ToId: Optional[str] # Relationships
+    Uri: Optional[str]
     Url: Optional[str]
+    UserId: Optional[str]
     UserName: Optional[str]
     Username: Optional[str]
-    UserId: Optional[str]
-    Id: Optional[str]
-    Site: Optional[str]
-    ScreenName: Optional[str]
     Verified: Optional[str]
-    EmailAddress: Optional[str]
-    FromId: Optional[str]
-    ToId: Optional[str]
-    Direction: Optional[str]
-    Nationality: Optional[str]
-    Name: Optional[str]
-    Description: Optional[str]
-    DateOfDeath: Optional[str]
-    Dob: Optional[str]
-    Salutation: Optional[str]
-    OtherNames: Optional[str]
 
 
 class Entity(BaseModel):
+    """The structure of entities accepted by Videris"""
     id: str
     type: str
     attributes: Attribute
 
 
 class Result(BaseModel):
+    """The structure of each search result accepted by Videris"""
     key: str
     title: str
     subTitle: Optional[str]
@@ -59,15 +65,32 @@ class Result(BaseModel):
 
 
 class SearchResults(BaseModel):
+    """The structure of search results accepted by Videris"""
     searchResults: List[Result]
 
 
 class Error(BaseModel):
+    """The structure of error messages accepted by Videris"""
     message: str
 
 
 class ErrorList(BaseModel):
+    """The structure of the list of errors accepted by Videris"""
     errors: List[Error]
+
+
+# ============================ Shared functions ============================
+def create_relationship(from_id, to_id):
+    relationship = {
+        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, from_id + to_id)),
+        "type": "RelationshipRelationship",
+        "attributes": {
+            "FromId": from_id,
+            "ToId": to_id,
+            "Direction": "FromTo"
+        }
+    }
+    return relationship
 
 
 def email_to_entity(email: str):
@@ -82,6 +105,7 @@ def email_to_entity(email: str):
     return entity
 
 
+# ============================ Little Sis functions ============================
 def littlesis_build_entity(entity_type, data):
     ent_type = entity_type[6:].replace("Organisation", "Org")
 
@@ -102,9 +126,8 @@ def littlesis_build_entity(entity_type, data):
             "FirstName": "name_first",
             "LastName": "name_last",
             "OtherNames": "name_middle",
-            "Salutation": "name_prefix"
-            # ,
-            # "Gender": "gender_id"
+            "Salutation": "name_prefix",
+            "Gender": "gender_id"
         }
         # ,
         # "EntityOrganisation": {
@@ -141,6 +164,7 @@ def littlesis_build_entity(entity_type, data):
         return [entity]
 
 
+# ============================ Gravitar functions ============================
 def gravitar_account_to_entity(account):
     shortname = account["shortname"]
 
@@ -197,18 +221,7 @@ def gravitar_account_to_entity(account):
         return entity
 
 
-def create_relationship(from_id, to_id):
-    relationship = {
-        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, from_id + to_id)),
-        "type": "RelationshipRelationship",
-        "attributes": {
-            "FromId": from_id,
-            "ToId": to_id,
-            "Direction": "FromTo"
-        }
-    }
-    return relationship
-
+# ============================ Shared Endpoint ============================
 
 @app.get("/searchers/", response_model=List[Searcher], response_model_exclude_none=True)
 async def get_searchers():
@@ -229,6 +242,7 @@ async def get_searchers():
     return searchers
 
 
+# ============================ Little Sis Endpoint ============================
 @app.get("/searchers/littlesis/results", response_model=Union[SearchResults, ErrorList],
          response_model_exclude_none=True,
          status_code=status.HTTP_200_OK)
@@ -277,6 +291,7 @@ async def get_littlesis(query: str):
         return output
 
 
+# ============================ Gravitar Endpoint ============================
 @app.get("/searchers/gravatar/results", response_model=Union[SearchResults, ErrorList],
          response_model_exclude_none=True,
          status_code=status.HTTP_200_OK)
