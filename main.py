@@ -115,9 +115,10 @@ def email_to_entity(email: str):
 
 
 # ============================ Little Sis functions ============================
-def littlesis_build_entity(entity_type, data):
-    ent_type = entity_type[6:].replace("Organisation", "Org")
-
+def littlesis_build_entity(data):
+    # print(data["attributes"].keys())
+    ent_type = data["attributes"]["primary_ext"]  # Little Sis entity type
+    v_entity_type = "Entity" + ent_type.replace("Org", "Organisation")  # Videris entity type
     attributes = {
         "EntityPerson": {
             "Dob": "start_date",
@@ -143,18 +144,18 @@ def littlesis_build_entity(entity_type, data):
         #
         # }
     }
-    # print(data)
+
     entity = {
         "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, str(data["id"]))),
-        "type": entity_type,
+        "type": v_entity_type,
         "attributes": dict()
     }
 
-    for att, src in attributes[entity_type].items():
+    for att, src in attributes[v_entity_type].items():
         entity["attributes"][att] = data["attributes"][src]
 
     try:
-        for att, src in extensions[entity_type].items():
+        for att, src in extensions[v_entity_type].items():
             entity["attributes"][att] = data["attributes"]["extensions"][ent_type][src]
     except KeyError:
         pass
@@ -171,6 +172,29 @@ def littlesis_build_entity(entity_type, data):
         return [entity, webpage]
     else:
         return [entity]
+
+
+def get_littlesis_network(entity_id):
+    # Get relationships from provided entity
+    relationships_endpoint = r"https://littlesis.org/api/entities/" + str(entity_id) + "/relationships"
+    # Get the entities who are at either end of the relationships
+    connections_endpoint = r"https://littlesis.org/api/entities/" + str(entity_id) + "/connections"
+
+    rels_r = requests.get(relationships_endpoint)
+    ents_r = requests.get(connections_endpoint)
+
+    entities = []
+
+    if rels_r.status_code != 200 or ents_r.status_code != 200:
+        return entities
+    else:
+        relationships_data = rels_r.json()["data"]
+        connections_data = ents_r.json()["data"]
+
+        for connection in connections_data:
+            entities += littlesis_build_entity(connection)
+
+        return entities
 
 
 # ============================ Gravatar functions ============================
@@ -262,20 +286,15 @@ async def get_littlesis(query: str):
     if r.status_code != 200:
         return {"errors": [{"message": r.json()}]}
     else:
-        # print(r)
         data = r.json()
 
         search_results = []
         for i, entry in enumerate(data["data"]):
-            if "Person" in entry["attributes"]["types"]:
-                entity_type = "EntityPerson"
-            elif "Organization" in entry["attributes"]["types"]:
-                entity_type = "EntityOrganisation"
-            else:
+            if "Person" not in entry["attributes"]["types"] and "Organization" not in entry["attributes"]["types"]:
                 break
 
-            entity_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(entry['id'])))
-            # print(entry)
+            entity_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(entry["id"])))
+
             result = {
                 "key": str(uuid.uuid3(uuid.NAMESPACE_DNS, query + str(i))),
                 "title": entry["attributes"]["name"],
@@ -286,11 +305,17 @@ async def get_littlesis(query: str):
                 "url": entry["links"]["self"]
             }
 
-            [result["entities"].append(ent) for ent in littlesis_build_entity(entity_type, entry)]
+            # Add the entity/entities from the search results
+            [result["entities"].append(ent) for ent in littlesis_build_entity(entry)]
+
+            # For the top 10 results
+            if i < 10:
+                # Query their network and return related entities
+                [result["entities"].append(ent) for ent in get_littlesis_network(entry["id"])]
 
             for entity in result["entities"].copy():
-                if entity["id"] != entity_uuid:
-                    relationship: dict = create_relationship(entity_uuid, entity["id"])
+                if str(entity["id"]) != entity_uuid:
+                    relationship: dict = create_relationship(entity_uuid, str(entity["id"]))
                     result["entities"].append(relationship)
 
             search_results.append(result)
