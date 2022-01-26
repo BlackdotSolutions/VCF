@@ -315,6 +315,7 @@ async def get_littlesis(query: str):
 
             for entity in result["entities"].copy():
                 if str(entity["id"]) != entity_uuid and entity["type"] not in ["EntityWebPage", "Relationship"]:
+                    print("Creating relationship to a(n) " + entity["type"])
                     relationship: dict = create_relationship(entity_uuid, str(entity["id"]))
                     result["entities"].append(relationship)
 
