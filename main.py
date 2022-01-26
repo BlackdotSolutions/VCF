@@ -314,7 +314,7 @@ async def get_littlesis(query: str):
                 [result["entities"].append(ent) for ent in get_littlesis_network(entry["id"])]
 
             for entity in result["entities"].copy():
-                if str(entity["id"]) != entity_uuid and entity["type"] not in ["EntityWebPage", "Relationship"]:
+                if str(entity["id"]) != entity_uuid and entity["type"] not in ["EntityWebPage", "RelationshipRelationship"]:
                     print("Creating relationship to a(n) " + entity["type"])
                     relationship: dict = create_relationship(entity_uuid, str(entity["id"]))
                     result["entities"].append(relationship)
