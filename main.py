@@ -89,20 +89,43 @@ class ErrorList(BaseModel):
 
 
 # ============================ Shared functions ============================
-def create_relationship(from_id, to_id):
+def create_relationship(from_id: str, to_id: str, description: str = "") -> dict:
+    """
+    Creates a relationship "entity" between the specified entity ids with an optional description.
+
+    :param from_id: UUID of "from" entity
+    :type from_id: str
+    :param to_id: UUID of "to" entity
+    :type to_id: str
+    :param description: Description of the relationship OPTIONAL
+    :type description: str
+    :return: Structured relationship entity
+    :rtype: dict
+    """
+
     relationship = {
         "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, from_id + to_id)),
         "type": "RelationshipRelationship",
         "attributes": {
             "FromId": from_id,
             "ToId": to_id,
-            "Direction": "FromTo"
+            "Direction": "FromTo",
+            "Description": description
         }
     }
     return relationship
 
 
 def email_to_entity(email: str):
+    """
+    Creates an email entity.
+
+    :param email: Email address
+    :type email: str
+    :return: Structured email entity
+    :rtype: dict
+    """
+
     entity = {
         "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, email)),
         "type": "EntityEmail",
@@ -194,11 +217,19 @@ def get_littlesis_network(entity_id):
         for connection in connections_data:
             entities += littlesis_build_entity(connection)
 
+        for relationship in relationships_data:
+            from_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(relationship["attributes"]["entity1_id"])))
+            to_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(relationship["attributes"]["entity2_id"])))
+            description = relationship["attributes"]["description1"]
+
+            entities += create_relationship(from_entity_id, to_entity_id, description)
+
         return entities
 
 
 # ============================ Gravatar functions ============================
 def gravatar_account_to_entity(account):
+    """Converts gravatar JSON for social media accounts to their respective Videris entities."""
     shortname = account["shortname"]
 
     shortname_to_entity = {
@@ -279,17 +310,18 @@ async def get_searchers():
          response_model_exclude_none=True,
          status_code=status.HTTP_200_OK)
 async def get_littlesis(query: str):
-    endpoint = r"https://littlesis.org/api/entities/search?q=" + query
+    """Searches Little Sis API. Auto-enriches top 10 results to fetch connections of the found entity."""
 
+    endpoint = r"https://littlesis.org/api/entities/search?q=" + query
     r = requests.get(endpoint)
 
     if r.status_code != 200:
         return {"errors": [{"message": r.json()}]}
     else:
-        data = r.json()
+        data = r.json()["data"]
 
         search_results = []
-        for i, entry in enumerate(data["data"]):
+        for i, entry in enumerate(data):
             if "Person" not in entry["attributes"]["types"] and "Organization" not in entry["attributes"]["types"]:
                 break
 
@@ -313,12 +345,12 @@ async def get_littlesis(query: str):
                 # Query their network and return related entities
                 [result["entities"].append(ent) for ent in get_littlesis_network(entry["id"])]
 
-            for entity in result["entities"].copy():
-                if str(entity["id"]) != entity_uuid and entity["type"] not in ["EntityWebPage",
-                                                                               "RelationshipRelationship"]:
-                    print("Creating relationship to a(n) " + entity["type"])
-                    relationship: dict = create_relationship(entity_uuid, str(entity["id"]))
-                    result["entities"].append(relationship)
+            # for entity in result["entities"].copy():
+            #     if str(entity["id"]) != entity_uuid and entity["type"] not in ["EntityWebPage",
+            #                                                                    "RelationshipRelationship"]:
+            #         print("Creating relationship to a(n) " + entity["type"])
+            #         relationship: dict = create_relationship(entity_uuid, str(entity["id"]))
+            #         result["entities"].append(relationship)
 
             search_results.append(result)
 
@@ -332,7 +364,7 @@ async def get_littlesis(query: str):
          status_code=status.HTTP_200_OK)
 async def get_gravatar(query: str):
     g = Gravatar(query)
-    gravatar_url = g.get_image(160, "mp", False, "r")  # TODO: Learn how to create Image entities
+    # gravatar_url = g.get_image(160, "mp", False, "r")   TODO: Learn how to create Image entities
     gravatar_profile = g.get_profile(data_format="json")
     r = requests.get(gravatar_profile)
 
@@ -345,15 +377,22 @@ async def get_gravatar(query: str):
         search_results = []
         for entry in data["entry"]:
             person_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, entry['id']))
-            formatted_name, first_name, last_name = ("", "", "")
-            print(entry)
-            if "name" not in entry.keys():
+
+            # Get names
+            formatted_name, first_name, last_name = ("", "", "")  # Blank names by default
+
+            # Check if the response contains name info
+            if "name" not in entry:
+                # If not, use the username
                 formatted_name = entry["preferredUsername"]
                 first_name = entry["preferredUsername"]
             elif entry["name"] != []:
+                # If there is non-empty name object, then use that
                 formatted_name = entry["name"]["formatted"]
                 first_name = entry["name"]["givenName"]
                 last_name = entry["name"]["familyName"]
+
+            # Create search result
             result = {
                 "key": str(uuid.uuid4()),
                 "title": entry["displayName"],
@@ -361,6 +400,7 @@ async def get_gravatar(query: str):
                 "summary": f"Id: {entry['id']} | Username: {entry['preferredUsername']}",
                 "source": "Gravatar",
                 "entities": [
+                    # TODO Learn how to create Image entities
                     # {
                     #     "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, entry["thumbnailUrl"])),
                     #     "type": "EntityImage",
@@ -388,6 +428,8 @@ async def get_gravatar(query: str):
                 ],
                 "url": entry["profileUrl"]
             }
+
+            # If the profile has info about online accounts then capture that
             if "accounts" in entry:
                 for account in entry["accounts"]:
                     entity = gravatar_account_to_entity(account)
