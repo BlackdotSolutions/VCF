@@ -314,7 +314,8 @@ async def get_littlesis(query: str):
                 [result["entities"].append(ent) for ent in get_littlesis_network(entry["id"])]
 
             for entity in result["entities"].copy():
-                if str(entity["id"]) != entity_uuid and entity["type"] not in ["EntityWebPage", "RelationshipRelationship"]:
+                if str(entity["id"]) != entity_uuid and entity["type"] not in ["EntityWebPage",
+                                                                               "RelationshipRelationship"]:
                     print("Creating relationship to a(n) " + entity["type"])
                     relationship: dict = create_relationship(entity_uuid, str(entity["id"]))
                     result["entities"].append(relationship)
@@ -344,11 +345,19 @@ async def get_gravatar(query: str):
         search_results = []
         for entry in data["entry"]:
             person_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, entry['id']))
-
+            formatted_name, first_name, last_name = ("", "", "")
+            print(entry)
+            if "name" not in entry.keys():
+                formatted_name = entry["preferredUsername"]
+                first_name = entry["preferredUsername"]
+            elif entry["name"] != []:
+                formatted_name = entry["name"]["formatted"]
+                first_name = entry["name"]["givenName"]
+                last_name = entry["name"]["familyName"]
             result = {
                 "key": str(uuid.uuid4()),
                 "title": entry["displayName"],
-                "subTitle": entry["name"]["formatted"],
+                "subTitle": formatted_name,
                 "summary": f"Id: {entry['id']} | Username: {entry['preferredUsername']}",
                 "source": "Gravatar",
                 "entities": [
@@ -365,8 +374,8 @@ async def get_gravatar(query: str):
                         "id": person_uuid,
                         "type": "EntityPerson",
                         "attributes": {
-                            "FirstName": entry["name"]["givenName"],
-                            "LastName": entry["name"]["familyName"]
+                            "FirstName": first_name,
+                            "LastName": last_name
                         }
                     },
                     {
