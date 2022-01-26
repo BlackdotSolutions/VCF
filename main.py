@@ -352,15 +352,15 @@ async def get_gravatar(query: str):
                 "summary": f"Id: {entry['id']} | Username: {entry['preferredUsername']}",
                 "source": "Gravatar",
                 "entities": [
-                    {
-                        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, entry["thumbnailUrl"])),
-                        "type": "EntityImage",
-                        "attributes": {
-                            "Imageuri": gravatar_url,
-                            "Uri": entry["thumbnailUrl"],
-                            "Data": entry["thumbnailUrl"]
-                        }
-                    },
+                    # {
+                    #     "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, entry["thumbnailUrl"])),
+                    #     "type": "EntityImage",
+                    #     "attributes": {
+                    #         "Imageuri": gravatar_url,
+                    #         "Uri": entry["thumbnailUrl"],
+                    #         "Data": entry["thumbnailUrl"]
+                    #     }
+                    # },
                     {
                         "id": person_uuid,
                         "type": "EntityPerson",
