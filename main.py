@@ -168,8 +168,8 @@ def littlesis_build_entity(data):
                 "Url": data["attributes"]["website"]
             }
         }
-
-        return [entity, webpage]
+        relationship = create_relationship(entity["id"], webpage["id"])
+        return [entity, webpage, relationship]
     else:
         return [entity]
 
@@ -314,7 +314,7 @@ async def get_littlesis(query: str):
                 [result["entities"].append(ent) for ent in get_littlesis_network(entry["id"])]
 
             for entity in result["entities"].copy():
-                if str(entity["id"]) != entity_uuid:
+                if str(entity["id"]) != entity_uuid and entity["type"] != "EntityWebPage":
                     relationship: dict = create_relationship(entity_uuid, str(entity["id"]))
                     result["entities"].append(relationship)
 
