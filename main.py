@@ -228,44 +228,44 @@ def get_littlesis_endpoint(endpoint_name, entity_id=None, category_id=None, page
 
 
 def get_littlesis_network(entity_id):
-    categories = ["1", "2", "3", "4", "6", "7", "8", "9", "10", "11", "12"]
+    # categories = ["1", "2", "3", "4", "6", "7", "8", "9", "10", "11", "12"]
     entities = []
 
     # Get relationships for provided entity
     relationships_data = []
-    for category_id in categories:
+    # for category_id in categories:
+    try:
+        meta, data = get_littlesis_endpoint("relationships", entity_id)
+        relationships_data += data
+    except Exception as e:
+        print(e)
+        break
+    while meta["currentPage"] < meta["currentPage"] and meta["currentPage"] <= 3:
         try:
-            meta, data = get_littlesis_endpoint("relationships", entity_id, category_id)
+            meta, data = get_littlesis_endpoint("relationships", entity_id, page=meta["currentPage"] + 1)
             relationships_data += data
         except Exception as e:
             print(e)
             break
-        while meta["currentPage"] < meta["currentPage"] and meta["currentPage"] <= 3:
-            try:
-                meta, data = get_littlesis_endpoint("relationships", entity_id, category_id, meta["currentPage"] + 1)
-                relationships_data += data
-            except Exception as e:
-                print(e)
-                break
 
     # Get connections for provided entity
     connections_data = []
-    for category_id in categories:
-        page = 1
+    # for category_id in categories:
+    page = 1
+    try:
+        meta, data = get_littlesis_endpoint("connections", entity_id, page=page)
+        relationships_data += data
+    except Exception as e:
+        print(e)
+        break
+    while data != [] and page <= 3:
+        page += 1
         try:
-            meta, data = get_littlesis_endpoint("connections", entity_id, category_id, page)
+            meta, data = get_littlesis_endpoint("connections", entity_id, page= page)
             relationships_data += data
         except Exception as e:
             print(e)
             break
-        while data != [] and page <= 3:
-            page += 1
-            try:
-                meta, data = get_littlesis_endpoint("connections", entity_id, category_id, page)
-                relationships_data += data
-            except Exception as e:
-                print(e)
-                break
 
     for connection in connections_data:
         entities += littlesis_build_entity(connection)
