@@ -47,7 +47,7 @@ class Attribute(BaseModel):
     Salutation: Optional[str]
     ScreenName: Optional[str]
     Site: Optional[str]
-    Title: Optional[str]  # Relationships
+    Title: Optional[str] # Relationships
     ToId: Optional[str]  # Relationships
     Uri: Optional[str]
     Url: Optional[str]
@@ -193,7 +193,7 @@ def littlesis_build_entity(data):
                 "Url": data["attributes"]["website"]
             }
         }
-        relationship = create_relationship(entity["id"], webpage["id"], "Website")
+        relationship = create_relationship(entity["id"], webpage["id"])
         return [entity, webpage, relationship]
     else:
         return [entity]
@@ -220,7 +220,6 @@ def get_littlesis_endpoint(endpoint_name, entity_id=None, category_id=None, page
             endpoint += "?page=" + str(page)
 
     r = requests.get(endpoint)
-    print(endpoint + " - Response: " + str(r.status_code))
     if r.status_code != 200:
         raise Exception("Bad API response: " + str(r.status_code) + " - " + r.json())
     else:
