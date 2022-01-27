@@ -270,11 +270,24 @@ def get_littlesis_network(entity_id):
     for connection in connections_data:
         entities += littlesis_build_entity(connection)
 
+    source_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(entity_id)))
+    entity_ids = [item["id"] for item in entities]
     for relationship in relationships_data:
         from_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(relationship["attributes"]["entity1_id"])))
         to_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(relationship["attributes"]["entity2_id"])))
-        description = relationship["attributes"]["description1"]
-        entities.append(create_relationship(from_entity_id, to_entity_id, description))
+        if (from_entity_id == source_entity_id and to_entity_id in entity_ids) or (
+                to_entity_id == source_entity_id and from_entity_id in entity_ids):
+
+            description = relationship["attributes"]["description1"]
+            entities.append(create_relationship(from_entity_id, to_entity_id, description))
+
+            if from_entity_id == source_entity_id:
+                entity_ids.remove(to_entity_id)
+            else:
+                entity_ids.remove(from_entity_id)
+
+    for remaining_entity_id in entity_ids:
+        entities.append(create_relationship(source_entity_id, remaining_entity_id))
 
     return entities
 
