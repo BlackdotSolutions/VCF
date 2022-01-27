@@ -198,33 +198,85 @@ def littlesis_build_entity(data):
         return [entity]
 
 
+def get_littlesis_endpoint(endpoint_name, entity_id=None, category_id=None, page=None):
+    endpoint = r"https://littlesis.org/api/entities"
+    if entity_id:
+        endpoint += "/" + str(entity_id)
+
+    if endpoint_name:
+        endpoint += "/" + endpoint_name
+
+    params_used = False
+
+    if category_id:
+        endpoint += "?=category_id" + category_id
+        params_used = True
+
+    if page:
+        if params_used:
+            endpoint += "&page=" + str(page)
+        else:
+            endpoint += "?page=" + str(page)
+
+    r = requests.get(endpoint)
+    if r.status_code != 200:
+        raise Exception("Bad API response: " + str(r.status_code) + " - " + r.json())
+    else:
+        meta = r.json()["meta"] if r.json()["meta"] else None
+        data = r.json()["data"]
+        return meta, data
+
+
 def get_littlesis_network(entity_id):
-    # Get relationships from provided entity
-    relationships_endpoint = r"https://littlesis.org/api/entities/" + str(entity_id) + "/relationships"
-    # Get the entities who are at either end of the relationships
-    connections_endpoint = r"https://littlesis.org/api/entities/" + str(entity_id) + "/connections"
-
-    rels_r = requests.get(relationships_endpoint)
-    ents_r = requests.get(connections_endpoint)
-
+    categories = ["1", "2", "3", "4", "6", "7", "8", "9", "10", "11", "12"]
     entities = []
 
-    if rels_r.status_code != 200 or ents_r.status_code != 200:
-        return entities
-    else:
-        relationships_data = rels_r.json()["data"]
-        connections_data = ents_r.json()["data"]
+    # Get relationships for provided entity
+    relationships_data = []
+    for category_id in categories:
+        try:
+            meta, data = get_littlesis_endpoint("relationships", entity_id, category_id)
+            relationships_data += data
+        except Exception as e:
+            print(e)
+            break
+        while meta["currentPage"] < meta["currentPage"]:
+            try:
+                meta, data = get_littlesis_endpoint("relationships", entity_id, category_id, meta["currentPage"] + 1)
+                relationships_data += data
+            except Exception as e:
+                print(e)
+                break
 
-        for connection in connections_data:
-            entities += littlesis_build_entity(connection)
+    # Get connections for provided entity
+    connections_data = []
+    for category_id in categories:
+        page = 1
+        try:
+            meta, data = get_littlesis_endpoint("connections", entity_id, category_id, page)
+            relationships_data += data
+        except Exception as e:
+            print(e)
+            break
+        while data != []:
+            page += 1
+            try:
+                meta, data = get_littlesis_endpoint("relationships", entity_id, category_id, page)
+                relationships_data += data
+            except Exception as e:
+                print(e)
+                break
 
-        for relationship in relationships_data:
-            from_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(relationship["attributes"]["entity1_id"])))
-            to_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(relationship["attributes"]["entity2_id"])))
-            description = relationship["attributes"]["description1"]
-            entities.append(create_relationship(from_entity_id, to_entity_id, description))
+    for connection in connections_data:
+        entities += littlesis_build_entity(connection)
 
-        return entities
+    for relationship in relationships_data:
+        from_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(relationship["attributes"]["entity1_id"])))
+        to_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(relationship["attributes"]["entity2_id"])))
+        description = relationship["attributes"]["description1"]
+        entities.append(create_relationship(from_entity_id, to_entity_id, description))
+
+    return entities
 
 
 # ============================ Gravatar functions ============================
