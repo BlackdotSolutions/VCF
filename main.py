@@ -47,7 +47,7 @@ class Attribute(BaseModel):
     Salutation: Optional[str]
     ScreenName: Optional[str]
     Site: Optional[str]
-    Title: Optional[str] # Relationships
+    Title: Optional[str]  # Relationships
     ToId: Optional[str]  # Relationships
     Uri: Optional[str]
     Url: Optional[str]
@@ -193,7 +193,7 @@ def littlesis_build_entity(data):
                 "Url": data["attributes"]["website"]
             }
         }
-        relationship = create_relationship(entity["id"], webpage["id"])
+        relationship = create_relationship(entity["id"], webpage["id"], "Website")
         return [entity, webpage, relationship]
     else:
         return [entity]
@@ -239,7 +239,7 @@ def get_littlesis_network(entity_id):
     try:
         meta, data = get_littlesis_endpoint("relationships", entity_id)
         relationships_data += data
-        while meta["currentPage"] < meta["currentPage"] and meta["currentPage"] <= 3:
+        while meta["currentPage"] < meta["pageCount"] and meta["currentPage"] <= 3:
             meta, data = get_littlesis_endpoint("relationships", entity_id, page=meta["currentPage"] + 1)
             relationships_data += data
     except Exception as e:
@@ -290,7 +290,7 @@ def get_littlesis_network(entity_id):
     # Need to remove entities that already have relationships (as they don't need extras)
 
     for e in entities:
-        if e["type"]=="RelationshipRelationship":
+        if e["type"] == "RelationshipRelationship":
             if e["attributes"]["FromId"] in entity_ids:
                 entity_ids.remove(e["attributes"]["FromId"])
             if e["attributes"]["ToId"] in entity_ids:
