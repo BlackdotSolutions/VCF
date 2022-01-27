@@ -240,7 +240,7 @@ def get_littlesis_network(entity_id):
         except Exception as e:
             print(e)
             break
-        while meta["currentPage"] < meta["currentPage"]:
+        while meta["currentPage"] < meta["currentPage"] and meta["currentPage"] <= 3:
             try:
                 meta, data = get_littlesis_endpoint("relationships", entity_id, category_id, meta["currentPage"] + 1)
                 relationships_data += data
@@ -258,10 +258,10 @@ def get_littlesis_network(entity_id):
         except Exception as e:
             print(e)
             break
-        while data != []:
+        while data != [] and page <= 3:
             page += 1
             try:
-                meta, data = get_littlesis_endpoint("relationships", entity_id, category_id, page)
+                meta, data = get_littlesis_endpoint("connections", entity_id, category_id, page)
                 relationships_data += data
             except Exception as e:
                 print(e)
