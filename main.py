@@ -47,7 +47,7 @@ class Attribute(BaseModel):
     Salutation: Optional[str]
     ScreenName: Optional[str]
     Site: Optional[str]
-    Title: Optional[str] # Relationships
+    Title: Optional[str]  # Relationships
     ToId: Optional[str]  # Relationships
     Uri: Optional[str]
     Url: Optional[str]
@@ -193,7 +193,7 @@ def littlesis_build_entity(data):
                 "Url": data["attributes"]["website"]
             }
         }
-        relationship = create_relationship(entity["id"], webpage["id"])
+        relationship = create_relationship(entity["id"], webpage["id"], "Website")
         return [entity, webpage, relationship]
     else:
         return [entity]
@@ -262,7 +262,7 @@ def get_littlesis_network(entity_id):
     while data != [] and page <= 3:
         page += 1
         try:
-            meta, data = get_littlesis_endpoint("connections", entity_id, page= page)
+            meta, data = get_littlesis_endpoint("connections", entity_id, page=page)
             relationships_data += data
         except Exception as e:
             print(e)
