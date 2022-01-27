@@ -47,6 +47,7 @@ class Attribute(BaseModel):
     Salutation: Optional[str]
     ScreenName: Optional[str]
     Site: Optional[str]
+    Title: Optional[str] # Relationships
     ToId: Optional[str]  # Relationships
     Uri: Optional[str]
     Url: Optional[str]
@@ -90,7 +91,7 @@ class ErrorList(BaseModel):
 
 
 # ============================ Shared functions ============================
-def create_relationship(from_id: str, to_id: str, description: str = "") -> dict:
+def create_relationship(from_id: str, to_id: str, title: str = "") -> dict:
     """
     Creates a relationship "entity" between the specified entity ids with an optional description.
 
@@ -98,8 +99,8 @@ def create_relationship(from_id: str, to_id: str, description: str = "") -> dict
     :type from_id: str
     :param to_id: UUID of "to" entity
     :type to_id: str
-    :param description: Description of the relationship OPTIONAL
-    :type description: str
+    :param title: Description of the relationship OPTIONAL
+    :type title: str
     :return: Structured relationship entity
     :rtype: dict
     """
@@ -111,7 +112,7 @@ def create_relationship(from_id: str, to_id: str, description: str = "") -> dict
             "FromId": from_id,
             "ToId": to_id,
             "Direction": "FromTo",
-            "Description": description
+            "Title": title
         }
     }
     return relationship
@@ -271,6 +272,7 @@ def get_littlesis_network(entity_id):
             entity_ids.append(item["id"])
 
     for relationship in relationships_data:
+
         from_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(relationship["attributes"]["entity1_id"])))
         to_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(relationship["attributes"]["entity2_id"])))
         if (from_entity_id == source_entity_id and to_entity_id in entity_ids) or (
