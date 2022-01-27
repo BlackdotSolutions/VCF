@@ -220,7 +220,6 @@ def get_littlesis_endpoint(endpoint_name, entity_id=None, category_id=None, page
             endpoint += "?page=" + str(page)
 
     r = requests.get(endpoint)
-    print(endpoint + " - Response: " + str(r.status_code))
     if r.status_code != 200:
         raise Exception("Bad API response: " + str(r.status_code) + " - " + r.json())
     else:
@@ -239,7 +238,7 @@ def get_littlesis_network(entity_id):
     try:
         meta, data = get_littlesis_endpoint("relationships", entity_id)
         relationships_data += data
-        while meta["currentPage"] < meta["currentPage"] and meta["currentPage"] <= 3:
+        while meta["currentPage"] < meta["pageCount"] and meta["currentPage"] <= 3:
             meta, data = get_littlesis_endpoint("relationships", entity_id, page=meta["currentPage"] + 1)
             relationships_data += data
     except Exception as e:
@@ -290,7 +289,7 @@ def get_littlesis_network(entity_id):
     # Need to remove entities that already have relationships (as they don't need extras)
 
     for e in entities:
-        if e["type"]=="RelationshipRelationship":
+        if e["type"] == "RelationshipRelationship":
             if e["attributes"]["FromId"] in entity_ids:
                 entity_ids.remove(e["attributes"]["FromId"])
             if e["attributes"]["ToId"] in entity_ids:
