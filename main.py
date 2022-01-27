@@ -7,6 +7,7 @@ E.g.
 
     uvicorn main:app --host 192.168.2.25
 """
+import json
 import uuid
 from typing import List, Optional, Union
 
@@ -221,8 +222,7 @@ def get_littlesis_network(entity_id):
             from_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(relationship["attributes"]["entity1_id"])))
             to_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(relationship["attributes"]["entity2_id"])))
             description = relationship["attributes"]["description1"]
-
-            entities += create_relationship(from_entity_id, to_entity_id, description)
+            entities.append(create_relationship(from_entity_id, to_entity_id, description))
 
         return entities
 
@@ -355,6 +355,7 @@ async def get_littlesis(query: str):
             search_results.append(result)
 
         output = {"searchResults": search_results}
+        print(json.dumps(output))
         return output
 
 
