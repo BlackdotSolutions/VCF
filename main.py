@@ -219,6 +219,7 @@ def get_littlesis_endpoint(endpoint_name, entity_id=None, category_id=None, page
             endpoint += "?page=" + str(page)
 
     r = requests.get(endpoint)
+    print(endpoint + " - Response: " + str(r.status_code))
     if r.status_code != 200:
         raise Exception("Bad API response: " + str(r.status_code) + " - " + r.json())
     else:
@@ -237,16 +238,11 @@ def get_littlesis_network(entity_id):
     try:
         meta, data = get_littlesis_endpoint("relationships", entity_id)
         relationships_data += data
-    except Exception as e:
-        print(e)
-        break
-    while meta["currentPage"] < meta["currentPage"] and meta["currentPage"] <= 3:
-        try:
+        while meta["currentPage"] < meta["currentPage"] and meta["currentPage"] <= 3:
             meta, data = get_littlesis_endpoint("relationships", entity_id, page=meta["currentPage"] + 1)
             relationships_data += data
-        except Exception as e:
-            print(e)
-            break
+    except Exception as e:
+        print(e)
 
     # Get connections for provided entity
     connections_data = []
@@ -254,24 +250,26 @@ def get_littlesis_network(entity_id):
     page = 1
     try:
         meta, data = get_littlesis_endpoint("connections", entity_id, page=page)
-        relationships_data += data
+        connections_data += data
+
+        while data != [] and page <= 3:
+            page += 1
+            meta, data = get_littlesis_endpoint("connections", entity_id, page=page)
+            connections_data += data
     except Exception as e:
         print(e)
-        break
-    while data != [] and page <= 3:
-        page += 1
-        try:
-            meta, data = get_littlesis_endpoint("connections", entity_id, page= page)
-            relationships_data += data
-        except Exception as e:
-            print(e)
-            break
 
     for connection in connections_data:
         entities += littlesis_build_entity(connection)
 
     source_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(entity_id)))
-    entity_ids = [item["id"] for item in entities]
+
+    # Get a list of all entities that need relationships building for them
+    entity_ids = []
+    for item in entities:
+        if item["type"] != "RelationshipRelationship":
+            entity_ids.append(item["id"])
+
     for relationship in relationships_data:
         from_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(relationship["attributes"]["entity1_id"])))
         to_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(relationship["attributes"]["entity2_id"])))
@@ -286,6 +284,17 @@ def get_littlesis_network(entity_id):
             else:
                 entity_ids.remove(from_entity_id)
 
+    # All entities now have detailed relationship info where available
+    # Need to remove entities that already have relationships (as they don't need extras)
+
+    for e in entities:
+        if e["type"]=="RelationshipRelationship":
+            if e["attributes"]["FromId"] in entity_ids:
+                entity_ids.remove(e["attributes"]["FromId"])
+            if e["attributes"]["ToId"] in entity_ids:
+                entity_ids.remove(e["attributes"]["ToId"])
+
+    # Build relationships to the source entity for all that is left
     for remaining_entity_id in entity_ids:
         entities.append(create_relationship(source_entity_id, remaining_entity_id))
 
