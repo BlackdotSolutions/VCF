@@ -430,7 +430,7 @@ async def get_littlesis(query: str):
             search_results.append(result)
 
         output = {"searchResults": search_results}
-        print(json.dumps(output))
+        # print(json.dumps(output))
         return output
 
 
@@ -447,7 +447,7 @@ async def get_gravatar(query: str):
     if r.status_code != 200:
         return {"errors": [{"message": r.json()}]}
     else:
-        print(r)
+        # print(r)
         data = r.json()
 
         search_results = []
