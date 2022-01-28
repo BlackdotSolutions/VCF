@@ -196,12 +196,13 @@ def littlesis_build_entity(data):
 
 
 def get_littlesis_endpoint(endpoint_name, entity_id=None, query=None, category_id=None, page=None):
-    endpoint = r"https://littlesis.org/api/"
-    if entity_id:
-        endpoint += "/" + str(entity_id)
+    endpoint = r"https://littlesis.org/api"
 
     if endpoint_name:
         endpoint += "/" + endpoint_name
+
+    if entity_id:
+        endpoint += "/" + str(entity_id)
 
     params_used = False
 
@@ -210,14 +211,18 @@ def get_littlesis_endpoint(endpoint_name, entity_id=None, query=None, category_i
         params_used = True
 
     if category_id:
-        endpoint += "category_id=" + category_id
-        params_used = True
+        if params_used:
+            endpoint += "&category_id=" + category_id
+        else:
+            endpoint += "?category_id=" + category_id
+            params_used = True
 
     if page:
         if params_used:
             endpoint += "&page=" + str(page)
         else:
             endpoint += "?page=" + str(page)
+            params_used = True
 
     r = requests.get(endpoint)
     print(endpoint + " : " + str(r.status_code))
