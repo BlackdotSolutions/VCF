@@ -200,7 +200,7 @@ def littlesis_build_entity(data):
 
 
 def get_littlesis_endpoint(endpoint_name, entity_id=None, category_id=None, page=None):
-    endpoint = r"https://littlesis.org/api/entities"
+    endpoint = r"https://littlesis.org/api/"
     if entity_id:
         endpoint += "/" + str(entity_id)
 
@@ -220,6 +220,7 @@ def get_littlesis_endpoint(endpoint_name, entity_id=None, category_id=None, page
             endpoint += "?page=" + str(page)
 
     r = requests.get(endpoint)
+    print(endpoint + " : " + str(r.status_code))
     if r.status_code != 200:
         raise Exception(endpoint +" - Bad API response: " + str(r.status_code))
     else:
@@ -245,13 +246,13 @@ def get_littlesis_network(entity_id: int):
     # for category_id in categories:
     page = 1
     try:
-        meta, data = get_littlesis_endpoint("connections", entity_id, page=page)
+        meta, data = get_littlesis_endpoint("entities/connections", entity_id, page=page)
         connections_data += data
 
-        while data and page <= 3:
-            page += 1
-            meta, data = get_littlesis_endpoint("connections", entity_id, page=page)
-            connections_data += data
+        # while data and page <= 3:
+        #     page += 1
+        #     meta, data = get_littlesis_endpoint("entities/connections", entity_id, page=page)
+        #     connections_data += data
     except Exception as e:
         print(e)
 
@@ -265,10 +266,10 @@ def get_littlesis_network(entity_id: int):
     relationships_data = []
     # for category_id in categories:
     try:
-        meta, data = get_littlesis_endpoint("relationships", entity_id)
+        meta, data = get_littlesis_endpoint("entities/relationships", entity_id)
         relationships_data += data
-        while meta["currentPage"] < meta["pageCount"] and meta["currentPage"] <= 3:
-            meta, data = get_littlesis_endpoint("relationships", entity_id, page=meta["currentPage"] + 1)
+        while meta["currentPage"] < meta["pageCount"] and meta["currentPage"] < 3:
+            meta, data = get_littlesis_endpoint("entities/relationships", entity_id, page=meta["currentPage"] + 1)
             relationships_data += data
     except Exception as e:
         print(e)
@@ -394,8 +395,7 @@ async def get_searchers():
          status_code=status.HTTP_200_OK)
 async def get_littlesis(query: str):
     """Searches Little Sis API. Auto-enriches top 10 results to fetch connections of the found entity."""
-
-    endpoint = r"https://littlesis.org/api/entities/search?q=" + query
+    meta, data = get_littlesis_endpoint("entities/search", q=query)
     r = requests.get(endpoint)
 
     if r.status_code != 200:
