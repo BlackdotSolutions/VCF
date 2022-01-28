@@ -75,19 +75,15 @@ class Result(BaseModel):
     url: Optional[str]
 
 
-class SearchResults(BaseModel):
-    """The structure of search results accepted by Videris"""
-    searchResults: List[Result]
-
-
 class Error(BaseModel):
     """The structure of error messages accepted by Videris"""
     message: str
 
 
-class ErrorList(BaseModel):
-    """The structure of the list of errors accepted by Videris"""
-    errors: List[Error]
+class SearchResults(BaseModel):
+    """The structure of search results accepted by Videris"""
+    searchResults: Optional[List[Result]]
+    errors: Optional[List[Error]]
 
 
 # ============================ Shared functions ============================
@@ -543,7 +539,7 @@ async def get_gravatar(query: str):
 
             search_results.append(result)
 
-        output = {"searchResults": search_results}
+        output["searchResults"] = search_results
         # print(output)
         return output
 
