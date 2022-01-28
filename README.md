@@ -1,4 +1,4 @@
-# Build Your Own Adaptor (BYOA)
+# Videris Connector Framework
 A collection of adaptors written by Mark Cooper to extend Videris.
 
 # Adaptors
