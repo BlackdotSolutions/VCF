@@ -196,13 +196,13 @@ def littlesis_build_entity(data):
 
 
 def get_littlesis_endpoint(endpoint_name, entity_id=None, query=None, category_id=None, page=None):
-    endpoint = r"https://littlesis.org/api"
-
-    if endpoint_name:
-        endpoint += "/" + endpoint_name
+    endpoint = r"https://littlesis.org/api/entities"
 
     if entity_id:
         endpoint += "/" + str(entity_id)
+
+    if endpoint_name:
+        endpoint += "/" + endpoint_name
 
     params_used = False
 
@@ -251,12 +251,12 @@ def get_littlesis_network(entity_id: int):
     # for category_id in categories:
     page = 1
     try:
-        meta, data = get_littlesis_endpoint("entities/connections", entity_id, page=page)
+        meta, data = get_littlesis_endpoint("connections", entity_id=entity_id, page=page)
         connections_data += data
 
         # while data and page <= 3:
         #     page += 1
-        #     meta, data = get_littlesis_endpoint("entities/connections", entity_id, page=page)
+        #     meta, data = get_littlesis_endpoint("connections", entity_id, page=page)
         #     connections_data += data
     except Exception as e:
         print(e)
@@ -271,10 +271,10 @@ def get_littlesis_network(entity_id: int):
     relationships_data = []
     # for category_id in categories:
     try:
-        meta, data = get_littlesis_endpoint("entities/relationships", entity_id)
+        meta, data = get_littlesis_endpoint("relationships", entity_id=entity_id)
         relationships_data += data
         while meta["currentPage"] < meta["pageCount"] and meta["currentPage"] < 3:
-            meta, data = get_littlesis_endpoint("entities/relationships", entity_id, page=meta["currentPage"] + 1)
+            meta, data = get_littlesis_endpoint("relationships", entity_id=entity_id, page=meta["currentPage"] + 1)
             relationships_data += data
     except Exception as e:
         print(e)
@@ -402,13 +402,13 @@ async def get_littlesis(query: str, maxResults: int):
     output = dict()
     output["errors"] = []
     try:
-        meta, data = get_littlesis_endpoint("entities/search", query=query)
+        meta, data = get_littlesis_endpoint("search", query=query)
     except Exception as e:
         return {"errors": [{"message": str(e)}]}
 
     while meta["currentPage"] < meta["pageCount"] and len(data) < maxResults:
         try:
-            meta, search_data = get_littlesis_endpoint("entities/search", query=query, page=meta["currentPage"] + 1)
+            meta, search_data = get_littlesis_endpoint("search", query=query, page=meta["currentPage"] + 1)
             data += search_data
         except Exception:
             output["errors"].append({"message": "Unable to fetch some results from Little Sis. Please try again."})
