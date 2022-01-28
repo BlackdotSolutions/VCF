@@ -7,7 +7,6 @@ E.g.
 
     uvicorn main:app --host 192.168.2.25
 """
-import json
 import uuid
 from typing import List, Optional, Union
 
@@ -199,7 +198,7 @@ def littlesis_build_entity(data):
         return [entity]
 
 
-def get_littlesis_endpoint(endpoint_name, entity_id=None, category_id=None, page=None):
+def get_littlesis_endpoint(endpoint_name, entity_id=None, query=None, category_id=None, page=None):
     endpoint = r"https://littlesis.org/api/"
     if entity_id:
         endpoint += "/" + str(entity_id)
@@ -209,8 +208,12 @@ def get_littlesis_endpoint(endpoint_name, entity_id=None, category_id=None, page
 
     params_used = False
 
+    if query:
+        endpoint += "?q=" + query
+        params_used = True
+
     if category_id:
-        endpoint += "?=category_id" + category_id
+        endpoint += "category_id=" + category_id
         params_used = True
 
     if page:
@@ -222,7 +225,7 @@ def get_littlesis_endpoint(endpoint_name, entity_id=None, category_id=None, page
     r = requests.get(endpoint)
     print(endpoint + " : " + str(r.status_code))
     if r.status_code != 200:
-        raise Exception(endpoint +" - Bad API response: " + str(r.status_code))
+        raise Exception(endpoint + " - Bad API response: " + str(r.status_code))
     else:
         meta = r.json()["meta"] if r.json()["meta"] else None
         data = r.json()["data"]
@@ -393,49 +396,55 @@ async def get_searchers():
 @app.get("/searchers/littlesis/results", response_model=Union[SearchResults, ErrorList],
          response_model_exclude_none=True,
          status_code=status.HTTP_200_OK)
-async def get_littlesis(query: str):
+async def get_littlesis(query: str, maxResults: int):
     """Searches Little Sis API. Auto-enriches top 10 results to fetch connections of the found entity."""
-    meta, data = get_littlesis_endpoint("entities/search", q=query)
-    r = requests.get(endpoint)
+    output = dict()
+    output["errors"] = []
+    try:
+        meta, data = get_littlesis_endpoint("entities/search", q=query)
+    except Exception as e:
+        return {"errors": [{"message": e}]}
 
-    if r.status_code != 200:
-        return {"errors": [{"message": r.json()}]}
-    else:
-        data = r.json()["data"]
+    while meta["currentPage"] < meta["pageCount"] and len(data) < maxResults:
+        try:
+            meta, search_data = get_littlesis_endpoint("entities/search", q=query)
+            data += search_data
+        except Exception:
+            output["errors"].append({"message": "Unable to fetch some results from Little Sis. Please try again."})
 
-        search_results = []
-        for i, entry in enumerate(data):
-            # entity_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(entry["id"])))
+    search_results = []
+    for i, entry in enumerate(data):
+        # entity_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(entry["id"])))
 
-            result = {
-                "key": str(uuid.uuid3(uuid.NAMESPACE_DNS, query + str(i))),
-                "title": entry["attributes"]["name"],
-                "subTitle": entry["attributes"]["blurb"],
-                "summary": entry["attributes"]["summary"],
-                "source": "Little Sis",
-                "entities": [],
-                "url": entry["links"]["self"]
-            }
+        result = {
+            "key": str(uuid.uuid3(uuid.NAMESPACE_DNS, query + str(i))),
+            "title": entry["attributes"]["name"],
+            "subTitle": entry["attributes"]["blurb"],
+            "summary": entry["attributes"]["summary"],
+            "source": "Little Sis",
+            "entities": [],
+            "url": entry["links"]["self"]
+        }
 
-            # Add the entity/entities from the search results
-            result["entities"] += littlesis_build_entity(entry)
+        # Add the entity/entities from the search results
+        result["entities"] += littlesis_build_entity(entry)
 
-            # For the top 10 results
-            if i < 10:
-                # Query their network and return related entities
-                result["entities"] += get_littlesis_network(entry["id"])
+        # For the top 10 results
+        if i < 10:
+            # Query their network and return related entities
+            result["entities"] += get_littlesis_network(entry["id"])
 
-            # for entity in result["entities"].copy():
-            #     if str(entity["id"]) != entity_uuid and entity["type"] not in ["EntityWebPage",
-            #                                                                    "RelationshipRelationship"]:
-            #         print("Creating relationship to a(n) " + entity["type"])
-            #         relationship: dict = create_relationship(entity_uuid, str(entity["id"]))
-            #         result["entities"].append(relationship)
+        # for entity in result["entities"].copy():
+        #     if str(entity["id"]) != entity_uuid and entity["type"] not in ["EntityWebPage",
+        #                                                                    "RelationshipRelationship"]:
+        #         print("Creating relationship to a(n) " + entity["type"])
+        #         relationship: dict = create_relationship(entity_uuid, str(entity["id"]))
+        #         result["entities"].append(relationship)
 
-            search_results.append(result)
+        search_results.append(result)
 
-        output = {"searchResults": search_results}
-        print(json.dumps(output))
+        output["searchResults"] = search_results
+        # print(json.dumps(output))
         return output
 
 
