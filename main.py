@@ -403,7 +403,7 @@ async def get_littlesis(query: str, maxResults: int):
 
     while meta["currentPage"] < meta["pageCount"] and len(data) < maxResults:
         try:
-            meta, search_data = get_littlesis_endpoint("entities/search", query=query)
+            meta, search_data = get_littlesis_endpoint("entities/search", query=query, page=meta["currentPage"] + 1)
             data += search_data
         except Exception:
             output["errors"].append({"message": "Unable to fetch some results from Little Sis. Please try again."})
