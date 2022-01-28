@@ -397,13 +397,13 @@ async def get_littlesis(query: str, maxResults: int):
     output = dict()
     output["errors"] = []
     try:
-        meta, data = get_littlesis_endpoint("entities/search", q=query)
+        meta, data = get_littlesis_endpoint("entities/search", query=query)
     except Exception as e:
-        return {"errors": [{"message": e}]}
+        return {"errors": [{"message": str(e)}]}
 
     while meta["currentPage"] < meta["pageCount"] and len(data) < maxResults:
         try:
-            meta, search_data = get_littlesis_endpoint("entities/search", q=query)
+            meta, search_data = get_littlesis_endpoint("entities/search", query=query)
             data += search_data
         except Exception:
             output["errors"].append({"message": "Unable to fetch some results from Little Sis. Please try again."})
@@ -452,7 +452,7 @@ async def get_gravatar(query: str):
     # gravatar_url = g.get_image(160, "mp", False, "r")   TODO: Learn how to create Image entities
     gravatar_profile = g.get_profile(data_format="json")
     r = requests.get(gravatar_profile)
-
+    output = dict()
     if r.status_code != 200:
         return {"errors": [{"message": r.json()}]}
     else:
