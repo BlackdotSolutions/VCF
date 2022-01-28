@@ -220,7 +220,7 @@ def get_littlesis_endpoint(endpoint_name, entity_id=None, category_id=None, page
 
     r = requests.get(endpoint)
     if r.status_code != 200:
-        raise Exception("Bad API response: " + str(r.status_code) + " - " + r.json())
+        raise Exception(endpoint +" - Bad API response: " + str(r.status_code))
     else:
         meta = r.json()["meta"] if r.json()["meta"] else None
         data = r.json()["data"]
@@ -239,6 +239,27 @@ def get_littlesis_network(entity_id: int):
     # categories = ["1", "2", "3", "4", "6", "7", "8", "9", "10", "11", "12"]
     entities = []
 
+    # Get connections for provided entity
+    connections_data = []
+    # for category_id in categories:
+    page = 1
+    try:
+        meta, data = get_littlesis_endpoint("connections", entity_id, page=page)
+        connections_data += data
+
+        while data and page <= 3:
+            page += 1
+            meta, data = get_littlesis_endpoint("connections", entity_id, page=page)
+            connections_data += data
+    except Exception as e:
+        print(e)
+
+    if not connections_data:
+        return []
+
+    for connection in connections_data:
+        entities += littlesis_build_entity(connection)
+
     # Get relationships for provided entity
     relationships_data = []
     # for category_id in categories:
@@ -250,24 +271,6 @@ def get_littlesis_network(entity_id: int):
             relationships_data += data
     except Exception as e:
         print(e)
-
-    # Get connections for provided entity
-    connections_data = []
-    # for category_id in categories:
-    page = 1
-    try:
-        meta, data = get_littlesis_endpoint("connections", entity_id, page=page)
-        connections_data += data
-
-        while data != [] and page <= 3:
-            page += 1
-            meta, data = get_littlesis_endpoint("connections", entity_id, page=page)
-            connections_data += data
-    except Exception as e:
-        print(e)
-
-    for connection in connections_data:
-        entities += littlesis_build_entity(connection)
 
     source_entity_id = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(entity_id)))
 
