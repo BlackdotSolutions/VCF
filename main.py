@@ -294,14 +294,10 @@ def get_littlesis_network(entity_id: int):
                 entity_ids.remove(from_entity_id)
 
     # All entities now have detailed relationship info where available
-    # Need to remove entities that already have relationships to the main/source entity (as they don't need extras)
-
+    # Need to remove webpage entities which have already been linked to their associates entities
     for e in entities:
-        if e["type"] == "RelationshipRelationship":
-            if e["attributes"]["FromId"] in entity_ids and to_entity_id == source_entity_id:
-                entity_ids.remove(e["attributes"]["FromId"])
-            if e["attributes"]["ToId"] in entity_ids and from_entity_id == source_entity_id:
-                entity_ids.remove(e["attributes"]["ToId"])
+        if e["type"] not in ["EntityPerson", "EntityOrganisation"]:
+            entity_ids.remove(e["id"])
 
     # Build relationships to the source entity for all that is left
     for remaining_entity_id in entity_ids:
