@@ -296,7 +296,7 @@ def get_littlesis_network(entity_id: int):
     # All entities now have detailed relationship info where available
     # Need to remove webpage entities which have already been linked to their associates entities
     for e in entities:
-        if e["type"] not in ["EntityPerson", "EntityOrganisation"]:
+        if e["type"] not in ["EntityPerson", "EntityOrganisation"] and e["id"] in entity_ids:
             entity_ids.remove(e["id"])
 
     # Build relationships to the source entity for all that is left
