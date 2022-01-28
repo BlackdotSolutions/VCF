@@ -9,7 +9,7 @@ E.g.
 """
 import json
 import uuid
-from typing import List, Optional, Union
+from typing import List, Optional
 
 import requests
 from fastapi import FastAPI, status
@@ -445,8 +445,7 @@ async def get_littlesis(query: str, maxResults: int):
 
 
 # ============================ Gravatar Endpoint ============================
-@app.get("/searchers/gravatar/results", response_model=Union[SearchResults, ErrorList],
-         response_model_exclude_none=True,
+@app.get("/searchers/gravatar/results", response_model=SearchResults, response_model_exclude_none=True,
          status_code=status.HTTP_200_OK)
 async def get_gravatar(query: str):
     g = Gravatar(query)
