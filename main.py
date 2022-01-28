@@ -390,8 +390,7 @@ async def get_searchers():
 
 
 # ============================ Little Sis Endpoint ============================
-@app.get("/searchers/littlesis/results", response_model=Union[SearchResults, ErrorList],
-         response_model_exclude_none=True,
+@app.get("/searchers/littlesis/results", response_model=SearchResults, response_model_exclude_none=True,
          status_code=status.HTTP_200_OK)
 async def get_littlesis(query: str, maxResults: int):
     """Searches Little Sis API. Auto-enriches top 10 results to fetch connections of the found entity."""
