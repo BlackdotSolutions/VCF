@@ -7,6 +7,7 @@ E.g.
 
     uvicorn main:app --host 192.168.2.25
 """
+import json
 import uuid
 from typing import List, Optional, Union
 
@@ -434,7 +435,7 @@ async def get_littlesis(query: str):
             search_results.append(result)
 
         output = {"searchResults": search_results}
-        # print(json.dumps(output))
+        print(json.dumps(output))
         return output
 
 
