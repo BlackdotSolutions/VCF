@@ -14,7 +14,7 @@ This adaptor allows Videris users to search for people or organisations by name.
 
 The adaptor (mostly) respects the maxResults parameter sent from Videris.
 
-Results will be returned for each matching entity, which will be either a person or an organisation. clicking the link in the search results will take you to the entity's profile on LittleSis.org.
+Results will be returned for each matching entity, which will be either a person or an organisation. Clicking the link in the search results will take you to the entity's profile on LittleSis.org.
 
 If the result has an associated website, this will be returned as a webpage entity, linked to the result (if copied to/viewed in a Chart/Grid). 
 
