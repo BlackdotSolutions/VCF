@@ -7,7 +7,6 @@ E.g.
 
     uvicorn main:app --host 192.168.2.25
 """
-import json
 import uuid
 from typing import List, Optional, Union
 
@@ -47,7 +46,7 @@ class Attribute(BaseModel):
     Salutation: Optional[str]
     ScreenName: Optional[str]
     Site: Optional[str]
-    Title: Optional[str] # Relationships
+    Title: Optional[str]  # Relationships
     ToId: Optional[str]  # Relationships
     Uri: Optional[str]
     Url: Optional[str]
@@ -228,7 +227,15 @@ def get_littlesis_endpoint(endpoint_name, entity_id=None, category_id=None, page
         return meta, data
 
 
-def get_littlesis_network(entity_id):
+def get_littlesis_network(entity_id: int):
+    """
+    Queries Little Sis endpoints for connections and relationships to/from the specified entity id.
+
+    :param entity_id: LittleSis ID of the entity which we want to build out the network for.
+    :type entity_id: int
+    :return: List of entities (including relationships) that represent the entity's network.
+    :rtype: list(dict)
+    """
     # categories = ["1", "2", "3", "4", "6", "7", "8", "9", "10", "11", "12"]
     entities = []
 
@@ -267,6 +274,7 @@ def get_littlesis_network(entity_id):
     # Get a list of all entities that need relationships building for them
     entity_ids = []
     for item in entities:
+        # We don't want to create relationships to relationships so exclude those.
         if item["type"] != "RelationshipRelationship":
             entity_ids.append(item["id"])
 
@@ -286,13 +294,13 @@ def get_littlesis_network(entity_id):
                 entity_ids.remove(from_entity_id)
 
     # All entities now have detailed relationship info where available
-    # Need to remove entities that already have relationships (as they don't need extras)
+    # Need to remove entities that already have relationships to the main/source entity (as they don't need extras)
 
     for e in entities:
         if e["type"] == "RelationshipRelationship":
-            if e["attributes"]["FromId"] in entity_ids:
+            if e["attributes"]["FromId"] in entity_ids and to_entity_id == source_entity_id:
                 entity_ids.remove(e["attributes"]["FromId"])
-            if e["attributes"]["ToId"] in entity_ids:
+            if e["attributes"]["ToId"] in entity_ids and from_entity_id == source_entity_id:
                 entity_ids.remove(e["attributes"]["ToId"])
 
     # Build relationships to the source entity for all that is left
@@ -397,10 +405,7 @@ async def get_littlesis(query: str):
 
         search_results = []
         for i, entry in enumerate(data):
-            if "Person" not in entry["attributes"]["types"] and "Organization" not in entry["attributes"]["types"]:
-                break
-
-            entity_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(entry["id"])))
+            # entity_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(entry["id"])))
 
             result = {
                 "key": str(uuid.uuid3(uuid.NAMESPACE_DNS, query + str(i))),
@@ -413,12 +418,12 @@ async def get_littlesis(query: str):
             }
 
             # Add the entity/entities from the search results
-            [result["entities"].append(ent) for ent in littlesis_build_entity(entry)]
+            result["entities"] += littlesis_build_entity(entry)
 
             # For the top 10 results
             if i < 10:
                 # Query their network and return related entities
-                [result["entities"].append(ent) for ent in get_littlesis_network(entry["id"])]
+                result["entities"] += get_littlesis_network(entry["id"])
 
             # for entity in result["entities"].copy():
             #     if str(entity["id"]) != entity_uuid and entity["type"] not in ["EntityWebPage",
