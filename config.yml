@@ -1,0 +1,13 @@
+searchers:
+  littlesis:
+    id: littlesis
+    name: Little Sis
+    hint: Search for a person
+    tooltip: Find Gravatar profile by email address
+    enabled: True # True or False
+  gravatar:
+    id: gravatar
+    name: Gravatar
+    hint: Search by email address
+    tooltip: Find Gravatar profile by email address
+    enabled: False # True or False
