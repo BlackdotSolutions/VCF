@@ -8,8 +8,10 @@ E.g.
     uvicorn main:app --host 192.168.2.25
 """
 
+
 import yaml
 from fastapi import FastAPI, status
+
 
 from vcf import *
 from gravatar import *
@@ -33,7 +35,7 @@ def get_searchers():
     return searchers
 
 
-# ============================ Gravatar Endpoint ============================
+
 @app.get("/searchers/{searcher_id}/results", response_model=SearchResults, response_model_exclude_none=True,
          status_code=status.HTTP_200_OK)
 async def get_results(searcher_id, query: str, maxResults=100):
