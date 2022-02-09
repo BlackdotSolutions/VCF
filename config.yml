@@ -10,4 +10,11 @@ searchers:
     name: Gravatar
     hint: Search by email address
     tooltip: Find Gravatar profile by email address
+    enabled: True # True or False
+  bitcoin:
+    id: bitcoin
+    name: BitCoin Abuse
+    hint: Search by BitCoin address
+    tooltip: Find abused BitCoin wallets
     enabled: False # True or False
+    redirect: http://92.14.10.160:8000/searchers/littlesis/results
