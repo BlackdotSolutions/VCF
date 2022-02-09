@@ -39,9 +39,10 @@ def get_searchers():
 async def get_results(searcher_id, query: str, maxResults=50):
     if searcher_id in CONFIG["searchers"]:
         if CONFIG["searchers"][searcher_id]["enabled"]:
-            if CONFIG["searchers"][searcher_id]["redirect"]:
-                endpoint = CONFIG["searchers"][searcher_id]["redirect"] + f"?query={query}&maxResults={maxResults}"
-                return requests.get(endpoint)
+            if "redirect" in CONFIG["searchers"][searcher_id].keys():
+                redirect = CONFIG["searchers"][searcher_id]["redirect"] + f"?query={query}&maxResults={str(maxResults)}"
+                print(redirect)
+                return requests.get(redirect).json()
             else:
                 return await globals()["get_" + searcher_id](query, maxResults)
 

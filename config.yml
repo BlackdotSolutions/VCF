@@ -16,5 +16,5 @@ searchers:
     name: BitCoin Abuse
     hint: Search by BitCoin address
     tooltip: Find abused BitCoin wallets
-    enabled: False # True or False
-    redirect: http://92.14.10.160:8000/searchers/littlesis/results
+    enabled: True # True or False
+    redirect: http://192.168.1.25:8001/searchers/littlesis/results
