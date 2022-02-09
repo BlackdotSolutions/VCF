@@ -14,7 +14,7 @@ searchers:
   bitcoin:
     id: bitcoin
     name: BitCoin Abuse
-    hint: Search by BitCoin address
-    tooltip: Find abused BitCoin wallets
+    hint: Check for abused BitCoin wallets
+    tooltip: Search by BitCoin wallet address
     enabled: True # True or False
-    redirect: http://192.168.1.25:8001/searchers/littlesis/results
+    redirect: http://90.220.172.3:3010/searchers/Videris124/results
