@@ -1,4 +1,6 @@
-The Videris Connector Framework (**VCF**) enables customers to add their own data sources to Videris, for the first time ever.
+Videris Connector Framework Userguide
+
+The Videris Connector Framework (VCF) enables customers to add their own data sources to Videris, for the first time ever.
 
 This **Get Started guide** outlines how the VCF works and how to get up and running.
 
