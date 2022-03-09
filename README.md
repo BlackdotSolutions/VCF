@@ -19,12 +19,12 @@ Listed by language
 
 ### Python
 
-* [Gravatar](/Gravatar/README.md)
-* [LittleSis](/LittleSis/README.md)
+* [Gravatar](/Gravatar/)
+* [LittleSis](/LittleSis/)
 
 
 ### Ruby
 
-* [Shodan](/Shodan/README.md)
-* [Bitcoin Abuse](/Bitcoin%20Abuse/README.md)
+* [Shodan](/Shodan/)
+* [Bitcoin Abuse](/Bitcoin%20Abuse/)
 
