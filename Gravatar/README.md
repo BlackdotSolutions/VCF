@@ -1,9 +1,4 @@
-# Videris Connector Framework
-
-A collection of adaptors written by Mark Cooper to extend Videris.
-
-* Gravatar
-* Little Sis
+# Gravatar
 
 ## Configuration
 
@@ -11,10 +6,10 @@ To enable or disable searchers, update `config.yml` and set "enabled" as `True` 
 
 ```yaml 
     searchers:
-      littlesis:        # <<< Note this must be identical to the id
-        id: littlesis   
-        name: Little Sis
-        hint: Search for a person
+      gravatar:        # <<< Note this must be identical to the id
+        id: gravatar   
+        name: Gravatar
+        hint: Search by email address
         tooltip: Find Gravatar profile by email address
         enabled: True
 ```
