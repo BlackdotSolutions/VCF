@@ -13,5 +13,5 @@ Listed by language
 ### Ruby
 
 * [Shodan](/Shodan/README.md)
-* ["Bitcoin Abuse"](/Bitcoin Abuse/README.md)
+* [Bitcoin Abuse](/Bitcoin%20Abuse/README.md)
 
