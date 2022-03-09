@@ -1,0 +1,1748 @@
+Started GET "/" for 127.0.0.1 at 2021-11-20 20:16:27 +0500
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1308)
+
+
+  
+ActionController::RequestForgeryProtection::DisabledSessionError (Request forgery protection requires a working session store but your application has sessions disabled. You need to either disable request forgery protection, or configure a working session store.):
+  
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:483:in `ensure_session_is_enabled!'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:472:in `protect_against_forgery?'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:321:in `verified_request?'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:252:in `verify_authenticity_token'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:415:in `block in make_lambda'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.0.alpha2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `block in invoke_before'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `each'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `invoke_before'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/abstract_controller/callbacks.rb:220:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/instrumentation.rb:65:in `block in process_action'
+activesupport (7.0.0.alpha2) lib/active_support/notifications.rb:207:in `block in instrument'
+activesupport (7.0.0.alpha2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.0.alpha2) lib/active_support/notifications.rb:207:in `instrument'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/instrumentation.rb:64:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+activerecord (7.0.0.alpha2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.0.alpha2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.0.alpha2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.0.alpha2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:845:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0.alpha2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/host_authorization.rb:96:in `call'
+railties (7.0.0.alpha2) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-11-20 20:16:27 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/index" for 127.0.0.1 at 2021-11-20 20:17:29 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/index" for 127.0.0.1 at 2021-11-20 20:20:00 +0500
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:6:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/index" for 127.0.0.1 at 2021-11-20 20:22:12 +0500
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:6:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/index" for 127.0.0.1 at 2021-11-20 20:23:21 +0500
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:6:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2021-11-20 20:40:32 +0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (uninitialized constant ShodaController
+Did you mean?  ShodanController):
+  
+Started GET "/index" for 127.0.0.1 at 2021-11-20 20:40:36 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/index" for 127.0.0.1 at 2021-11-20 20:40:51 +0500
+  
+ArgumentError (Route path not specified):
+  
+config/routes.rb:6:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/index" for 127.0.0.1 at 2021-11-20 20:44:36 +0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/" for 127.0.0.1 at 2021-11-20 20:44:40 +0500
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 346)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-20 20:48:01 +0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- shodan):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-11-20 20:48:01 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2021-11-20 20:51:27 +0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+LoadError (cannot load such file -- shodan):
+  
+app/controllers/application_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2021-11-20 20:53:06 +0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 1295ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 16080)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-20 20:54:22 +0500
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 1307ms (Views: 1.2ms | Allocations: 3390)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-20 20:56:58 +0500
+Processing by ApplicationController#index as HTML
+Completed 500 Internal Server Error in 1112ms (Allocations: 3430)
+
+
+  
+NameError (undefined local variable or method `url' for #<ApplicationController:0x0000000000e6f0>
+Did you mean?  uri
+               URI):
+  
+app/controllers/application_controller.rb:8:in `index'
+Started GET "/" for 127.0.0.1 at 2021-11-20 20:57:27 +0500
+Processing by ApplicationController#index as HTML
+Completed 500 Internal Server Error in 843ms (Allocations: 3288)
+
+
+  
+NameError (undefined local variable or method `url' for #<ApplicationController:0x00000000011a30>
+Did you mean?  uri
+               URI):
+  
+app/controllers/application_controller.rb:9:in `index'
+Started GET "/" for 127.0.0.1 at 2021-11-20 20:57:44 +0500
+Processing by ApplicationController#index as HTML
+Completed 500 Internal Server Error in 959ms (Allocations: 3358)
+
+
+  
+NameError (undefined local variable or method `url' for #<ApplicationController:0x00000000014d98>
+Did you mean?  uri
+               URI):
+  
+app/controllers/application_controller.rb:9:in `index'
+Started GET "/" for 127.0.0.1 at 2021-11-20 20:58:24 +0500
+Processing by ApplicationController#index as HTML
+Completed 500 Internal Server Error in 3690ms (Allocations: 3356)
+
+
+  
+NameError (undefined local variable or method `c' for #<ApplicationController:0x000000000180b0>):
+  
+app/controllers/application_controller.rb:10:in `index'
+Started GET "/" for 127.0.0.1 at 2021-11-20 20:58:46 +0500
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 837ms (Views: 1.3ms | Allocations: 3364)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 21:03:13 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 1211ms (Views: 1.2ms | Allocations: 3403)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 21:08:08 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 5325ms (Views: 1.2ms | Allocations: 3409)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-20 21:08:43 +0500
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 3666ms (Views: 1.5ms | Allocations: 3193)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-20 21:13:20 +0500
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 1160ms (Views: 1.3ms | Allocations: 3401)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 21:13:32 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 1926ms (Views: 1.7ms | Allocations: 3149)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 21:24:21 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 1021ms (Views: 0.2ms | Allocations: 1049)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 21:24:43 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 1103ms (Views: 1.2ms | Allocations: 3363)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 21:26:22 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 1395ms (Views: 1.4ms | Allocations: 3182)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 21:26:36 +0500
+Processing by ApplicationController#index as */*
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 837ms (Views: 1.2ms | Allocations: 3145)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=3" for 127.0.0.1 at 2021-11-20 21:42:51 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"3"}
+Completed 200 OK in 1202ms (Views: 0.8ms | Allocations: 2719)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-20 21:43:00 +0500
+Processing by ApplicationController#index as HTML
+Completed 204 No Content in 0ms (Allocations: 53)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=1" for 127.0.0.1 at 2021-11-20 21:43:03 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"1"}
+Completed 200 OK in 988ms (Views: 0.5ms | Allocations: 1670)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=1" for 127.0.0.1 at 2021-11-20 21:43:12 +0500
+Processing by ApplicationController#index as */*
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"1"}
+Completed 200 OK in 871ms (Views: 0.3ms | Allocations: 1670)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=100" for 127.0.0.1 at 2021-11-20 21:47:20 +0500
+Processing by ApplicationController#index as */*
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"100"}
+Completed 200 OK in 957ms (Views: 1.3ms | Allocations: 3663)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=100" for 127.0.0.1 at 2021-11-20 21:47:41 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"100"}
+Completed 200 OK in 874ms (Views: 1.3ms | Allocations: 3658)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 21:47:46 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 880ms (Views: 1.3ms | Allocations: 3662)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 21:49:27 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 1171ms (Views: 1.2ms | Allocations: 3696)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-20 23:20:32 +0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 13930)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 23:20:48 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 500 Internal Server Error in 1190ms (ActiveRecord: 0.0ms | Allocations: 1696)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/application_controller.rb:13:in `[]='
+app/controllers/application_controller.rb:13:in `index'
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 23:21:02 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 500 Internal Server Error in 1177ms (Views: 1.2ms | Allocations: 3484)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/application_controller.rb:17:in `index'
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 23:22:10 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 500 Internal Server Error in 2996ms (Views: 1.3ms | Allocations: 3286)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/application_controller.rb:17:in `index'
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 23:22:27 +0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 832ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 17350)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 23:23:05 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 1423ms (Views: 1.2ms | Allocations: 3406)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 23:24:23 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 1521ms (Views: 1.1ms | Allocations: 3197)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 23:25:19 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 1148ms (Views: 1.3ms | Allocations: 3398)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-20 23:25:38 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 775ms (Views: 1.3ms | Allocations: 3351)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=5" for 127.0.0.1 at 2021-11-20 23:25:44 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"5"}
+Completed 200 OK in 909ms (Views: 1.3ms | Allocations: 2848)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-20 23:28:15 +0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 13931)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-21 19:19:35 +0500
+  [1m[35m (9.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 1440ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 17366)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-11-21 19:19:37 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-21 19:21:50 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 911ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 3330)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=1" for 127.0.0.1 at 2021-11-21 19:21:52 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"1"}
+Completed 200 OK in 900ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1581)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-21 19:23:14 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 983ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 3186)
+
+
+Started GET "/?search=test&results=10" for 127.0.0.1 at 2021-11-21 19:23:29 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"test", "results"=>"10"}
+Completed 200 OK in 9218ms (Views: 29.1ms | ActiveRecord: 0.0ms | Allocations: 200413)
+
+
+Started GET "/?search=test&results=100" for 127.0.0.1 at 2021-11-21 19:24:21 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"test", "results"=>"100"}
+Completed 200 OK in 14292ms (Views: 347.9ms | ActiveRecord: 0.0ms | Allocations: 732466)
+
+
+Started GET "/?search=test&results=100" for 127.0.0.1 at 2021-11-21 19:25:05 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"test", "results"=>"100"}
+Completed 200 OK in 7543ms (Views: 391.5ms | ActiveRecord: 0.0ms | Allocations: 718076)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-21 21:40:04 +0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 1796ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 17375)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-11-21 21:40:06 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/?search=test&results=10" for 127.0.0.1 at 2021-11-21 21:40:10 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"test", "results"=>"10"}
+Completed 200 OK in 4645ms (Views: 105.2ms | ActiveRecord: 0.0ms | Allocations: 200321)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-21 21:44:52 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 1005ms (Views: 1.2ms | Allocations: 3930)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-21 22:31:29 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 500 Internal Server Error in 1217ms (Allocations: 1477)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/application_controller.rb:27:in `[]'
+app/controllers/application_controller.rb:27:in `block in index'
+app/controllers/application_controller.rb:13:in `each'
+app/controllers/application_controller.rb:13:in `each_with_index'
+app/controllers/application_controller.rb:13:in `index'
+Started GET "/?search=Cobham%20SATCOM&results=10" for 127.0.0.1 at 2021-11-21 22:31:49 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"10"}
+Completed 200 OK in 801ms (Views: 0.6ms | Allocations: 2236)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=1" for 127.0.0.1 at 2021-11-21 22:32:06 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"1"}
+Completed 200 OK in 4004ms (Views: 0.2ms | Allocations: 1416)
+
+
+Started GET "/?search=Cobham%20SATCOM&results=1" for 127.0.0.1 at 2021-11-22 17:37:30 +0500
+  [1m[35m (11.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"1"}
+Completed 200 OK in 1533ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 15593)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-11-22 17:37:33 +0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/?search=Cobham%20SATCOM&results=2" for 127.0.0.1 at 2021-11-22 17:37:42 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"search"=>"Cobham SATCOM", "results"=>"2"}
+Completed 200 OK in 899ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1681)
+
+
+Started GET "/Searches/123/Results?query=dog&maxResults=10" for 127.0.0.1 at 2021-11-22 20:12:47 +0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/Searches/123/Results"):
+  
+Started GET "/Searches/123/Results?query=dog&maxResults=10" for 127.0.0.1 at 2021-11-22 20:13:13 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"dog", "maxResults"=>"10", "id"=>"123"}
+Completed 200 OK in 7392ms (Views: 0.9ms | Allocations: 24827)
+
+
+Started GET "/Searches/123/Results?query=dog&maxResults=1" for 127.0.0.1 at 2021-11-22 20:13:31 +0500
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"dog", "maxResults"=>"1", "id"=>"123"}
+Completed 200 OK in 2447ms (Views: 0.4ms | Allocations: 23072)
+
+
+Started GET "/Searches/123/Results?query=dog&maxResults=10" for ::1 at 2021-11-22 16:17:15 +0000
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"dog", "maxResults"=>"10", "id"=>"123"}
+Completed 200 OK in 5908ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 39005)
+
+
+Started GET "/Searches/123/Results?query=Cobham%20SATCOM&maxResults=10" for ::1 at 2021-11-22 16:17:29 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"10", "id"=>"123"}
+Completed 200 OK in 469ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 2062)
+
+
+Started GET "/Searches/123/Results?query=Cobham%20SATCOM&maxResults=100" for ::1 at 2021-11-22 16:17:39 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 264ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 2046)
+
+
+Started GET "/Searchers/123/Results?query=Cobham%20SATCOM&maxResults=100" for ::1 at 2021-11-22 16:18:51 +0000
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 1760ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 17123)
+
+
+Started GET "/Searchers/123/Results?query=&maxResults=100" for ::1 at 2021-11-22 16:19:05 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"", "maxResults"=>"100", "id"=>"123"}
+Completed 500 Internal Server Error in 589ms (ActiveRecord: 0.0ms | Allocations: 661)
+
+
+  
+RuntimeError (Empty search query):
+  
+app/controllers/application_controller.rb:10:in `index'
+Started GET "/Searchers/123/Results?query=cat&maxResults=100" for ::1 at 2021-11-22 16:19:12 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"cat", "maxResults"=>"100", "id"=>"123"}
+Completed 500 Internal Server Error in 7136ms (ActiveRecord: 0.0ms | Allocations: 22906)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/controllers/application_controller.rb:16:in `block in index'
+app/controllers/application_controller.rb:12:in `each'
+app/controllers/application_controller.rb:12:in `each_with_index'
+app/controllers/application_controller.rb:12:in `index'
+Started GET "/Searchers/123/Results?query=Cobham%20SATCOM&maxResults=100" for ::1 at 2021-11-22 16:19:27 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 2169ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 2104)
+
+
+Started GET "/Searchers/123/Results?query=Cobham%20SATCOM&maxResults=100" for ::1 at 2021-11-22 16:19:48 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 265ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 2020)
+
+
+Started GET "/Searchers/123/Results?query=162.220.89.142&maxResults=100" for ::1 at 2021-11-22 16:20:40 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"162.220.89.142", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 1156ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 793)
+
+
+Started GET "/Searchers/123/Results?query=VSAT&maxResults=100" for ::1 at 2021-11-22 16:21:25 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 10507ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 20291)
+
+
+Started GET "/Searchers/123/Results?query=VSAT&maxResults=100" for ::1 at 2021-11-22 16:47:10 +0000
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 6894ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 35704)
+
+
+Started GET "/Searchers/123/Results?query=VSAT&maxResults=100" for 127.0.0.1 at 2021-11-23 13:18:39 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 2456ms (Views: 9.2ms | Allocations: 22418)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-11-23 13:18:42 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/Searchers/123/Results?query=VSAT&maxResults=100" for 127.0.0.1 at 2021-11-30 18:06:57 +0000
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 9988ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 36289)
+
+
+Started GET "/Searchers/123/Results?query=VSAT&maxResults=100" for 127.0.0.1 at 2021-11-30 18:07:20 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 334ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 21206)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-11-30 18:07:21 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/Searchers/123/Results?query=VSAT&maxResults=100" for 10.211.55.2 at 2021-11-30 18:09:23 +0000
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 7583ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 36490)
+
+
+Started GET "/Searchers/123/Results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-11-30 18:09:31 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 276ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 21431)
+
+
+Started GET "/favicon.ico" for 10.211.55.2 at 2021-11-30 18:09:31 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 10.211.55.5 at 2021-11-30 18:13:50 +0000
+Processing by Rails::WelcomeController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 256)
+
+
+  
+ActionController::RequestForgeryProtection::DisabledSessionError (Request forgery protection requires a working session store but your application has sessions disabled. You need to either disable request forgery protection, or configure a working session store.):
+  
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:483:in `ensure_session_is_enabled!'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:472:in `protect_against_forgery?'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:321:in `verified_request?'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:252:in `verify_authenticity_token'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:415:in `block in make_lambda'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.0.alpha2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `block in invoke_before'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `each'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `invoke_before'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/abstract_controller/callbacks.rb:220:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/instrumentation.rb:65:in `block in process_action'
+activesupport (7.0.0.alpha2) lib/active_support/notifications.rb:207:in `block in instrument'
+activesupport (7.0.0.alpha2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.0.alpha2) lib/active_support/notifications.rb:207:in `instrument'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/instrumentation.rb:64:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+activerecord (7.0.0.alpha2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.0.alpha2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.0.alpha2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.0.alpha2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:845:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0.alpha2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/host_authorization.rb:96:in `call'
+railties (7.0.0.alpha2) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 10.211.55.5 at 2021-11-30 18:13:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/searchers" for 10.211.55.5 at 2021-11-30 18:15:03 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers"):
+  
+Started GET "/Searchers" for 10.211.55.2 at 2021-12-01 09:43:51 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/Searchers"):
+  
+Started GET "/" for 10.211.55.2 at 2021-12-01 09:43:56 +0000
+Processing by Rails::WelcomeController#index as HTML
+Completed 500 Internal Server Error in 1ms (Allocations: 106)
+
+
+  
+ActionController::RequestForgeryProtection::DisabledSessionError (Request forgery protection requires a working session store but your application has sessions disabled. You need to either disable request forgery protection, or configure a working session store.):
+  
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:483:in `ensure_session_is_enabled!'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:472:in `protect_against_forgery?'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:321:in `verified_request?'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/request_forgery_protection.rb:252:in `verify_authenticity_token'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:415:in `block in make_lambda'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.0.alpha2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `block in invoke_before'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `each'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:500:in `invoke_before'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/abstract_controller/callbacks.rb:220:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/instrumentation.rb:65:in `block in process_action'
+activesupport (7.0.0.alpha2) lib/active_support/notifications.rb:207:in `block in instrument'
+activesupport (7.0.0.alpha2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.0.alpha2) lib/active_support/notifications.rb:207:in `instrument'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/instrumentation.rb:64:in `process_action'
+actionpack (7.0.0.alpha2) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+activerecord (7.0.0.alpha2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.0.alpha2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.0.alpha2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.0.alpha2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.0.alpha2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.0.alpha2) lib/action_dispatch/routing/route_set.rb:845:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.0.alpha2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.0.alpha2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.0.alpha2) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.0.alpha2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.0.alpha2) lib/action_dispatch/middleware/host_authorization.rb:96:in `call'
+railties (7.0.0.alpha2) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/Searchers" for 127.0.0.1 at 2021-12-01 11:19:32 +0000
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 14892)
+
+
+Started GET "/Searchers/123/Results?query=VSAT&maxResults=100" for 127.0.0.1 at 2021-12-01 11:20:21 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"123"}
+Completed 500 Internal Server Error in 2776ms (ActiveRecord: 0.0ms | Allocations: 9629)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/controllers/application_controller.rb:17:in `block in index'
+app/controllers/application_controller.rb:13:in `each'
+app/controllers/application_controller.rb:13:in `each_with_index'
+app/controllers/application_controller.rb:13:in `index'
+Started GET "/Searchers/123/Results?query=Cobham%20SATCOM&maxResults=100" for 127.0.0.1 at 2021-12-01 11:21:40 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 588ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1781)
+
+
+Started GET "/Searchers" for 127.0.0.1 at 2021-12-01 11:23:23 +0000
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/stuartclarke/Documents/Tools/Shodan/APIv5/app/controllers/application_controller.rb:54: syntax error, unexpected '}', expecting =>
+...render json: {out_data.to_json}
+...                              ^
+):
+  
+app/controllers/application_controller.rb:54: syntax error, unexpected '}', expecting =>
+app/controllers/application_controller.rb:54: syntax error, unexpected '}', expecting =>
+Started GET "/Searchers/123/Results?query=Cobham%20SATCOM&maxResults=100" for 127.0.0.1 at 2021-12-01 11:23:54 +0000
+  
+SyntaxError (/Users/stuartclarke/Documents/Tools/Shodan/APIv5/app/controllers/application_controller.rb:54: syntax error, unexpected '}', expecting =>
+...render json: {out_data.to_json}
+...                              ^
+):
+  
+app/controllers/application_controller.rb:54: syntax error, unexpected '}', expecting =>
+app/controllers/application_controller.rb:54: syntax error, unexpected '}', expecting =>
+Started GET "/Searchers/123/Results?query=Cobham%20SATCOM&maxResults=100" for 127.0.0.1 at 2021-12-01 11:24:51 +0000
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 3121ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 16705)
+
+
+Started GET "/Searchers" for 127.0.0.1 at 2021-12-01 11:24:59 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 194)
+
+
+Started GET "/Searchers" for 10.211.55.2 at 2021-12-01 11:25:39 +0000
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 14885)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-01 11:30:42 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers"):
+  
+Started GET "/Searchers" for 10.211.55.5 at 2021-12-01 11:36:44 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 4ms (Views: 0.2ms | Allocations: 238)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-01 11:53:37 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers"):
+  
+Started GET "/searchers" for 10.211.55.5 at 2021-12-01 12:01:09 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers"):
+  
+Started GET "/Searchers" for 10.211.55.2 at 2021-12-01 13:23:54 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 175)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-01 14:04:29 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers"):
+  
+Started GET "/searchers" for 10.211.55.5 at 2021-12-01 15:10:38 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers"):
+  
+Started GET "/Searchers/123/Results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.2 at 2021-12-01 15:17:00 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 991ms (Views: 1.1ms | Allocations: 1987)
+
+
+Started GET "/Searchers" for 10.211.55.5 at 2021-12-01 15:36:36 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 34ms (Views: 8.4ms | Allocations: 176)
+
+
+Started GET "/Searchers" for 10.211.55.3 at 2021-12-01 15:38:16 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | Allocations: 176)
+
+
+Started GET "/favicon.ico" for 10.211.55.3 at 2021-12-01 15:38:16 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/Searchers/123/Results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.2 at 2021-12-01 15:45:28 +0000
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 2820ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 16703)
+
+
+Started GET "/Searchers/123/Results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.2 at 2021-12-01 16:30:23 +0000
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 679ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 16697)
+
+
+Started GET "/Searchers" for 10.211.55.2 at 2021-12-01 16:30:30 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 194)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-01 17:04:12 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers"):
+  
+Started GET "/Searchers" for 10.211.55.5 at 2021-12-01 17:05:15 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 237)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-01 17:07:38 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers"):
+  
+Started GET "/Searchers" for 10.211.55.2 at 2021-12-01 17:09:47 +0000
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 14885)
+
+
+Started GET "/favicon.ico" for 10.211.55.2 at 2021-12-01 17:09:47 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/Searchers" for 10.211.55.5 at 2021-12-01 17:11:27 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 241)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-01 17:15:37 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers"):
+  
+Started GET "/searchers" for 10.211.55.5 at 2021-12-01 17:16:22 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers"):
+  
+Started GET "/searchers" for 10.211.55.2 at 2021-12-01 17:16:54 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers"):
+  
+Started GET "/searchers" for 10.211.55.2 at 2021-12-01 17:19:18 +0000
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 14885)
+
+
+Started GET "/favicon.ico" for 10.211.55.2 at 2021-12-01 17:19:18 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/searchers" for 10.211.55.5 at 2021-12-01 17:20:02 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 241)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-01 17:21:32 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-01 17:22:14 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 175)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-01 17:22:58 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-01 17:30:17 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers/Videris123/results"):
+  
+Started GET "/searchers/123/Results?query=VSAT&maxResults=100" for 10.211.55.2 at 2021-12-01 17:31:55 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"123"}
+Completed 200 OK in 2487ms (Views: 8.4ms | Allocations: 21579)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-01 21:00:04 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers/Videris123/results"):
+  
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-01 21:02:44 +0000
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5566ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 35628)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.2 at 2021-12-01 21:03:35 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.2 at 2021-12-01 21:03:39 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5749ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 22322)
+
+
+Completed 200 OK in 5121ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 41808)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-01 21:03:58 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 361ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 20808)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-01 21:05:35 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5733ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1648)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.2 at 2021-12-01 21:06:41 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 1608ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1619)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-01 21:09:04 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 4918ms (Views: 0.7ms | Allocations: 1625)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.3 at 2021-12-01 21:09:34 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 343ms (Views: 2.7ms | Allocations: 1618)
+
+
+Started GET "/favicon.ico" for 10.211.55.3 at 2021-12-01 21:09:35 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-01 21:12:28 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 951ms (Views: 1.1ms | Allocations: 1768)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.3 at 2021-12-01 21:13:04 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 584ms (Views: 0.4ms | Allocations: 1615)
+
+
+Started GET "/favicon.ico" for 10.211.55.3 at 2021-12-01 21:13:05 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.2 at 2021-12-02 08:49:48 +0000
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5800ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 16752)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-02 08:50:39 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 469ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 1675)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-02 08:52:14 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 553ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1657)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-02 08:54:07 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5614ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 22564)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.2 at 2021-12-02 08:57:19 +0000
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 516ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 16820)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-02 08:57:42 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 302ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1761)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-02 09:28:09 +0000
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/stuartclarke/Documents/Tools/BYOA/Shodan/APIv6/app/controllers/application_controller.rb:62: syntax error, unexpected ',', expecting `end'
+      "id" => "Videris126",
+                          ^
+/Users/stuartclarke/Documents/Tools/BYOA/Shodan/APIv6/app/controllers/application_controller.rb:63: syntax error, unexpected ',', expecting `end'
+      "name" => "Reddit BYOA",
+                             ^
+/Users/stuartclarke/Documents/Tools/BYOA/Shodan/APIv6/app/controllers/application_controller.rb:64: syntax error, unexpected ',', expecting `end'
+...hint" => "Search Reddit posts",
+...                              ^
+/Users/stuartclarke/Documents/Tools/BYOA/Shodan/APIv6/app/controllers/application_controller.rb:66: syntax error, unexpected '}', expecting `end'
+      }
+      ^
+):
+  
+app/controllers/application_controller.rb:62: syntax error, unexpected ',', expecting `end'
+app/controllers/application_controller.rb:63: syntax error, unexpected ',', expecting `end'
+app/controllers/application_controller.rb:64: syntax error, unexpected ',', expecting `end'
+app/controllers/application_controller.rb:66: syntax error, unexpected '}', expecting `end'
+app/controllers/application_controller.rb:62: syntax error, unexpected ',', expecting `end'
+app/controllers/application_controller.rb:63: syntax error, unexpected ',', expecting `end'
+app/controllers/application_controller.rb:64: syntax error, unexpected ',', expecting `end'
+app/controllers/application_controller.rb:66: syntax error, unexpected '}', expecting `end'
+Started GET "/favicon.ico" for 10.211.55.5 at 2021-12-02 09:28:10 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/searchers" for 10.211.55.5 at 2021-12-02 09:31:25 +0000
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 14973)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-02 09:33:28 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-02 09:33:52 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 265)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-02 14:48:26 +0000
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 14973)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-02 14:48:29 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-02 14:50:05 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 505ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 2113)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-06 15:19:40 +0000
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 14973)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-06 15:24:05 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-06 15:24:13 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 265)
+
+
+Started GET "/searchers/Videris123/results?query=%22default%20password%22&maxResults=100" for 10.211.55.5 at 2021-12-06 15:27:02 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"\"default password\"", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 7691ms (Views: 37.8ms | Allocations: 35206)
+
+
+Started GET "/searchers/Videris123/results?query=net:18.9.47.0/24&maxResults=100" for 10.211.55.5 at 2021-12-06 15:28:32 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"net:18.9.47.0/24", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 500 Internal Server Error in 224ms (Allocations: 646)
+
+
+  
+RuntimeError (Please upgrade your API plan to use filters or paging.):
+  
+app/controllers/application_controller.rb:12:in `index'
+Started GET "/searchers/Videris123/results?query=net:18.9.47.0/24&maxResults=100" for 10.211.55.5 at 2021-12-06 15:28:40 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"net:18.9.47.0/24", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 500 Internal Server Error in 214ms (Allocations: 701)
+
+
+  
+RuntimeError (Please upgrade your API plan to use filters or paging.):
+  
+app/controllers/application_controller.rb:12:in `index'
+Started GET "/searchers/Videris123/results?query=product:MongoDB%20-authentication&maxResults=100" for 10.211.55.5 at 2021-12-06 15:28:57 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"product:MongoDB -authentication", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 500 Internal Server Error in 742ms (Allocations: 607)
+
+
+  
+RuntimeError (Please upgrade your API plan to use filters or paging.):
+  
+app/controllers/application_controller.rb:12:in `index'
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-06 15:29:11 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 464ms (Views: 1.2ms | Allocations: 2274)
+
+
+Started GET "/searchers" for 10.211.55.3 at 2021-12-06 16:27:14 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 5ms (Views: 1.2ms | Allocations: 263)
+
+
+Started GET "/favicon.ico" for 10.211.55.3 at 2021-12-06 16:27:14 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/searchers/Videris123/results?query=%22default%20password%22&maxResults=100" for 10.211.55.5 at 2021-12-06 16:29:28 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"\"default password\"", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 7024ms (Views: 58.8ms | Allocations: 35324)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-06 16:31:46 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 626ms (Views: 3.2ms | Allocations: 2218)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-07 09:51:40 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 6ms (Views: 0.9ms | Allocations: 264)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-08 14:54:08 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 54ms (Views: 15.4ms | Allocations: 264)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-09 14:26:31 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 1498ms (Views: 51.1ms | Allocations: 2235)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-09 14:27:34 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5429ms (Views: 99.7ms | Allocations: 24554)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-09 14:39:42 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 550ms (Views: 4.5ms | Allocations: 2214)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-10 12:17:09 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 28ms (Views: 3.9ms | Allocations: 264)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-13 18:02:25 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 7ms (Views: 1.4ms | Allocations: 264)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-14 09:41:08 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5099ms (Views: 47.4ms | Allocations: 24144)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-14 13:07:38 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 4080ms (Views: 12.2ms | Allocations: 2207)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2021-12-15 11:24:52 +0000
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 14973)
+
+
+Started GET "/searchers/Videris123/Results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-15 11:24:58 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers/Videris123/Results"):
+  
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-15 11:29:05 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5295ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 24614)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.2 at 2021-12-20 16:53:38 +0000
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 500 Internal Server Error in 5216ms (ActiveRecord: 0.0ms | Allocations: 26137)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/controllers/application_controller.rb:19:in `block in index'
+app/controllers/application_controller.rb:14:in `each'
+app/controllers/application_controller.rb:14:in `each_with_index'
+app/controllers/application_controller.rb:14:in `index'
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 16:55:41 +0000
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 500 Internal Server Error in 5687ms (ActiveRecord: 0.0ms | Allocations: 25907)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/controllers/application_controller.rb:19:in `block in index'
+app/controllers/application_controller.rb:14:in `each'
+app/controllers/application_controller.rb:14:in `each_with_index'
+app/controllers/application_controller.rb:14:in `index'
+Started GET "/favicon.ico" for 10.211.55.5 at 2021-12-20 16:55:47 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/searchers/123/Results?Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-20 16:58:54 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers/123/Results"):
+  
+Started GET "/searchers/123/Results?Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-20 16:59:03 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers/123/Results"):
+  
+Started GET "/searchers/123/Results?Cobham%20SATCOM&maxResults=100" for 10.211.55.5 at 2021-12-20 17:04:43 +0000
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/searchers/123/Results"):
+  
+Started GET "/searchers/123/Results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:04:57 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers/123/Results"):
+  
+Started GET "/searchers" for 10.211.55.5 at 2021-12-20 17:05:14 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 530)
+
+
+Started GET "/searchers/123/Results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:05:23 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/searchers/123/Results"):
+  
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:05:36 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5742ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 26657)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:06:37 +0000
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 26ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 14973)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:06:49 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 279)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:07:56 +0000
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 14983)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:08:53 +0000
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 14974)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:08:58 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:10:13 +0000
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 14974)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:10:32 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 379)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:11:06 +0000
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 14974)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:11:10 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:12:35 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 266)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:12:47 +0000
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 9725ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 25152)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:14:52 +0000
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 14805)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:14:56 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 112)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:15:51 +0000
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 39ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 14805)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:16:13 +0000
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 11922ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 41343)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:17:29 +0000
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 15126)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/application_controller.rb:12:in `index'
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:18:12 +0000
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5629ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 41312)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:20:30 +0000
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5584ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 41324)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:21:01 +0000
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 273ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 41366)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:22:56 +0000
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5226ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 41828)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:24:01 +0000
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5333ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 41896)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:24:43 +0000
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5582ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 41373)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:25:13 +0000
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 266ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 41480)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:30:28 +0000
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 14646)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/controllers/application_controller.rb:12:in `index'
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:31:46 +0000
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 12552ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 41442)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:32:14 +0000
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 642ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 42087)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:34:55 +0000
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5547ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 41889)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:35:11 +0000
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 730ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 41818)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:37:00 +0000
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 6538ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 41826)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:37:12 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 269ms (Views: 8.4ms | Allocations: 26979)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:38:10 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 10100ms (Views: 9.7ms | Allocations: 26523)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:38:36 +0000
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 309ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 41395)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:38:49 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 500 Internal Server Error in 2ms (Allocations: 1544)
+
+
+  
+NoMethodError (undefined method `query' for #<ActionDispatch::Request GET "http://10.211.55.2:3010/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5>
+Did you mean?  to_query):
+  
+app/controllers/application_controller.rb:12:in `index'
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:39:04 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 500 Internal Server Error in 0ms (Allocations: 163)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/application_controller.rb:12:in `index'
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:39:56 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 500 Internal Server Error in 1ms (Allocations: 1437)
+
+
+  
+NoMethodError (undefined method `get' for #<ActionDispatch::Request GET "http://10.211.55.2:3010/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5>
+Did you mean?  get?
+               gem
+               GET):
+  
+app/controllers/application_controller.rb:12:in `index'
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:40:13 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 12263ms (Views: 7.8ms | Allocations: 26321)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:40:38 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 565ms (Views: 13.5ms | Allocations: 26234)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:41:01 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 11443ms (Views: 11.7ms | Allocations: 26252)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:41:41 +0000
+  
+SyntaxError (/Users/stuartclarke/Documents/Tools/BYOA/Shodan/APIv6/app/controllers/application_controller.rb:76: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/application_controller.rb:76: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/application_controller.rb:76: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:41:51 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 6627ms (Views: 15.0ms | Allocations: 26710)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.5 at 2021-12-20 17:53:09 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 5742ms (Views: 7.5ms | Allocations: 27005)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2022-01-21 14:35:44 +0000
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 14970)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2022-01-21 14:39:35 +0000
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 14973)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2022-01-21 15:01:15 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 8ms (Views: 1.2ms | Allocations: 279)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2022-01-21 18:07:15 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 32ms (Views: 4.6ms | Allocations: 265)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2022-01-25 17:13:08 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 46ms (Views: 20.0ms | Allocations: 266)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2022-01-25 17:13:48 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 121ms (Views: 0.1ms | Allocations: 263)
+
+
+Started GET "/searchers/Videris123/results?query=port:9080%20http.favicon.hash:902521196&maxResults=100" for 10.211.55.5 at 2022-01-25 17:21:53 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"port:9080 http.favicon.hash:902521196", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 500 Internal Server Error in 1013ms (Allocations: 978)
+
+
+  
+RuntimeError (Please upgrade your API plan to use filters or paging.):
+  
+app/controllers/application_controller.rb:13:in `index'
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.2 at 2022-01-31 15:12:48 +0000
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 1751ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 39770)
+
+
+Started GET "/searchers/Videris123/results?query=VSAT&maxResults=100" for 10.211.55.2 at 2022-01-31 15:24:41 +0000
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"VSAT", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 713ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 40114)
+
+
+Started GET "/searchers/Videris123/results?query=Cobham%20SATCOM&maxResults=100" for 10.211.55.2 at 2022-01-31 15:25:17 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"Cobham SATCOM", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 461ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1523)
+
+
+Started GET "/searchers" for 10.211.55.5 at 2022-01-31 15:31:32 +0000
+Processing by ApplicationController#index as HTML
+Completed 200 OK in 2ms (Views: 0.4ms | Allocations: 134)
+
+
+Started GET "/searchers/Videris123/results?query=vsat&maxResults=100" for 10.211.55.5 at 2022-01-31 15:33:48 +0000
+Processing by ApplicationController#index as HTML
+  Parameters: {"query"=>"vsat", "maxResults"=>"100", "id"=>"Videris123"}
+Completed 200 OK in 2071ms (Views: 12.2ms | Allocations: 24852)
+
+

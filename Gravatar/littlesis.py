@@ -8,9 +8,10 @@ E.g.
     uvicorn main:app --host 192.168.2.25
 """
 import uuid
-from vcf import create_relationship
 
 import requests
+
+from vcf import create_relationship
 
 
 # ============================ Little Sis functions ============================
@@ -196,6 +197,7 @@ def get_littlesis_network(entity_id: int):
 
 async def get_littlesis(query: str, max_results: int):
     """Searches Little Sis API. Auto-enriches top 10 results to fetch connections of the found entity."""
+    max_results = int(max_results)
     output = dict()
     output["errors"] = []
     try:

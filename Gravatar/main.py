@@ -8,10 +8,8 @@ E.g.
     uvicorn main:app --host 192.168.2.25
 """
 
-
 import yaml
 from fastapi import FastAPI, status
-
 
 from vcf import *
 from gravatar import *
@@ -30,18 +28,23 @@ def get_searchers():
     for searcher in CONFIG["searchers"].values():
         if searcher["enabled"]:
             searcher.pop("enabled", None)
+            searcher.pop("redirect", None)
             searchers.append(searcher)
 
     return searchers
 
 
-
 @app.get("/searchers/{searcher_id}/results", response_model=SearchResults, response_model_exclude_none=True,
          status_code=status.HTTP_200_OK)
-async def get_results(searcher_id, query: str, maxResults=100):
+async def get_results(searcher_id, query: str, maxResults=50):
     if searcher_id in CONFIG["searchers"]:
         if CONFIG["searchers"][searcher_id]["enabled"]:
-            return await globals()["get_" + searcher_id](query, maxResults)
+            if "redirect" in CONFIG["searchers"][searcher_id].keys():
+                redirect = CONFIG["searchers"][searcher_id]["redirect"] + f"?query={query}&maxResults={str(maxResults)}"
+                print(redirect)
+                return requests.get(redirect).json()
+            else:
+                return await globals()["get_" + searcher_id](query, maxResults)
 
         else:
             return {"errors": [{"message": "Searcher not enabled."}]}
