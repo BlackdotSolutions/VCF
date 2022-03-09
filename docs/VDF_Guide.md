@@ -120,14 +120,14 @@ The examples in this guide were created using [https://docs.beeceptor.com/docs/f
 
 #### Response
 
-```java
+```json
 [
-{
-"id": "videris-byoa-id",
-"name": "Videris BYOA example",
-"hint": "Hint text",
-"tooltip": "Tooltip text"
-}
+  {
+    "id": "videris-byoa-id",
+    "name": "Videris BYOA example",
+    "hint": "Hint text",
+    "tooltip": "Tooltip text"
+  }
 ]
 ```
 
@@ -152,7 +152,7 @@ This example searcher is displayed in Videris Search under the **Databases** cat
 
 #### Response
 
-```java
+```json
 {
     "searchResults": [
   {
@@ -244,12 +244,14 @@ The details of the specific error can be found in the Data Integration Service l
 
 Customised error text can be used if you wish to report a particular error to the user (e.g. an error collecting results):
 
-```java
+```json
 {
-"searchResults": [],
-"errors": [
-{"message": "This is an error"}
-]
+  "searchResults": [],
+  "errors": [
+    {
+      "message": "This is an error"
+    }
+  ]
 }
 ```
 
@@ -272,7 +274,7 @@ This is required before custom adaptors can be discovered or run.
     
 3.  Enter the _{base url}_ for the custom adaptor service (e.g. [https://videris-byoa.free.beeceptor.com](https://videris-byoa.free.beeceptor.com/)) in the **Custom Adaptors URL** box.
     
-4.  Scroll up to the top and **Apply configuration**. This should reset the server - if it doesn’t, you will need to do this manually.
+4.  Scroll up to the top and **Apply configuration**. This should reset the server - if it doesn't, you will need to do this manually.
     
 
 Once configured, the relevant section of the configuration site should look something like this:
@@ -283,32 +285,32 @@ Note: after the Data Integration Service (DIS) starts, it can take up to 5 minut
 
 To restart DIS only, rather than resetting the server, use the following cli commands:
 
-*   ```plain
+*   ```bash
     kubectl scale --replicas=0 deploy/data-integration
     ```
     
-*   ```java
+*   ```bash
     kubectl scale --replicas=1 deploy/data-integration
     ```
     
 
 To check the gateway metadata current caching policy:
 
-*   ```java
+*   ```bash
     kubectl set env deploy/gateway --list
     ```
     
 
 To set the gateway metadata caching policy to zero:
 
-*   ```java
+*   ```bash
     kubectl set env deploy/gateway GATEWAY__METADATACACHEMINUTES=0
     ```
     
 
 To set the gateway metadata caching policy back to the default again:
 
-*   ```java
+*   ```bash
     kubectl set env deploy/gateway GATEWAY__METADATACACHEMINUTES-
     ```
     
@@ -317,7 +319,7 @@ To set the gateway metadata caching policy back to the default again:
 
 This is required before custom adaptors can be run.
 
-1.  Navigate to `[hostname]:30002/data-collection/account-groups` and authenticate.
+1.  Navigate to `https://[hostname]:30002/data-collection/account-groups` and authenticate.
     
 2.  Select the **New** button to add a new account group.
     
@@ -327,7 +329,7 @@ This is required before custom adaptors can be run.
     
 5.  Click **Add** to save the new account group.
     
-6.  Navigate to `[hostname]:30002/data-collection/account-groups?p=45`. You should see the account group which was just added listed in the table.
+6.  Navigate to `https://[hostname]:30002/data-collection/account-groups?p=45`. You should see the account group which was just added listed in the table.
     
 
 ![](attachments/3186950147/3195699201.png)
