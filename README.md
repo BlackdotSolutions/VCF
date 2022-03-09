@@ -1,16 +1,16 @@
-#Videris Connector Framework
+# Videris Connector Framework
 
-##Example adaptors
+## Example adaptors
 
 Listed by language
 
-###Python
+### Python
 
 * [Gravatar](/Gravatar/README.md)
 * [LittleSis](/LittleSis/README.md)
 
 
-###Ruby
+### Ruby
 
 * [Shodan](/Shodan/README.md)
 * [Bitcoin Abuse](/Bitcoin Abuse/README.md)
