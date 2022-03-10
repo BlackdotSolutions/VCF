@@ -13,6 +13,7 @@ from fastapi import FastAPI, status
 
 from vcf import *
 from gravatar import *
+from littlesis import *
 
 app = FastAPI()
 
