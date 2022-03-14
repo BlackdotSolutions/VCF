@@ -16,7 +16,7 @@ To enable or disable searcher, update `config.yml` and set "enabled" as `True` o
 
 ## Little Sis
 
-LittleSis.org is a free database of who-knows-who at the heights of business and government. It seems to be quite
+[LittleSis.org](https://LittleSis.org) is a free database of who-knows-who at the heights of business and government. It seems to be quite
 US-centric but holds a large network, connecting the dots between the world's most powerful people and organizations.
 
 This adaptor allows Videris users to search for people or organisations by name. The adaptor (mostly) respects the
