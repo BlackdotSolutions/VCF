@@ -1,4 +1,4 @@
-# Gravatar
+# Little Sis
 
 ## Configuration
 
