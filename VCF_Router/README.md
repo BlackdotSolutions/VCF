@@ -1,4 +1,4 @@
-# Gravatar
+# VCF Router
 
 ## Configuration
 
@@ -7,7 +7,7 @@ address of the adaptor you want to route that searcher to.
 
 ```yaml 
     searchers:
-      database:
+      database:   # <<< This needs to match the id on the next line.
         id: database
         name: My internal database
         hint: Search by name
@@ -25,7 +25,7 @@ address of the adaptor you want to route that searcher to.
 
 ## Running the router
 
-The adaptors are written in Python 3.10 and make use of the FastAPI framework which runs on a uvicorn server.
+The adaptor is written in Python 3.10 and make use of the [FastAPI](https://fastapi.tiangolo.com/) framework which runs on a [uvicorn](https://www.uvicorn.org/) server.
 
 Install the required packages:
 
