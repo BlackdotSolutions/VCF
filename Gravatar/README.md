@@ -28,7 +28,7 @@ on the profile (Flickr, Facebook, Goodreads, Tumblr, Twitter, Wordpress).
 
 ## Enabling the adaptor
 
-The adaptor is written in Python 3.10 and make use of the FastAPI framework which runs on a uvicorn server.
+The adaptor is written in Python 3.10 and make use of the [FastAPI](https://fastapi.tiangolo.com/) framework which runs on a [uvicorn](https://www.uvicorn.org/) server.
 
 Install the required packages:
 
