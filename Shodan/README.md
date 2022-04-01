@@ -1,7 +1,6 @@
 # README
 
-This README documents steps that are necessary to get the
-application up and running.
+This README documents steps that are necessary to get the application up and running.
 
 ## Ruby version
 ruby "3.0.2"
