@@ -6,10 +6,11 @@ ruby "3.0.2"
 
 
 ## System dependencies
-gem 'uri'
-gem 'securerandom'
-gem 'net/http'
-gem 'json'
+
+  gem 'uri'
+  gem 'securerandom'
+  gem 'net/http'
+  gem 'json'
 
 
 ## Configuration
