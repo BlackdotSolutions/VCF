@@ -7,7 +7,7 @@ class ApplicationController < ActionController::API
 
   def index
     # Bitcoin Abuse setup
-    apiBitcoinAbuse = 'Fj6Rf8xoVlVFfa872l1eOl9Psq7lZ2YoJLdr0kh5OvWLF3odWpvxEziX7BoX'
+    apiBitcoinAbuse = '<API-Key>'
 
     out_data = []
 
