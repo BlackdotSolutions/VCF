@@ -1,16 +1,16 @@
 # README
 This README documents steps that are necessary to get the application up and running.
 
-* Ruby version
+## Ruby version
 ruby "3.0.2"
 
 
 ## System dependencies
 
-  gem 'uri'
-  gem 'securerandom'
-  gem 'net/http'
-  gem 'json'
+    gem 'uri'
+    gem 'securerandom'
+    gem 'net/http'
+    gem 'json'
 
 
 ## Configuration
@@ -18,15 +18,15 @@ The main code is found at [app/controllers/application_controller.rb](app/contro
 
 In the root of directory run
   
-  bundle install  
+    bundle install  
 
 And to bind your server to port 3010 and your IP
   
-  rails server -p 3010 --binding=<IP-OF-YOUR-HOST>
+    rails server -p 3010 --binding=<IP-OF-YOUR-HOST>
 
 e.g.
   
-  rails server -p 3010 --binding=10.211.55.2
+    rails server -p 3010 --binding=10.211.55.2
 
 
 ## Deployment instructions
