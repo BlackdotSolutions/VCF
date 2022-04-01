@@ -1,7 +1,5 @@
 # README
-
-This README documents steps that are necessary to get the
-application up and running.
+This README documents steps that are necessary to get the application up and running.
 
 * Ruby version
 ruby "3.0.2"
@@ -13,7 +11,10 @@ gem 'securerandom'
 gem 'net/http'
 gem 'json'
 
+
 * Configuration
+The main code is found at [/app/controllers/application_controller.rb](/app/controllers/application_controller.rb). You'll need to add your own API Key to line 10 of this file.
+
 In the root of directory run
 bundle install  
 
