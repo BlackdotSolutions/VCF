@@ -13,7 +13,7 @@ gem 'json'
 
 
 * Configuration
-The main code is found at [/app/controllers/application_controller.rb](/app/controllers/application_controller.rb). You'll need to add your own API Key to line 10 of this file.
+The main code is found at [app/controllers/application_controller.rb](app/controllers/application_controller.rb). You'll need to add your own API Key to line 10 of this file.
 
 In the root of directory run
 bundle install  
