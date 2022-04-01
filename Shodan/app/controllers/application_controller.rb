@@ -5,7 +5,7 @@ require 'securerandom'
 class ApplicationController < ActionController::API
 
   def index
-    api = Shodan::Shodan.new('<INSERT API KEY>')
+    api = Shodan::Shodan.new('<API-Key>')
     out_data = []
 
     if request.query_parameters['query']
