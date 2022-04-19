@@ -46,7 +46,7 @@ Prerequisites
 
 Customers wishing to use the VCF will need some technical expertise and development resources.
 
-Specifically, they will need to be able to:
+Specifically, you will need to be able to:
 
 *   Create a service providing endpoints which conform to our [OpenAPI specification](https://build.bds-tools.com/job/CollectionServer/job/master/lastSuccessfulBuild/artifact/Docs/BYOASpecification.json). This specification is available on request. The service will need to be accessible to their Videris Server.
     
@@ -66,13 +66,13 @@ To use the VCF, the customer organisation will need to create a _Custom Adaptor 
     
     *   This endpoint allows Videris to retrieve details of the custom searcher(s) available.
         
-    *   We call this **discovering** **adaptors**.
+    *   We call this **discovering adaptors**.
         
 2.  _**GET {base url}/searchers/\[searcherId\]/results**_
     
     *   This endpoint allows Videris to retrieve search results from a specific custom searcher.
         
-    *   We call this **running** **adaptors**.
+    *   We call this **running adaptors**.
         
 
 Where multiple searchers are created, each searcher will need its own results endpoint.
@@ -110,7 +110,7 @@ Running adaptors is also a two stage process. In this case, step 1 will trigger 
 Examples
 --------
 
-Full descriptions, requirements and recommendations are listed in [the OpenAPI specification.](https://build.bds-tools.com/job/CollectionServer/job/master/lastSuccessfulBuild/artifact/Docs/BYOASpecification.json) This is available on request. We suggest copying the contents into [https://editor.swagger.io/](https://editor.swagger.io/).
+Full descriptions, requirements and recommendations are listed in the OpenAPI specification. This is available on request. We suggest copying the contents into [https://editor.swagger.io/](https://editor.swagger.io/).
 
 The examples in this guide were created using [https://docs.beeceptor.com/docs/features-mocking-rules/](https://docs.beeceptor.com/docs/features-mocking-rules/).
 
