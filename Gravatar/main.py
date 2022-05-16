@@ -16,12 +16,13 @@ from gravatar import *
 
 app = FastAPI()
 
-with open('config.yml', 'r') as file:
-    CONFIG = yaml.safe_load(file)
+
 
 
 @app.get("/searchers/", response_model=List[Searcher], response_model_exclude_none=True)
 def get_searchers():
+    with open('config.yml', 'r') as file:
+        CONFIG = yaml.safe_load(file)
     searchers = []
 
     for searcher in CONFIG["searchers"].values():
@@ -36,6 +37,8 @@ def get_searchers():
 @app.get("/searchers/{searcher_id}/results", response_model=SearchResults, response_model_exclude_none=True,
          status_code=status.HTTP_200_OK)
 async def get_results(searcher_id, query: str, maxResults=50):
+    with open('config.yml', 'r') as file:
+        CONFIG = yaml.safe_load(file)
     if searcher_id in CONFIG["searchers"]:
         if CONFIG["searchers"][searcher_id]["enabled"]:
             if "redirect" in CONFIG["searchers"][searcher_id].keys():
