@@ -4,4 +4,4 @@ searchers:
     name: Little Sis
     hint: Search for a person
     tooltip: Find Gravatar profile by email address
-    enabled: True # True or False
+    enabled: True
