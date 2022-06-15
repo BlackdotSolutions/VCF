@@ -1,0 +1,7 @@
+searchers:
+  chainalysis:
+    id: chainalysis
+    name: Chainalysis Sanctions API
+    hint: Enter a cryptocurrency wallet address
+    tooltip: Check if cyptocurrency wallet is sanctioned
+    enabled: True

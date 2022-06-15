@@ -1,0 +1,56 @@
+{
+    "searchResults": [
+        {
+            "key": "99BEC342-3BB6-4B5F-8213-0D22EC97D633",
+            "title": "1da5821544e25c636c1417ba96ade4cf6d2f9b5a",
+            "subTitle": "SANCTIONS: OFAC SDN Secondeye Solution 2021-04-15 1da5821544e25c636c1417ba96ade4cf6d2f9b5a",
+            "summary": "Pakistan-based Secondeye Solution (SES), also known as Forwarderz, is a synthetic identity document vendor that was added to the OFAC SDN list in April 2021.\n\nSES customers could buy fake identity documents to sign up for accounts with cryptocurrency exchanges, payment providers, banks, and more under false identities. According to the US Treasury Department, SES assisted the Internet Research Agency (IRA), the Russian troll farm that OFAC designated pursuant to E.O. 13848 in 2018 for interfering in the 2016 presidential election, in concealing its identity to evade sanctions.\n\nhttps://home.treasury.gov/news/press-releases/jy0126",
+            "source": "Chainalysis Sanctions API",
+            "entities": [
+                {
+                    "id": "586dd96d-8422-31e2-a803-63b00d04b05f",
+                    "type": "EntityAsset",
+                    "attributes": {
+                        "Name": "1da5821544e25c636c1417ba96ade4cf6d2f9b5a",
+                        "Url": "https://home.treasury.gov/news/press-releases/jy0126"
+                    }
+                },
+                {
+                    "id": "a39e46a6-2906-3527-b6d8-d250ce76eaf2",
+                    "type": "EntityWebPage",
+                    "attributes": {
+                        "Url": "https://home.treasury.gov/news/press-releases/jy0126"
+                    }
+                },
+                {
+                    "id": "b1c26dff-4838-34f8-9b07-8b74a739d507",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "586dd96d-8422-31e2-a803-63b00d04b05f",
+                        "Title": "Sanctioned URL",
+                        "ToId": "a39e46a6-2906-3527-b6d8-d250ce76eaf2"
+                    }
+                },
+                {
+                    "id": "f7b67aaf-a643-3550-8368-a74ba5e58151",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "SANCTIONS: OFAC SDN Secondeye Solution 2021-04-15"
+                    }
+                },
+                {
+                    "id": "96a28a46-4ffa-3bd0-a0e1-2d08ede6038b",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "586dd96d-8422-31e2-a803-63b00d04b05f",
+                        "Title": "Sanction Name",
+                        "ToId": "f7b67aaf-a643-3550-8368-a74ba5e58151"
+                    }
+                }
+            ],
+            "url": "https://home.treasury.gov/news/press-releases/jy0126"
+        }
+    ]
+}
