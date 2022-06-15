@@ -1,5 +1,9 @@
 # Chainalysis
 
+## API Key & Usage
+
+You must source an API key directly for the Chainalysis Sanctions API from Chainalysis, and you must comply with their license and usage restrictions.
+
 ## Configuration
 
 To enable or disable searcher, update `config.yml` and set "enabled" as `True` or `False`.
@@ -36,7 +40,7 @@ pip install -r requirements.txt
 Configure environment variables:
 
 ```
-export CHAINALYSIS_API_KEY=a222ee4a1699442d8f8cd1dab11062a14bddddf8e439454fb6d73c6ce6024ee7
+export CHAINALYSIS_API_KEY=YOUR_API_KEY
 ```
 
 Run API on the uvicorn server:
