@@ -1,9 +1,9 @@
 # Videris Connector Framework
-This repository contains some examples adaptors that add new data sources to Videris via the Videris Connector Framework (VCF). 
+This repository contains some examples adaptors that add new data sources to Videris via the Videris Connector Framework (VCF) and are defined as Third Party Content. 
 
 These adaptors have been created and shared to help demonstrate the versitility of the VCF and how easy it is for you to create your own adaptors. The current selection of adaptors been written by 3rd party developers or by various members of Blackdot Solutions, who are not members of our development team but have some programming skills. 
 
-As such, **these are not officially supported by Blackdot Solutions, they do not fall under your Videris license agreement and are used at your own risk**.
+As such, **because these connectors are defined as Third Party Content they are not officially supported by Blackdot Solutions, they are not covered under your Videris license agreement and are used at your own risk**.
 
 The code is fully and freely available for you to:
  * review
