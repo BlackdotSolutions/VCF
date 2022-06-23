@@ -50,3 +50,7 @@ uvicorn main:app --host <IPv4 address>
 ```
 
 The IPv4 ip address needs to be accessible to Videris, so make sure you configure any necessary port forwarding rules.
+
+## Example in Videris
+![2022-06-13_10-12-16](https://user-images.githubusercontent.com/87775802/175311324-8bc80b50-7763-4071-839b-f044b1151e44.jpg)
+
