@@ -1,0 +1,82 @@
+{
+  "$comments": "This is a sample config.json file that demonstrates the core features. It uses the sample SQL Server database AdventureWorks - you can deploy an Azure SQL database with this in the Azure portal",
+  "connections": [
+    {
+      "$comments": "This is a super basic searcher definition with the system providing defaults for many aspects",
+      "connectionString": "Server=your-server;Initial Catalog=your-db;Persist Security Info=False;User ID=userid;Password=password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+      "id": "simple",
+      "name": "Simple",
+      "serverType": "SQLServer",
+      "entities": [
+        {
+          "name": "SalesLT.Customer",
+          "title": "LastName",
+          "source": "Customers (Individuals)",
+          "searchColumns": [
+            { "name": "LastName" }
+          ],
+          "entityDefinition": {
+            "entityType": "EntityPerson",
+            "entityAttributes": [
+              { "fromColumn": "FirstName", "toAttribute": "FirstName"},
+              { "fromColumn": "LastName", "toAttribute": "LastName"}
+            ]
+          }
+        }
+      ]
+    },
+    
+    {
+      "$comments": "This example shows how a searcher can include multiple entity types in its results and how titles can be brought together from multiple properties and score weighting configured on a per column basis",
+      "connectionString": "Server=your-server;Initial Catalog=your-db;Persist Security Info=False;User ID=userid;Password=password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+      "id": "adventureworks",
+      "name": "AdventureWorks",
+      "serverType": "SQLServer",
+      "entities": [
+        {
+          "name": "SalesLT.Customer",
+          "key": "CustomerID",
+          "title": "FirstName + ' ' + LastName + ' (' + CompanyName + ')'",
+          "source": "Customers (Individuals)",
+          "scoreBasedOnMatchCount": false,
+          "searchColumns": [
+            { "name": "FirstName", "weight": 1 },
+            { "name": "LastName", "weight": 2 }
+          ],
+          "entityDefinition": {
+            "entityType": "EntityPerson",
+            "entityAttributes": [
+              { "fromColumn": "FirstName", "toAttribute": "FirstName"},
+              { "fromColumn": "LastName", "toAttribute": "LastName"}
+            ]
+          }
+        },
+        {
+          "name": "SalesLT.Customer",
+          "key": "CustomerID",
+          "title": "CompanyName",
+          "source": "Customers (Companies)",
+          "searchColumns": [
+            { "name": "CompanyName", "weight": 2 }
+          ],
+          "entityDefinition": {
+            "entityType": "EntityBusiness",
+            "entityAttributes": [
+              { "fromColumn": "CompanyName", "toAttribute": "Name"}
+            ]
+          }
+        },
+        {
+          "name": "SalesLT.Product",
+          "key": "ProductID",
+          "title": "Name",
+          "source": "Products",
+          "searchColumns": [
+            { "name": "Name", "weight": 1 },
+            { "name": "ProductNumber", "weight": 3 }
+          ]
+        }
+      ]
+    }
+  ]
+}
