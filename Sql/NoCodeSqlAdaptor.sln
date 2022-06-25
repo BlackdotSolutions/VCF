@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "NoCodeSqlAdaptor", "NoCodeSqlAdaptor\NoCodeSqlAdaptor.fsproj", "{98BC555A-0166-441F-B785-2B3A961035CF}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AzureContainerApps.Deploy", "AzureContainerApps.Deploy\AzureContainerApps.Deploy.fsproj", "{D4E9558C-B539-4D34-B058-3A5C8D586240}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AwsEcsDeploy", "AwsEcs.Deploy\src\AwsEcsDeploy\AwsEcsDeploy.fsproj", "{91EB62D8-A384-434D-ADE5-7A569CF42F06}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "NoCodeSqlAdaptor.Common", "NoCodeSqlAdaptor.Common\NoCodeSqlAdaptor.Common.fsproj", "{297401DB-EF30-479C-9FAD-860F5535AC5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98BC555A-0166-441F-B785-2B3A961035CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BC555A-0166-441F-B785-2B3A961035CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BC555A-0166-441F-B785-2B3A961035CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BC555A-0166-441F-B785-2B3A961035CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4E9558C-B539-4D34-B058-3A5C8D586240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E9558C-B539-4D34-B058-3A5C8D586240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E9558C-B539-4D34-B058-3A5C8D586240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E9558C-B539-4D34-B058-3A5C8D586240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91EB62D8-A384-434D-ADE5-7A569CF42F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91EB62D8-A384-434D-ADE5-7A569CF42F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91EB62D8-A384-434D-ADE5-7A569CF42F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91EB62D8-A384-434D-ADE5-7A569CF42F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{297401DB-EF30-479C-9FAD-860F5535AC5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{297401DB-EF30-479C-9FAD-860F5535AC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{297401DB-EF30-479C-9FAD-860F5535AC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{297401DB-EF30-479C-9FAD-860F5535AC5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

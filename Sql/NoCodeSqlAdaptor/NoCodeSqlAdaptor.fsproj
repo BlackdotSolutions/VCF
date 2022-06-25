@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Include="config.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <Compile Include="SecretProviders\Default.fs" />
+      <Compile Include="SecretProviders\AzureKeyVault.fs" />
+      <Compile Include="SecretProviders\AwsSecretManager.fs" />
+      <Compile Include="SpectreBindings.fs" />
+      <Compile Include="Database.fs" />
+      <Compile Include="ApiTypes.fs" />
+      <Compile Include="Configuration.fs" />
+      <Compile Include="Query.fs" />
+      <Compile Include="ApiTokenAuthentication.fs" />
+      <Compile Include="Api.fs" />
+      <Compile Include="Program.fs" />
+      <Content Include=".env" Condition="'$(Configuration)' == 'Debug'">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <!--<ItemGroup Condition="'$(Configuration)' == 'Debug'">
+        <None Update=".env" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>-->
+
+    <ItemGroup>
+      <PackageReference Include="Argu" Version="6.1.1" />
+      <PackageReference Include="AWSSDK.SecretsManager" Version="3.7.2.13" />
+      <PackageReference Include="Azure.Identity" Version="1.5.0" />
+      <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.2.0" />
+      <PackageReference Include="FSharpx.Async" Version="1.14.1" />
+      <PackageReference Include="FsHttp" Version="8.0.1" />
+      <PackageReference Include="FsToolkit.ErrorHandling" Version="2.13.0" />
+      <PackageReference Include="Giraffe" Version="6.0.0-alpha-2" />
+      <PackageReference Include="Npgsql" Version="6.0.2" />
+      <PackageReference Include="Saturn" Version="0.15.0" />
+      <PackageReference Include="Spectre.Console" Version="0.43.1-preview.0.17" />
+      <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+      <PackageReference Include="Thoth.Json.Giraffe" Version="6.0.0-beta-001" />
+      <PackageReference Include="Thoth.Json.Net" Version="8.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NoCodeSqlAdaptor.Common\NoCodeSqlAdaptor.Common.fsproj" />
+    </ItemGroup>
+
+</Project>
