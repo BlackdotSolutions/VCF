@@ -1,5 +1,7 @@
 # README
-This README documents steps that are necessary to get the application up and running.
+This README documents steps that are necessary to get the application up and running. The Bitcoin Abuse connector will lookup bitcoin addresses that have been linked to criminal activity searching a public database of bitcoin addresses used by scammers, hackers, and criminals.
+
+
 
 ## Ruby version
 ruby "3.0.2"
