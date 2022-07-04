@@ -37,7 +37,7 @@ Install the required packages:
 pip install -r requirements.txt
 ```
 
-Configure environment variables:
+Configure environment variables. If you're using a virtual environment, this needs to go in the `activate` file.
 
 ```
 export CHAINALYSIS_API_KEY=YOUR_API_KEY
