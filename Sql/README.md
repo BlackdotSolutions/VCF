@@ -1,6 +1,6 @@
 # SQL Adaptor
 
-This repository contains a generic SQL search adaptor for the Videris Bring Your Own Adaptor system. It can be deployed as a set of .NET 6.0 binaries or as a Docker container for execution in a host of your choice.
+This repository contains a generic SQL search adaptor for the Videris Connector Framework. It can be deployed as a set of .NET 6.0 binaries or as a Docker container for execution in a host of your choice.
 
 Configuration of the adaptor takes place in two places:
 
