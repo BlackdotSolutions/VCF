@@ -1,0 +1,13 @@
+searchers:
+  cribis_company:
+    id: cribis_company
+    name: CRIBIS Company Search API
+    hint: Enter a company to search for
+    tooltip: Get the CRIBIS information of a company
+    enabled: True
+  cribis_people:
+    id: cribis_people
+    name: CRIBIS People Search API
+    hint: Enter a person to search for
+    tooltip: Get the CRIBIS information of a person
+    enabled: True
