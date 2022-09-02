@@ -23,6 +23,7 @@ Listed by language
 * [Gravatar](/Gravatar/)
 * [LittleSis](/LittleSis/)
 * [VCF Router](/VCF_Router/)
+* [Cribis](/Cribis/)
 
 ### Ruby
 
