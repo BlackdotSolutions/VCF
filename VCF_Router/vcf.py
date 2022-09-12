@@ -14,11 +14,13 @@ class Searcher(BaseModel):
 
 class Attribute(BaseModel):
     """All possible attributes that entities Videris accepts (not yet complete)"""
+    CompanyNumber: Optional[str]
     Data: Optional[str]  # Images
     DateOfDeath: Optional[str]
     Description: Optional[str]
     Direction: Optional[str]
     Dob: Optional[str]
+    Duns: Optional[str]
     EmailAddress: Optional[str]
     FirstName: Optional[str]
     FromId: Optional[str]  # Relationships
@@ -26,19 +28,31 @@ class Attribute(BaseModel):
     Id: Optional[str]
     Imageuri: Optional[str]
     LastName: Optional[str]
+    Liquidated: Optional[str]
+    LocalName: Optional[str]
     Name: Optional[str]
     Nationality: Optional[str]
     OtherNames: Optional[str]
+    Postcode: Optional[str]
+    Region: Optional[str]
+    RegistrationState: Optional[str]
+    RegistrationCountry: Optional[str]
     Salutation: Optional[str]
     ScreenName: Optional[str]
     Site: Optional[str]
+    Status: Optional[str]
+    StatusSince: Optional[str]
+    Street1: Optional[str]
+    Street2: Optional[str]
+    Street3: Optional[str]
     Title: Optional[str]  # Relationships
     ToId: Optional[str]  # Relationships
+    TradeDescription: Optional[str]
     Uri: Optional[str]
     Url: Optional[str]
     UserId: Optional[str]
     UserName: Optional[str]
-    Username: Optional[str]
+    VatNumber: Optional[str]
     Verified: Optional[str]
 
 
