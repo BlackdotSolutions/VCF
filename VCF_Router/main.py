@@ -7,23 +7,21 @@ E.g.
 
     uvicorn main:app --host 192.168.2.25
 """
-
+import requests
 import yaml
 from fastapi import FastAPI, status
 
 from vcf import *
-from gravatar import *
-from littlesis import *
 
 app = FastAPI()
-
-with open('config.yml', 'r') as file:
-    CONFIG = yaml.safe_load(file)
 
 
 @app.get("/searchers/", response_model=List[Searcher], response_model_exclude_none=True)
 def get_searchers():
     searchers = []
+
+    with open('config.yml', 'r') as file:
+        CONFIG = yaml.safe_load(file)
 
     for searcher in CONFIG["searchers"].values():
         if searcher["enabled"]:
@@ -37,6 +35,9 @@ def get_searchers():
 @app.get("/searchers/{searcher_id}/results", response_model=SearchResults, response_model_exclude_none=True,
          status_code=status.HTTP_200_OK)
 async def get_results(searcher_id, query: str, maxResults=50):
+    with open('config.yml', 'r') as file:
+        CONFIG = yaml.safe_load(file)
+
     if searcher_id in CONFIG["searchers"]:
         if CONFIG["searchers"][searcher_id]["enabled"]:
             if "redirect" in CONFIG["searchers"][searcher_id].keys():
