@@ -1,7 +1,0 @@
-searchers:
-  newscatcher:
-    id: newscatcher
-    name: NewsCatcher
-    hint: null
-    tooltip: Search for News with the NewsCatcher API
-    enabled: True
