@@ -159,9 +159,9 @@ This example searcher is displayed in Videris Search under the **Databases** cat
     "searchResults": [
   {
     "key": "89ED7AB4-D987-E69C-0AC5-A8C5C5B0EAB3",
-    "title": "Title of the search result",
-    "subTitle": "Subtitle of the search result",
-    "summary": "Summary of the search result",
+    "title": "Title of the 1st search result",
+    "subTitle": "Subtitle of the 1st search result",
+    "summary": "Summary of the first search result",
     "source": "Videris BYOA",
     "entities": [
       {
@@ -173,6 +173,23 @@ This example searcher is displayed in Videris Search under the **Databases** cat
       }
     ],
     "url": "https://blackdotsolutions.com"
+  },
+   {
+    "key": "23DF8RP2-F321-R86V-0WQ2-S3B5N8M3IYQ4",
+    "title": "Title of the 2nd search result",
+    "subTitle": "Subtitle of the 2nd search result",
+    "summary": "Summary of the second search result",
+    "source": "Videris BYOA",
+    "entities": [
+      {
+        "id": "352v7454-c4p9-1fdj-v23h-754240irepao",
+        "type": "EntityBusiness",
+        "attributes": {
+          "Name": "Black Dot"
+        }
+      }
+    ],
+    "url": "https://www.blackdot.com"
   }
 ]
 }
