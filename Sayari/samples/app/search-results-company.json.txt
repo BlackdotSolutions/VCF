@@ -1,0 +1,3209 @@
+{
+    "searchResults": [
+        {
+            "key": "40F38EBF-B1F8-4E45-B4E1-303663C58579",
+            "title": "Alphabet Inc.",
+            "subTitle": "Company | USA, NZL, CAN, GBR | Risk Score: 67",
+            "summary": "Incorporation Date: 2015-07-23 | Registration Date: 1998-04-09 | Company no: 0001652044 (USA SEC CIK NUMBER)\nAddress: 2711, Suite 400, Centerville Road, Wilmington, 19808",
+            "source": "Sayari API",
+            "entities": [
+                {
+                    "id": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "CompaniesHouseId": "",
+                        "Description": "Risk Score: 67",
+                        "IncorporationDate": "2015-07-23",
+                        "Liquidated": "False",
+                        "LocalName": "Alphabet Inc.",
+                        "Name": "Alphabet Inc.",
+                        "RegistrationCountry": "USA",
+                        "SicCode": "7370",
+                        "Status": "Active",
+                        "Url": "www.google.com",
+                        "VatNumber": ""
+                    }
+                },
+                {
+                    "id": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "",
+                        "Region": "US-DE",
+                        "Street1": "",
+                        "Street2": ""
+                    }
+                },
+                {
+                    "id": "6585d2da-628f-3dbd-a24a-3d1ff6035958",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Company Address",
+                        "ToId": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3"
+                    }
+                },
+                {
+                    "id": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "",
+                        "Region": "DE",
+                        "Street1": "",
+                        "Street2": ""
+                    }
+                },
+                {
+                    "id": "6585d2da-628f-3dbd-a24a-3d1ff6035958",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Company Address",
+                        "ToId": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3"
+                    }
+                },
+                {
+                    "id": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "94043",
+                        "Region": "",
+                        "Street1": "",
+                        "Street2": "California"
+                    }
+                },
+                {
+                    "id": "6585d2da-628f-3dbd-a24a-3d1ff6035958",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Company Address",
+                        "ToId": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3"
+                    }
+                },
+                {
+                    "id": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "19808",
+                        "Region": "US-DE",
+                        "Street1": "251, Service Company",
+                        "Street2": "Little Falls Drive, WILMINGTON"
+                    }
+                },
+                {
+                    "id": "6585d2da-628f-3dbd-a24a-3d1ff6035958",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Company Address",
+                        "ToId": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3"
+                    }
+                },
+                {
+                    "id": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "19808",
+                        "Region": "US-DE",
+                        "Street1": "251",
+                        "Street2": "Little Falls Drive, WILMINGTON"
+                    }
+                },
+                {
+                    "id": "6585d2da-628f-3dbd-a24a-3d1ff6035958",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Company Address",
+                        "ToId": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3"
+                    }
+                },
+                {
+                    "id": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "94043-1351",
+                        "Region": "Ca",
+                        "Street1": "",
+                        "Street2": "Ca 94043-1351"
+                    }
+                },
+                {
+                    "id": "6585d2da-628f-3dbd-a24a-3d1ff6035958",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Company Address",
+                        "ToId": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3"
+                    }
+                },
+                {
+                    "id": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "",
+                        "Region": "",
+                        "Street1": "251",
+                        "Street2": "Little Falls Drive, Delaware"
+                    }
+                },
+                {
+                    "id": "6585d2da-628f-3dbd-a24a-3d1ff6035958",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Company Address",
+                        "ToId": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3"
+                    }
+                },
+                {
+                    "id": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "94043",
+                        "Region": "CA",
+                        "Street1": "1600 AMPHITHEATRE PARKWAY",
+                        "Street2": "Amphitheatre Parkway, Mountain View, MOUNTAIN VIEW"
+                    }
+                },
+                {
+                    "id": "6585d2da-628f-3dbd-a24a-3d1ff6035958",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Company Address",
+                        "ToId": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3"
+                    }
+                },
+                {
+                    "id": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "",
+                        "Region": "US-CA",
+                        "Street1": "Us-ca Usa",
+                        "Street2": ""
+                    }
+                },
+                {
+                    "id": "6585d2da-628f-3dbd-a24a-3d1ff6035958",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Company Address",
+                        "ToId": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3"
+                    }
+                },
+                {
+                    "id": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "",
+                        "Region": "US-DE",
+                        "Street1": "",
+                        "Street2": ""
+                    }
+                },
+                {
+                    "id": "6585d2da-628f-3dbd-a24a-3d1ff6035958",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Company Address",
+                        "ToId": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3"
+                    }
+                },
+                {
+                    "id": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "19808",
+                        "Region": "",
+                        "Street1": "2711, Suite 400",
+                        "Street2": "Centerville Road, Wilmington"
+                    }
+                },
+                {
+                    "id": "6585d2da-628f-3dbd-a24a-3d1ff6035958",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Company Address",
+                        "ToId": "bd59e9e2-8f1c-382f-b3e3-c11abca1b4c3"
+                    }
+                },
+                {
+                    "id": "c861f4ec-1eb5-36be-8483-1e9347bc2418",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "CYARX TECHNOLOGIES UK LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "8d601ba2-c145-30c6-95a7-5e6d6be9ade6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "c861f4ec-1eb5-36be-8483-1e9347bc2418"
+                    }
+                },
+                {
+                    "id": "f9136e82-2131-3f42-b95c-5e3f83617fef",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "MANDIANT UK LTD.",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "59fa84b8-d90f-3b75-8833-b95c0ee7953c",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "f9136e82-2131-3f42-b95c-5e3f83617fef"
+                    }
+                },
+                {
+                    "id": "88aa8aec-943b-3b47-b70b-05fc29e52ef2",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "WING AVIATION UK LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "ee848e08-4b01-31bd-80b3-f35eb63979a4",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "88aa8aec-943b-3b47-b70b-05fc29e52ef2"
+                    }
+                },
+                {
+                    "id": "8dd48ed7-34f2-3c65-ada8-dc2f419b56d7",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "BEST VALUE FINANCIAL SERVICES LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "9ffc0216-91f7-39c1-affe-238868ba8f84",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "8dd48ed7-34f2-3c65-ada8-dc2f419b56d7"
+                    }
+                },
+                {
+                    "id": "cfbf80f2-ede3-30f8-a58e-8c3e20fe55a4",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "ISOMORPHIC LABS LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "2623338b-bfe7-3d41-9030-476cc890c84e",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "cfbf80f2-ede3-30f8-a58e-8c3e20fe55a4"
+                    }
+                },
+                {
+                    "id": "d457b8ef-3a74-345b-b767-9721f62f0059",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GLOBAL INFRASTRUCTURE UK LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "493c0d9c-60e7-3e9c-b68b-6ff4e0394cb1",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "d457b8ef-3a74-345b-b767-9721f62f0059"
+                    }
+                },
+                {
+                    "id": "33d280e2-eac8-36f3-9b95-dd5363407ce3",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "JIBE MOBILE LTD",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "e1852e8b-6282-3123-93e3-437df8eeff7c",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "33d280e2-eac8-36f3-9b95-dd5363407ce3"
+                    }
+                },
+                {
+                    "id": "10846581-1d2b-30a5-902f-14d7c8201117",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "VELOSTRATA UK LTD",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "5e16a9eb-cc7e-3cee-aa48-577cd515634f",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "10846581-1d2b-30a5-902f-14d7c8201117"
+                    }
+                },
+                {
+                    "id": "8a2e2341-4302-3292-ae1b-62dda88034d9",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "LOOKER DATA SCIENCES LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "38ba7fb1-0c4a-342b-89cf-d2a132b6c334",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "8a2e2341-4302-3292-ae1b-62dda88034d9"
+                    }
+                },
+                {
+                    "id": "6ca4a8e1-352a-37b8-b1d3-603b817b9998",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "DEEPMIND HOLDINGS LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "8fb2dd99-eed2-3e95-a9a1-673bfb8f5b8a",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "6ca4a8e1-352a-37b8-b1d3-603b817b9998"
+                    }
+                },
+                {
+                    "id": "956de803-5677-3b91-ad46-59b6b23d5008",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE ENGINEERING UK HOLDINGS LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "0eab8d46-18f9-3210-9b50-d009d324c5d9",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "956de803-5677-3b91-ad46-59b6b23d5008"
+                    }
+                },
+                {
+                    "id": "c49c6ae6-5f9b-3190-855a-7e6e2f36b74a",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "WAYMO UK LTD.",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "8a5a3f24-16b0-39de-9fcf-e4e3ea6fe178",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "c49c6ae6-5f9b-3190-855a-7e6e2f36b74a"
+                    }
+                },
+                {
+                    "id": "fe2979bc-aa85-3f76-bb92-589a30eb03b4",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "BEATTHATQUOTE.COM LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "44d082a6-513f-369e-8c68-ac2878b39a6e",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "fe2979bc-aa85-3f76-bb92-589a30eb03b4"
+                    }
+                },
+                {
+                    "id": "9cebf12a-ae6d-3547-a9d6-5ed3a9288889",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GALVANI BIOELECTRONICS LIMITED",
+                        "NumberOfShares": "Owns 25-50% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "11592734-4997-3cc2-86f4-452870b26bd8",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "9cebf12a-ae6d-3547-a9d6-5ed3a9288889"
+                    }
+                },
+                {
+                    "id": "6f89a0f8-e7e5-3782-97fb-c1e568bc784c",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GRAPHICSFUZZ LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "771c27ac-d094-3ac8-acaf-f35d0e4924da",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "6f89a0f8-e7e5-3782-97fb-c1e568bc784c"
+                    }
+                },
+                {
+                    "id": "4d47abf5-73a5-3cee-a40a-748fc4168cce",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "NEVERWARE EUROPE LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "36159d20-ee2d-3b8a-b733-903697d1b4d7",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "4d47abf5-73a5-3cee-a40a-748fc4168cce"
+                    }
+                },
+                {
+                    "id": "da7b2ba5-18c8-381c-8939-12b754d542cc",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE PAYMENT LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "b04e2dac-ab52-3b4c-b46d-ed76fc1a9604",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "da7b2ba5-18c8-381c-8939-12b754d542cc"
+                    }
+                },
+                {
+                    "id": "24f2eeaf-fea1-3dc7-b6f8-1b8e604f4bf4",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "ACTIFIO UK LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "de4284c6-83c5-3b73-a9bf-62cc740be6b1",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "24f2eeaf-fea1-3dc7-b6f8-1b8e604f4bf4"
+                    }
+                },
+                {
+                    "id": "6f19868a-a363-3173-8501-47c45624945e",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "VERILY UK LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "9903c751-3e7b-3087-b3d5-1b23b7b09407",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "6f19868a-a363-3173-8501-47c45624945e"
+                    }
+                },
+                {
+                    "id": "584965ff-4321-30db-bc7c-84ef0225ddcb",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE UK LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "b7fdefcc-9b72-3228-8311-edeb38d25080",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "584965ff-4321-30db-bc7c-84ef0225ddcb"
+                    }
+                },
+                {
+                    "id": "869a186e-3f64-3ce6-b5a0-34d6f492a73d",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "ELASTIFILE UK LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "22e9585b-bbda-37c2-bd06-b860da9b03e7",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "869a186e-3f64-3ce6-b5a0-34d6f492a73d"
+                    }
+                },
+                {
+                    "id": "b9a0062e-832f-3342-8d24-2fe5e891ec95",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "TADA SCIENCE LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "3268e4b3-3f35-3138-99cc-5647e67a0fc8",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "b9a0062e-832f-3342-8d24-2fe5e891ec95"
+                    }
+                },
+                {
+                    "id": "e66805fd-aa20-3d5b-956f-f8ad0f8bdd4d",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE HEALTH UK LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "4c85fc25-334b-39f7-9e9a-c8e04fb94560",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "e66805fd-aa20-3d5b-956f-f8ad0f8bdd4d"
+                    }
+                },
+                {
+                    "id": "d6c78d88-59b9-391e-b72d-4902f432a0df",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GV UK MANAGEMENT COMPANY, LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "0c6ffe37-365f-3cd8-804a-c620a5242c7f",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "d6c78d88-59b9-391e-b72d-4902f432a0df"
+                    }
+                },
+                {
+                    "id": "6db0ab19-a020-3185-9659-d72e80b5ebc4",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "FITBIT LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "0ff20b34-ee87-3398-9715-0ecc22985bec",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "6db0ab19-a020-3185-9659-d72e80b5ebc4"
+                    }
+                },
+                {
+                    "id": "2fc24d4a-757f-3792-a62f-a01915b9f998",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "HARK HEALTH SOLUTIONS LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "0fe84e27-7359-3392-a8f1-a11a1f63d359",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "2fc24d4a-757f-3792-a62f-a01915b9f998"
+                    }
+                },
+                {
+                    "id": "5495d293-c64a-3176-b1ac-e73173284bbf",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "DEEPMIND TECHNOLOGIES LIMITED",
+                        "NumberOfShares": "Owns 75-100% of shares",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "7c72d886-9923-3d65-be8e-47aed5f34914",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "5495d293-c64a-3176-b1ac-e73173284bbf"
+                    }
+                },
+                {
+                    "id": "afe50b1a-6a7e-34c3-b8a7-f1eefe92245d",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "RAIDEN INFOTECH INDIA PRIVATE LIMITED",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "c9ddde7b-399a-39f2-9b8d-7461632b41f6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "afe50b1a-6a7e-34c3-b8a7-f1eefe92245d"
+                    }
+                },
+                {
+                    "id": "b700596a-67bb-350f-9f1e-62aa28dc163e",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE INFORMATION SERVICES INDIA PRIVATE LIMITED",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "5626bdaf-d3b0-3c7d-a4d3-9bde0702a6cd",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "b700596a-67bb-350f-9f1e-62aa28dc163e"
+                    }
+                },
+                {
+                    "id": "2d9b7374-facd-3661-9c5c-7b7af460bf7d",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE INDIA PRIVATE LIMITED",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "77b69eae-3746-3a4d-aef3-6badd67202ae",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "2d9b7374-facd-3661-9c5c-7b7af460bf7d"
+                    }
+                },
+                {
+                    "id": "83fb7cc1-e8af-398c-81e5-eeb24fa31173",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "Google LLC",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "b62ae9f9-3c08-3187-b14f-30026a24a413",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "83fb7cc1-e8af-398c-81e5-eeb24fa31173"
+                    }
+                },
+                {
+                    "id": "746eda01-a20a-3dc1-a9f2-333df0b2b640",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE INTERNATIONAL LLC",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "cbf5730b-6523-345c-a973-62ed3f604bc6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "746eda01-a20a-3dc1-a9f2-333df0b2b640"
+                    }
+                },
+                {
+                    "id": "4e198908-7e24-384e-81fe-31a3832ecf76",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE CLOUD INDIA PRIVATE LIMITED",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "2db67062-6dc2-34d6-b208-8723db9392a3",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "4e198908-7e24-384e-81fe-31a3832ecf76"
+                    }
+                },
+                {
+                    "id": "84d0c8d8-c23b-3052-94f1-ebf31d352b1a",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE INDIA DIGITAL SERVICES PRIVATE LIMITED",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "a90ac152-789e-3587-a20c-4d430315e62c",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "84d0c8d8-c23b-3052-94f1-ebf31d352b1a"
+                    }
+                },
+                {
+                    "id": "c5cccc12-5aed-3e1b-9175-25bc79e2b2a5",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "Oscar Health, Inc.",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "961f1706-6a9b-3311-a3a7-6d4d858aca80",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "c5cccc12-5aed-3e1b-9175-25bc79e2b2a5"
+                    }
+                },
+                {
+                    "id": "c48fc2b8-e33e-3c7c-817f-41705f79c1d0",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "Alphabet Capital US LLC",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "9481f56e-b3a2-3259-ba3c-81c241c14bf9",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "c48fc2b8-e33e-3c7c-817f-41705f79c1d0"
+                    }
+                },
+                {
+                    "id": "1fcea95d-7aa8-35a5-a80c-83ab0f739dfd",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "XXVI Holdings Inc",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "66045f83-d677-33d0-8d78-d749f673525e",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "1fcea95d-7aa8-35a5-a80c-83ab0f739dfd"
+                    }
+                },
+                {
+                    "id": "13842031-8e4a-3c09-b3ef-aa35487c3e50",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "MARBLE COMPUTING LIMITED",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "23e5fa1a-4a02-3db0-a19d-0b79a4c8d5ce",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "13842031-8e4a-3c09-b3ef-aa35487c3e50"
+                    }
+                },
+                {
+                    "id": "608c7457-1dd8-3ff4-9c32-f82b4c87180f",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE IT SERVICES INDIA PRIVATE LIMITED",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "3a5fca0e-5c4a-31e3-8898-4af98feb0cb1",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "608c7457-1dd8-3ff4-9c32-f82b4c87180f"
+                    }
+                },
+                {
+                    "id": "0fa93275-fcbc-3e2d-8969-ad9a0ddf26f8",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE CAPITAL ADVISORS INDIA PRIVATE LIMITED",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "a9729e13-ea8c-3efb-9710-46f2de74f9be",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "0fa93275-fcbc-3e2d-8969-ad9a0ddf26f8"
+                    }
+                },
+                {
+                    "id": "ffe78549-dea9-3395-ba5e-e0c057754236",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "CUARDAITHE DESIGNATED ACTIVITY COMPANY",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "bc2f2e1e-4510-387f-b645-8a95edd3040f",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "ffe78549-dea9-3395-ba5e-e0c057754236"
+                    }
+                },
+                {
+                    "id": "072c78ff-063a-3279-9ba7-95427930e8e8",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE PAYMENT INDIA PRIVATE LIMITED",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "e47d4d74-973e-3c88-b70f-05cd22431d1d",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "072c78ff-063a-3279-9ba7-95427930e8e8"
+                    }
+                },
+                {
+                    "id": "c4a11a6c-be91-3994-a6d1-e542ebbf0160",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE IRELAND HOLDINGS UNLIMITED COMPANY",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "0cb7c294-9be8-3b2b-87a8-7a3dfd72b7eb",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "c4a11a6c-be91-3994-a6d1-e542ebbf0160"
+                    }
+                },
+                {
+                    "id": "f08e3f20-8759-3db3-989d-ca5f92316aa2",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOC SERVICES INDIA PRIVATE LIMITED",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "fd87e826-9d6f-3f05-b6bf-f9dd45124bd3",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "f08e3f20-8759-3db3-989d-ca5f92316aa2"
+                    }
+                },
+                {
+                    "id": "6941f3b7-d99f-3759-8ed9-e54e11f992dd",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE CONNECT SERVICES INDIA PRIVATE LIMITED",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "44cbcf45-7784-3603-8227-b2eda09cf8ae",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "6941f3b7-d99f-3759-8ed9-e54e11f992dd"
+                    }
+                },
+                {
+                    "id": "6f1478b3-0483-322a-bd10-f10d6057e4ac",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "Tuike Finland Oy",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "115a8f13-e9dd-337e-8060-64500b836d6a",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "6f1478b3-0483-322a-bd10-f10d6057e4ac"
+                    }
+                },
+                {
+                    "id": "e0f890c0-c8b2-3f06-a927-c383064dd4b8",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE PAYMENT NEW ZEALAND LIMITED",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "91086d3f-e24f-35e4-8d98-0acf4475a004",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "e0f890c0-c8b2-3f06-a927-c383064dd4b8"
+                    }
+                },
+                {
+                    "id": "fc872a13-0ed4-391e-91ea-efdb2a9656db",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "Google Ireland Holdings",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "3e985e56-a0fe-37b2-a5e2-3aae51728f76",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "fc872a13-0ed4-391e-91ea-efdb2a9656db"
+                    }
+                },
+                {
+                    "id": "1de63240-6265-3638-92c6-3068a1189ddc",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "GOOGLE INC.",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "f77a7062-3d96-37ff-83b1-c5952f9ab609",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Businesses",
+                        "ToId": "1de63240-6265-3638-92c6-3068a1189ddc"
+                    }
+                },
+                {
+                    "id": "c74158bb-29f5-3148-bcc4-c3e3b54c8c20",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Page",
+                        "JobTitle": "Director",
+                        "LastName": "Lawrence"
+                    }
+                },
+                {
+                    "id": "49d5d3c5-587f-380c-bbfb-bcb96bbc22d6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "c74158bb-29f5-3148-bcc4-c3e3b54c8c20"
+                    }
+                },
+                {
+                    "id": "84afc528-cd76-3f54-8924-6dbd213ebc7e",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Sergey",
+                        "JobTitle": "Director",
+                        "LastName": "Brin"
+                    }
+                },
+                {
+                    "id": "07661574-dfc4-37d4-8c68-746e3955c1f5",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "84afc528-cd76-3f54-8924-6dbd213ebc7e"
+                    }
+                },
+                {
+                    "id": "60760bea-eb97-3691-8d68-661dc1324e04",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Diane",
+                        "JobTitle": "Director",
+                        "LastName": "B. Greene"
+                    }
+                },
+                {
+                    "id": "3187b5a3-1feb-3bef-a800-950d10c8d20b",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "60760bea-eb97-3691-8d68-661dc1324e04"
+                    }
+                },
+                {
+                    "id": "7abeb4fa-be8c-372e-9694-c8da2540cd17",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Paul",
+                        "JobTitle": "Director",
+                        "LastName": "S. Otellini"
+                    }
+                },
+                {
+                    "id": "dc4126ce-ef33-3aa1-844c-7c42b7bfbe47",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "7abeb4fa-be8c-372e-9694-c8da2540cd17"
+                    }
+                },
+                {
+                    "id": "be4450c7-7b50-3b3a-9a46-60dca11b7477",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "L.",
+                        "JobTitle": "Director",
+                        "LastName": "John Doerr"
+                    }
+                },
+                {
+                    "id": "872ce7fe-d8fd-398f-bbd1-fe0b6c8e4a99",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "be4450c7-7b50-3b3a-9a46-60dca11b7477"
+                    }
+                },
+                {
+                    "id": "5cbf05c2-36e8-33e4-8936-9391ce402756",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Sundar",
+                        "JobTitle": "Director",
+                        "LastName": "Pichai"
+                    }
+                },
+                {
+                    "id": "abcee5a5-3bcd-3c0b-86c8-0af3f41bb65c",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "5cbf05c2-36e8-33e4-8936-9391ce402756"
+                    }
+                },
+                {
+                    "id": "0b98b8c1-281e-37bf-b976-dd6e822a8684",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "K.",
+                        "JobTitle": "Director",
+                        "LastName": "Ram Shriram"
+                    }
+                },
+                {
+                    "id": "20b59fbf-1ac0-33a6-9f92-53f33c65e89c",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "0b98b8c1-281e-37bf-b976-dd6e822a8684"
+                    }
+                },
+                {
+                    "id": "1b695482-fb2c-35ed-add5-f363c42eedea",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Alan",
+                        "JobTitle": "Director",
+                        "LastName": "R. Mulally"
+                    }
+                },
+                {
+                    "id": "59619ead-d167-3483-8301-3c8a7f9a1dde",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "1b695482-fb2c-35ed-add5-f363c42eedea"
+                    }
+                },
+                {
+                    "id": "8b2701ed-8cc1-3577-ac44-7d973bd21240",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "HENNESSY",
+                        "JobTitle": "Director",
+                        "LastName": "JOHN L"
+                    }
+                },
+                {
+                    "id": "f71a3546-b3c1-3510-9db3-88bce75387c3",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "8b2701ed-8cc1-3577-ac44-7d973bd21240"
+                    }
+                },
+                {
+                    "id": "94ff6540-0268-357f-8735-47ed4bd976e9",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Frances",
+                        "JobTitle": "Director",
+                        "LastName": "Arnold"
+                    }
+                },
+                {
+                    "id": "6c3e49e3-55f3-36d9-90e5-686642232cba",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "94ff6540-0268-357f-8735-47ed4bd976e9"
+                    }
+                },
+                {
+                    "id": "c7443368-b84e-3b3b-9566-32dea5325f9d",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Ferguson",
+                        "JobTitle": "Director",
+                        "LastName": "Roger W. Jr"
+                    }
+                },
+                {
+                    "id": "983fee36-4550-3143-ab47-f7769e3083eb",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "c7443368-b84e-3b3b-9566-32dea5325f9d"
+                    }
+                },
+                {
+                    "id": "b21d8487-37c6-37a0-af56-a78ee429a7de",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Shirley",
+                        "JobTitle": "Director",
+                        "LastName": "M. Tilghman"
+                    }
+                },
+                {
+                    "id": "3ba8cd39-eca1-3e3e-bbf6-12c2e316f013",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "b21d8487-37c6-37a0-af56-a78ee429a7de"
+                    }
+                },
+                {
+                    "id": "9693aec8-585e-3e76-8f08-625ce0a23862",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "MATHER",
+                        "JobTitle": "Director",
+                        "LastName": "ANN"
+                    }
+                },
+                {
+                    "id": "66df85e2-00d9-3b46-b51b-44b7dd302e2b",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "9693aec8-585e-3e76-8f08-625ce0a23862"
+                    }
+                },
+                {
+                    "id": "d4406cfc-69a2-3387-abff-ef9488fe0fde",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "OTELLINI",
+                        "JobTitle": "Director",
+                        "LastName": "PAUL S"
+                    }
+                },
+                {
+                    "id": "412651c6-88e0-3242-98c3-9e8c23a9a475",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "d4406cfc-69a2-3387-abff-ef9488fe0fde"
+                    }
+                },
+                {
+                    "id": "4abe022b-0ab8-3689-bef5-22453dd6f608",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Shriram",
+                        "JobTitle": "Director",
+                        "LastName": "Kavitark Ram"
+                    }
+                },
+                {
+                    "id": "c9dd1779-729c-3ebf-8119-0624bd599d2e",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "4abe022b-0ab8-3689-bef5-22453dd6f608"
+                    }
+                },
+                {
+                    "id": "2bcdb64f-f7e3-3fe5-9e4f-39bc8b511d29",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Alan",
+                        "JobTitle": "Director",
+                        "LastName": "Roger Mulally"
+                    }
+                },
+                {
+                    "id": "0640a6c2-1373-3366-b18a-a61de32dc63d",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "2bcdb64f-f7e3-3fe5-9e4f-39bc8b511d29"
+                    }
+                },
+                {
+                    "id": "69dcc74f-9045-3bb5-a263-06f21bf96027",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "DOERR",
+                        "JobTitle": "Director",
+                        "LastName": "L JOHN"
+                    }
+                },
+                {
+                    "id": "8765eb8c-852f-3d94-8ef6-19eb07bf79d8",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "69dcc74f-9045-3bb5-a263-06f21bf96027"
+                    }
+                },
+                {
+                    "id": "4f044c5f-f85d-3ea8-b099-3ef6baa37ab9",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Ann",
+                        "JobTitle": "Director",
+                        "LastName": "L. Mather"
+                    }
+                },
+                {
+                    "id": "895872e7-5722-328b-a5f7-517ebc1cfc49",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "4f044c5f-f85d-3ea8-b099-3ef6baa37ab9"
+                    }
+                },
+                {
+                    "id": "ed6443b0-b9b3-3d2c-9243-cc7d093e5ec8",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "John",
+                        "JobTitle": "Director",
+                        "LastName": "L. Hennessy"
+                    }
+                },
+                {
+                    "id": "c242c107-bf11-3c73-80a2-430c55cb341c",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "ed6443b0-b9b3-3d2c-9243-cc7d093e5ec8"
+                    }
+                },
+                {
+                    "id": "7fe098e8-88d0-340c-bebb-08ce24ffa558",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "SCHMIDT",
+                        "JobTitle": "Director",
+                        "LastName": "ERIC E"
+                    }
+                },
+                {
+                    "id": "5e613b8d-aa48-379f-9d4f-f6fe873519f9",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "7fe098e8-88d0-340c-bebb-08ce24ffa558"
+                    }
+                },
+                {
+                    "id": "c4c6f59d-16b1-3ddc-bd7f-f1e7ef83cfe3",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "CHAVEZ",
+                        "JobTitle": "Director",
+                        "LastName": "R. MARTIN"
+                    }
+                },
+                {
+                    "id": "f7cfc809-d3b3-3330-b447-057a2fd0aaf7",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "c4c6f59d-16b1-3ddc-bd7f-f1e7ef83cfe3"
+                    }
+                },
+                {
+                    "id": "03149da0-9833-30a6-aecc-ad5e1a77bb82",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "MULALLY",
+                        "JobTitle": "Director",
+                        "LastName": "ALAN R"
+                    }
+                },
+                {
+                    "id": "00f6249e-7515-3f0c-abe9-eca79253665f",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "03149da0-9833-30a6-aecc-ad5e1a77bb82"
+                    }
+                },
+                {
+                    "id": "baae67fe-0f13-33a9-b241-cac89352ab26",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Larry",
+                        "JobTitle": "Director",
+                        "LastName": "Page"
+                    }
+                },
+                {
+                    "id": "6faf4fee-017b-3e82-81ad-ffac9dd7bd92",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "baae67fe-0f13-33a9-b241-cac89352ab26"
+                    }
+                },
+                {
+                    "id": "4b5d9dc0-a73a-38c2-bbed-a838eb9e3538",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Roger",
+                        "JobTitle": "Director",
+                        "LastName": "W. Ferguson"
+                    }
+                },
+                {
+                    "id": "59fc15c8-403e-33f7-91b1-21d3c1830130",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "4b5d9dc0-a73a-38c2-bbed-a838eb9e3538"
+                    }
+                },
+                {
+                    "id": "f155c919-5df2-3eb2-bce3-29e661e5520a",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Washington",
+                        "JobTitle": "Director",
+                        "LastName": "Robin L"
+                    }
+                },
+                {
+                    "id": "61f56330-115e-3be7-a306-1f4e1ec76761",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "f155c919-5df2-3eb2-bce3-29e661e5520a"
+                    }
+                },
+                {
+                    "id": "10779781-b42d-3d63-96f5-d3dd1bef867e",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Ann",
+                        "JobTitle": "Director",
+                        "LastName": "Mather"
+                    }
+                },
+                {
+                    "id": "6f4884f4-749c-3c05-97d9-d025cbe8ccb4",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "10779781-b42d-3d63-96f5-d3dd1bef867e"
+                    }
+                },
+                {
+                    "id": "67a87a19-e67d-3dcb-a409-70622ae2aa39",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Arthur",
+                        "JobTitle": "Director",
+                        "LastName": "D Levinson"
+                    }
+                },
+                {
+                    "id": "1ffe4171-ce77-3381-b7bb-b0fc4667c0b5",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "67a87a19-e67d-3dcb-a409-70622ae2aa39"
+                    }
+                },
+                {
+                    "id": "b67bf095-2c4a-3489-8df0-4e9c4d98088d",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Sundar",
+                        "JobTitle": "Director",
+                        "LastName": "Pichai"
+                    }
+                },
+                {
+                    "id": "1a62536c-a135-3f2b-be5a-fe257929d947",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "b67bf095-2c4a-3489-8df0-4e9c4d98088d"
+                    }
+                },
+                {
+                    "id": "7921e49d-3adc-3778-9a7c-5c35ce20d1d5",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Robin",
+                        "JobTitle": "Director",
+                        "LastName": "L. Washington"
+                    }
+                },
+                {
+                    "id": "564de5d3-c580-3c34-ac1d-25c1881eb246",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "7921e49d-3adc-3778-9a7c-5c35ce20d1d5"
+                    }
+                },
+                {
+                    "id": "a3a01e92-da94-3c2d-84d4-545560ffee8c",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Joseph",
+                        "JobTitle": "Director",
+                        "LastName": "Wakaba Mucheru"
+                    }
+                },
+                {
+                    "id": "7a280d3c-8ad8-392c-99ba-5b88b52e5dfa",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "a3a01e92-da94-3c2d-84d4-545560ffee8c"
+                    }
+                },
+                {
+                    "id": "942c7fb8-a0e6-36f7-8904-176e38372021",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Roger",
+                        "JobTitle": "Director",
+                        "LastName": "W. Ferguson"
+                    }
+                },
+                {
+                    "id": "e99b4180-4854-349c-a7a1-d81368eaf620",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "942c7fb8-a0e6-36f7-8904-176e38372021"
+                    }
+                },
+                {
+                    "id": "0de48220-43e4-3da9-8d78-035724e9554b",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Frances",
+                        "JobTitle": "Director",
+                        "LastName": "H. Arnold"
+                    }
+                },
+                {
+                    "id": "8ef0bd3e-9aa3-324a-bd92-66af509b67cb",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "0de48220-43e4-3da9-8d78-035724e9554b"
+                    }
+                },
+                {
+                    "id": "124819b2-4c10-3362-a911-086f1be36dcf",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Petteri",
+                        "JobTitle": "Director",
+                        "LastName": "Koponen"
+                    }
+                },
+                {
+                    "id": "09eb37b7-7ca4-3f9b-8368-eba22fcb71b8",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Directors",
+                        "ToId": "124819b2-4c10-3362-a911-086f1be36dcf"
+                    }
+                },
+                {
+                    "id": "c74158bb-29f5-3148-bcc4-c3e3b54c8c20",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Page",
+                        "JobTitle": "Chief Executive Officer",
+                        "LastName": "Lawrence"
+                    }
+                },
+                {
+                    "id": "49d5d3c5-587f-380c-bbfb-bcb96bbc22d6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "c74158bb-29f5-3148-bcc4-c3e3b54c8c20"
+                    }
+                },
+                {
+                    "id": "84afc528-cd76-3f54-8924-6dbd213ebc7e",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Sergey",
+                        "JobTitle": "President",
+                        "LastName": "Brin"
+                    }
+                },
+                {
+                    "id": "07661574-dfc4-37d4-8c68-746e3955c1f5",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "84afc528-cd76-3f54-8924-6dbd213ebc7e"
+                    }
+                },
+                {
+                    "id": "60760bea-eb97-3691-8d68-661dc1324e04",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Diane",
+                        "JobTitle": "Senior Vice President",
+                        "LastName": "B. Greene"
+                    }
+                },
+                {
+                    "id": "3187b5a3-1feb-3bef-a800-950d10c8d20b",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "60760bea-eb97-3691-8d68-661dc1324e04"
+                    }
+                },
+                {
+                    "id": "5cbf05c2-36e8-33e4-8936-9391ce402756",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Sundar",
+                        "JobTitle": "Chief Executive Officer",
+                        "LastName": "Pichai"
+                    }
+                },
+                {
+                    "id": "abcee5a5-3bcd-3c0b-86c8-0af3f41bb65c",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "5cbf05c2-36e8-33e4-8936-9391ce402756"
+                    }
+                },
+                {
+                    "id": "e6125642-ff09-3a05-a9e2-c52c2482c252",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Campbell",
+                        "JobTitle": "VP, Alphabet Corp. Controller",
+                        "LastName": "James Grier"
+                    }
+                },
+                {
+                    "id": "b2275d6f-773a-3124-9275-a7f233066f75",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "e6125642-ff09-3a05-a9e2-c52c2482c252"
+                    }
+                },
+                {
+                    "id": "bcadbbf8-7da0-3094-b1c4-d5e96c6040f3",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "O'TOOLE",
+                        "JobTitle": "VP, Chief Accounting Officer",
+                        "LastName": "AMIE THUENER"
+                    }
+                },
+                {
+                    "id": "9230294b-9626-3437-b580-eb9086d9f777",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "bcadbbf8-7da0-3094-b1c4-d5e96c6040f3"
+                    }
+                },
+                {
+                    "id": "b649e1e4-9650-3df2-93ba-26adbc2584bc",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Schindler",
+                        "JobTitle": "SVP, Chief Business Officer",
+                        "LastName": "Philipp"
+                    }
+                },
+                {
+                    "id": "2cb08e85-aad9-31f4-8950-84e188f8b45a",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "b649e1e4-9650-3df2-93ba-26adbc2584bc"
+                    }
+                },
+                {
+                    "id": "fcd6e739-321b-3bc4-ad61-e4928604c330",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Sundar",
+                        "JobTitle": "Executive Officer",
+                        "LastName": "M. Pichai"
+                    }
+                },
+                {
+                    "id": "a625e113-548d-3152-bf45-4b064ebb5b54",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "fcd6e739-321b-3bc4-ad61-e4928604c330"
+                    }
+                },
+                {
+                    "id": "8fcf24aa-4381-35b2-aa69-d1f007d53daf",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Ernst",
+                        "JobTitle": "",
+                        "LastName": ""
+                    }
+                },
+                {
+                    "id": "56bc5998-1d25-3a53-82b4-edb2ad4bac77",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "8fcf24aa-4381-35b2-aa69-d1f007d53daf"
+                    }
+                },
+                {
+                    "id": "1c808a48-f5ac-3b15-a468-48313dff931c",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "RAGHAVAN",
+                        "JobTitle": "Senior Vice President",
+                        "LastName": "PRABHAKAR"
+                    }
+                },
+                {
+                    "id": "180fc001-a082-3983-a61f-2b56160203e3",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "1c808a48-f5ac-3b15-a468-48313dff931c"
+                    }
+                },
+                {
+                    "id": "9955ca41-22ef-3326-8c2d-09c9802c920e",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Drummond",
+                        "JobTitle": "SVP, Corporate Development",
+                        "LastName": "David C"
+                    }
+                },
+                {
+                    "id": "e18fa66d-957d-35e3-bfa0-1b132ad0c2fc",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "9955ca41-22ef-3326-8c2d-09c9802c920e"
+                    }
+                },
+                {
+                    "id": "7fe098e8-88d0-340c-bebb-08ce24ffa558",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "SCHMIDT",
+                        "JobTitle": "Executive Chairman",
+                        "LastName": "ERIC E"
+                    }
+                },
+                {
+                    "id": "5e613b8d-aa48-379f-9d4f-f6fe873519f9",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "7fe098e8-88d0-340c-bebb-08ce24ffa558"
+                    }
+                },
+                {
+                    "id": "d537f475-b6de-38b8-b129-9329c0e2e2b4",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "David",
+                        "JobTitle": "David C Drummond is the Chief Legal Officer of Google LLC",
+                        "LastName": "C Drummond"
+                    }
+                },
+                {
+                    "id": "da309f15-140a-3622-91f3-a7819ce0dca0",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "d537f475-b6de-38b8-b129-9329c0e2e2b4"
+                    }
+                },
+                {
+                    "id": "81f3c194-dc28-3aeb-9938-c6207550358b",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Ernst",
+                        "JobTitle": "",
+                        "LastName": "& Young Llp"
+                    }
+                },
+                {
+                    "id": "025c01bc-82f6-3c06-bb96-851fa405c3fb",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "81f3c194-dc28-3aeb-9938-c6207550358b"
+                    }
+                },
+                {
+                    "id": "baae67fe-0f13-33a9-b241-cac89352ab26",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Larry",
+                        "JobTitle": "Chief Executive Officer, Co-Founder, And Director (Principal Executive Officer)",
+                        "LastName": "Page"
+                    }
+                },
+                {
+                    "id": "6faf4fee-017b-3e82-81ad-ffac9dd7bd92",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "baae67fe-0f13-33a9-b241-cac89352ab26"
+                    }
+                },
+                {
+                    "id": "73c680cd-5e8f-3402-9e6d-6b9dacc49c66",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "RUTH",
+                        "JobTitle": "SVP, CFO",
+                        "LastName": "PORAT"
+                    }
+                },
+                {
+                    "id": "ba3e6010-3e47-3d18-b07e-574df9f9e086",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "73c680cd-5e8f-3402-9e6d-6b9dacc49c66"
+                    }
+                },
+                {
+                    "id": "9b1d971a-c7d8-3302-98b5-dce894f3ac02",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "John",
+                        "JobTitle": "SVP, Global Affairs and CLO",
+                        "LastName": "Kent WALKER"
+                    }
+                },
+                {
+                    "id": "82c51047-e670-34c7-83ed-60b147127f45",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "9b1d971a-c7d8-3302-98b5-dce894f3ac02"
+                    }
+                },
+                {
+                    "id": "7ec58ac6-ec97-3bb8-88a0-96d199b06f35",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Ruth",
+                        "JobTitle": "Senior Vice President And Chief Financial Officer (Principal Financial Officer)",
+                        "LastName": "M. Porat"
+                    }
+                },
+                {
+                    "id": "a22d02db-b776-3ad9-87fd-2284f797cfcd",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "7ec58ac6-ec97-3bb8-88a0-96d199b06f35"
+                    }
+                },
+                {
+                    "id": "b67bf095-2c4a-3489-8df0-4e9c4d98088d",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Sundar",
+                        "JobTitle": "Chief Executive Officer And Director (Principal Executive Officer)",
+                        "LastName": "Pichai"
+                    }
+                },
+                {
+                    "id": "1a62536c-a135-3f2b-be5a-fe257929d947",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "b67bf095-2c4a-3489-8df0-4e9c4d98088d"
+                    }
+                },
+                {
+                    "id": "a0c60c14-65a4-3553-b8bc-604c665499d8",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Amie",
+                        "JobTitle": "Vice President And Chief Accounting Officer (Principal Accounting Officer)",
+                        "LastName": "Thuener O"
+                    }
+                },
+                {
+                    "id": "bb3598a1-e835-3cef-b73e-1dfb31ff52a8",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "a0c60c14-65a4-3553-b8bc-604c665499d8"
+                    }
+                },
+                {
+                    "id": "8d764e1a-5c9c-3304-bc5e-e7567676968c",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "James",
+                        "JobTitle": "Vice President, Corporate Controller, And Chief Accounting Officer (Principal Accounting Officer)",
+                        "LastName": "G. Campbell"
+                    }
+                },
+                {
+                    "id": "d08f1c2e-a05f-3fba-a623-39b152059b65",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "dd8a899d-a750-37ea-86d9-1a3fa936c59c",
+                        "Title": "Officers",
+                        "ToId": "8d764e1a-5c9c-3304-bc5e-e7567676968c"
+                    }
+                }
+            ],
+            "url": "https://sayari.auth0.com/u/login"
+        },
+        {
+            "key": "63204D1E-7A7A-4D15-A686-00D2BB2DD4C0",
+            "title": "GOOGLE INC.",
+            "subTitle": "Company | USA | Risk Score: 67",
+            "summary": "Registration Date: 2015-07-23 | Company no: 0001288776 (USA SEC CIK NUMBER)\nAddress: 1600, Amphitheatre Parkway Mountain View Us-ca, Mountain View, US-CA, 94043",
+            "source": "Sayari API",
+            "entities": [
+                {
+                    "id": "1de63240-6265-3638-92c6-3068a1189ddc",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "CompaniesHouseId": "",
+                        "Description": "Risk Score: 67",
+                        "IncorporationDate": "",
+                        "Liquidated": "False",
+                        "LocalName": "GOOGLE INC.",
+                        "Name": "GOOGLE INC.",
+                        "RegistrationCountry": "USA",
+                        "SicCode": "",
+                        "Status": "Active",
+                        "Url": "https://abc.xyz/",
+                        "VatNumber": ""
+                    }
+                },
+                {
+                    "id": "0013d8a0-d20a-3516-885d-63c8641c6307",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "44484-330",
+                        "Region": "US-OH",
+                        "Street1": "",
+                        "Street2": "Warren"
+                    }
+                },
+                {
+                    "id": "b10ad9ed-9ed3-315b-b8f1-e37ef042eec6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Company Address",
+                        "ToId": "0013d8a0-d20a-3516-885d-63c8641c6307"
+                    }
+                },
+                {
+                    "id": "0013d8a0-d20a-3516-885d-63c8641c6307",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "",
+                        "Region": "US-CA",
+                        "Street1": "Us-ca Usa",
+                        "Street2": ""
+                    }
+                },
+                {
+                    "id": "b10ad9ed-9ed3-315b-b8f1-e37ef042eec6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Company Address",
+                        "ToId": "0013d8a0-d20a-3516-885d-63c8641c6307"
+                    }
+                },
+                {
+                    "id": "0013d8a0-d20a-3516-885d-63c8641c6307",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "",
+                        "Region": "US-DE",
+                        "Street1": "",
+                        "Street2": ""
+                    }
+                },
+                {
+                    "id": "b10ad9ed-9ed3-315b-b8f1-e37ef042eec6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Company Address",
+                        "ToId": "0013d8a0-d20a-3516-885d-63c8641c6307"
+                    }
+                },
+                {
+                    "id": "0013d8a0-d20a-3516-885d-63c8641c6307",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "19808",
+                        "Region": "US-DE",
+                        "Street1": "251, Service Company",
+                        "Street2": "Little Falls Drive, WILMINGTON"
+                    }
+                },
+                {
+                    "id": "b10ad9ed-9ed3-315b-b8f1-e37ef042eec6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Company Address",
+                        "ToId": "0013d8a0-d20a-3516-885d-63c8641c6307"
+                    }
+                },
+                {
+                    "id": "0013d8a0-d20a-3516-885d-63c8641c6307",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "94043",
+                        "Region": "US-CA",
+                        "Street1": "1600",
+                        "Street2": "Amphitheatre Parkway Mountain View Us-ca, Mountain View"
+                    }
+                },
+                {
+                    "id": "b10ad9ed-9ed3-315b-b8f1-e37ef042eec6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Company Address",
+                        "ToId": "0013d8a0-d20a-3516-885d-63c8641c6307"
+                    }
+                },
+                {
+                    "id": "46c9f6d3-a5c2-3d6b-b964-417bb051286c",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "Clearwire Corp /DE",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "c4e9387a-6ce6-3542-8ba7-1a51b7012e86",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Businesses",
+                        "ToId": "46c9f6d3-a5c2-3d6b-b964-417bb051286c"
+                    }
+                },
+                {
+                    "id": "1e86954f-2bdb-305f-a0d0-1e19ead2d314",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "CLEARWIRE CORP",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "69caddde-9730-30c6-b8f3-c68316348f4a",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Businesses",
+                        "ToId": "1e86954f-2bdb-305f-a0d0-1e19ead2d314"
+                    }
+                },
+                {
+                    "id": "1e86954f-2bdb-305f-a0d0-1e19ead2d314",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "Name": "CLEARWIRE CORP",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "69caddde-9730-30c6-b8f3-c68316348f4a",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Businesses",
+                        "ToId": "1e86954f-2bdb-305f-a0d0-1e19ead2d314"
+                    }
+                },
+                {
+                    "id": "c74158bb-29f5-3148-bcc4-c3e3b54c8c20",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Page",
+                        "JobTitle": "Director",
+                        "LastName": "Lawrence"
+                    }
+                },
+                {
+                    "id": "8cfdc370-a16f-3e68-8fcf-1aaab3825871",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "c74158bb-29f5-3148-bcc4-c3e3b54c8c20"
+                    }
+                },
+                {
+                    "id": "84afc528-cd76-3f54-8924-6dbd213ebc7e",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Sergey",
+                        "JobTitle": "Director",
+                        "LastName": "Brin"
+                    }
+                },
+                {
+                    "id": "4b11344b-4750-3afb-963f-af26ec7a2ab0",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "84afc528-cd76-3f54-8924-6dbd213ebc7e"
+                    }
+                },
+                {
+                    "id": "0ae1fa78-8cdd-38a8-b7ce-e358f9982d66",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Robin",
+                        "JobTitle": "Director",
+                        "LastName": "L Washington"
+                    }
+                },
+                {
+                    "id": "5dfbcd63-797a-37c2-9a59-ab3b63b95289",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "0ae1fa78-8cdd-38a8-b7ce-e358f9982d66"
+                    }
+                },
+                {
+                    "id": "60760bea-eb97-3691-8d68-661dc1324e04",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Diane",
+                        "JobTitle": "Director",
+                        "LastName": "B. Greene"
+                    }
+                },
+                {
+                    "id": "7acdd6ed-ad44-31c9-9096-a79580ab0aef",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "60760bea-eb97-3691-8d68-661dc1324e04"
+                    }
+                },
+                {
+                    "id": "7abeb4fa-be8c-372e-9694-c8da2540cd17",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Paul",
+                        "JobTitle": "Director",
+                        "LastName": "S. Otellini"
+                    }
+                },
+                {
+                    "id": "db39fbf9-c839-3aa2-89f6-0bf4b711581c",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "7abeb4fa-be8c-372e-9694-c8da2540cd17"
+                    }
+                },
+                {
+                    "id": "be4450c7-7b50-3b3a-9a46-60dca11b7477",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "L.",
+                        "JobTitle": "Director",
+                        "LastName": "John Doerr"
+                    }
+                },
+                {
+                    "id": "78fca8ce-2ed4-385e-9c6f-57488db487b6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "be4450c7-7b50-3b3a-9a46-60dca11b7477"
+                    }
+                },
+                {
+                    "id": "0b98b8c1-281e-37bf-b976-dd6e822a8684",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "K.",
+                        "JobTitle": "Director",
+                        "LastName": "Ram Shriram"
+                    }
+                },
+                {
+                    "id": "7560295d-9d3d-3f85-ac24-90358181666c",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "0b98b8c1-281e-37bf-b976-dd6e822a8684"
+                    }
+                },
+                {
+                    "id": "8b2701ed-8cc1-3577-ac44-7d973bd21240",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "HENNESSY",
+                        "JobTitle": "Director",
+                        "LastName": "JOHN L"
+                    }
+                },
+                {
+                    "id": "aa3aa622-6c6e-350d-a7f3-e998af9647d6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "8b2701ed-8cc1-3577-ac44-7d973bd21240"
+                    }
+                },
+                {
+                    "id": "c845e223-2a44-3204-8982-47c9b7a0bf30",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Eric",
+                        "JobTitle": "Director",
+                        "LastName": "Schmidt"
+                    }
+                },
+                {
+                    "id": "a60f7755-8f20-3df1-b7cc-07e3f5cde3c4",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "c845e223-2a44-3204-8982-47c9b7a0bf30"
+                    }
+                },
+                {
+                    "id": "b21d8487-37c6-37a0-af56-a78ee429a7de",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Shirley",
+                        "JobTitle": "Director",
+                        "LastName": "M. Tilghman"
+                    }
+                },
+                {
+                    "id": "81dc29d7-6248-3773-9b50-2ac69f118073",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "b21d8487-37c6-37a0-af56-a78ee429a7de"
+                    }
+                },
+                {
+                    "id": "9693aec8-585e-3e76-8f08-625ce0a23862",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "MATHER",
+                        "JobTitle": "Director",
+                        "LastName": "ANN"
+                    }
+                },
+                {
+                    "id": "59df70fc-c328-381d-a6fd-1e678de232f6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "9693aec8-585e-3e76-8f08-625ce0a23862"
+                    }
+                },
+                {
+                    "id": "95076bad-4a39-322b-b4f2-a4882179207f",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "MICHAEL",
+                        "JobTitle": "Director",
+                        "LastName": "J. MORITZ"
+                    }
+                },
+                {
+                    "id": "4f582e35-741c-378c-95aa-1a5b0a6c622e",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "95076bad-4a39-322b-b4f2-a4882179207f"
+                    }
+                },
+                {
+                    "id": "50e74bcc-cc9e-3f8b-8fa2-058167358fc4",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "LEVINSON",
+                        "JobTitle": "Director",
+                        "LastName": "ARTHUR D"
+                    }
+                },
+                {
+                    "id": "85e2e876-ce8f-3e8a-b05b-a48a62ee6f0a",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "50e74bcc-cc9e-3f8b-8fa2-058167358fc4"
+                    }
+                },
+                {
+                    "id": "d4406cfc-69a2-3387-abff-ef9488fe0fde",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "OTELLINI",
+                        "JobTitle": "Director",
+                        "LastName": "PAUL S"
+                    }
+                },
+                {
+                    "id": "b9cb5e4b-5a12-3ef2-ba06-0a6cd3ed73f0",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "d4406cfc-69a2-3387-abff-ef9488fe0fde"
+                    }
+                },
+                {
+                    "id": "4abe022b-0ab8-3689-bef5-22453dd6f608",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Shriram",
+                        "JobTitle": "Director",
+                        "LastName": "Kavitark Ram"
+                    }
+                },
+                {
+                    "id": "2d1d7c82-29f1-3ffd-8366-3689d910d38e",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "4abe022b-0ab8-3689-bef5-22453dd6f608"
+                    }
+                },
+                {
+                    "id": "9c641d4b-ffe9-3ce6-a211-01d38aeeea5f",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Ann",
+                        "JobTitle": "Director",
+                        "LastName": "M. Mather"
+                    }
+                },
+                {
+                    "id": "0125f7e0-3487-3eb8-bee2-437339b17e3f",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "9c641d4b-ffe9-3ce6-a211-01d38aeeea5f"
+                    }
+                },
+                {
+                    "id": "2bcdb64f-f7e3-3fe5-9e4f-39bc8b511d29",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Alan",
+                        "JobTitle": "Director",
+                        "LastName": "Roger Mulally"
+                    }
+                },
+                {
+                    "id": "bd934faf-d8aa-34a1-b0b4-6bda166af469",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "2bcdb64f-f7e3-3fe5-9e4f-39bc8b511d29"
+                    }
+                },
+                {
+                    "id": "69dcc74f-9045-3bb5-a263-06f21bf96027",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "DOERR",
+                        "JobTitle": "Director",
+                        "LastName": "L JOHN"
+                    }
+                },
+                {
+                    "id": "41fbd062-ece9-3d22-80e9-9a64e6266e6a",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "69dcc74f-9045-3bb5-a263-06f21bf96027"
+                    }
+                },
+                {
+                    "id": "ed6443b0-b9b3-3d2c-9243-cc7d093e5ec8",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "John",
+                        "JobTitle": "Director",
+                        "LastName": "L. Hennessy"
+                    }
+                },
+                {
+                    "id": "4300cdb0-bb9f-3bc9-ab63-41dd988a34c6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "ed6443b0-b9b3-3d2c-9243-cc7d093e5ec8"
+                    }
+                },
+                {
+                    "id": "d408fdbb-e160-3578-be28-4494f6a74dd7",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Lawrence",
+                        "JobTitle": "Director",
+                        "LastName": "Edward Page"
+                    }
+                },
+                {
+                    "id": "491a27f2-8e08-3d78-8545-6fcdcd46fe96",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "d408fdbb-e160-3578-be28-4494f6a74dd7"
+                    }
+                },
+                {
+                    "id": "7fe098e8-88d0-340c-bebb-08ce24ffa558",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "SCHMIDT",
+                        "JobTitle": "Director",
+                        "LastName": "ERIC E"
+                    }
+                },
+                {
+                    "id": "e37c981f-1e59-32a5-8251-55b8f7983709",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "7fe098e8-88d0-340c-bebb-08ce24ffa558"
+                    }
+                },
+                {
+                    "id": "f78ada01-c642-36d3-8ede-ca09e62eb58e",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Sergey",
+                        "JobTitle": "Director",
+                        "LastName": "Mikhaylovich Brin"
+                    }
+                },
+                {
+                    "id": "f8a33a51-472f-3c64-b4cb-98ca991a5e48",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "f78ada01-c642-36d3-8ede-ca09e62eb58e"
+                    }
+                },
+                {
+                    "id": "03149da0-9833-30a6-aecc-ad5e1a77bb82",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "MULALLY",
+                        "JobTitle": "Director",
+                        "LastName": "ALAN R"
+                    }
+                },
+                {
+                    "id": "cec57f6d-26b4-3ada-9c10-05c2cfe78426",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "03149da0-9833-30a6-aecc-ad5e1a77bb82"
+                    }
+                },
+                {
+                    "id": "baae67fe-0f13-33a9-b241-cac89352ab26",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Larry",
+                        "JobTitle": "Director",
+                        "LastName": "Page"
+                    }
+                },
+                {
+                    "id": "d4a30c79-040b-3f2f-864b-581e7c45bd75",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "baae67fe-0f13-33a9-b241-cac89352ab26"
+                    }
+                },
+                {
+                    "id": "4b5d9dc0-a73a-38c2-bbed-a838eb9e3538",
+                    "type": "EntityDirectorRecord",
+                    "attributes": {
+                        "FirstName": "Roger",
+                        "JobTitle": "Director",
+                        "LastName": "W. Ferguson"
+                    }
+                },
+                {
+                    "id": "c3a196fe-6009-3e52-9d34-2ba027715c4e",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Directors",
+                        "ToId": "4b5d9dc0-a73a-38c2-bbed-a838eb9e3538"
+                    }
+                },
+                {
+                    "id": "90dc901d-35e9-3e7e-8edd-4d3234aaa2c6",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Nikesh",
+                        "JobTitle": "Pres, Global Sales & Bus Dev",
+                        "LastName": "Arora"
+                    }
+                },
+                {
+                    "id": "16ba80ca-ab00-308b-be17-5919643fe3ba",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "90dc901d-35e9-3e7e-8edd-4d3234aaa2c6"
+                    }
+                },
+                {
+                    "id": "c74158bb-29f5-3148-bcc4-c3e3b54c8c20",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Page",
+                        "JobTitle": "Chief Executive Officer",
+                        "LastName": "Lawrence"
+                    }
+                },
+                {
+                    "id": "8cfdc370-a16f-3e68-8fcf-1aaab3825871",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "c74158bb-29f5-3148-bcc4-c3e3b54c8c20"
+                    }
+                },
+                {
+                    "id": "84afc528-cd76-3f54-8924-6dbd213ebc7e",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Sergey",
+                        "JobTitle": "Executive Officer",
+                        "LastName": "Brin"
+                    }
+                },
+                {
+                    "id": "4b11344b-4750-3afb-963f-af26ec7a2ab0",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "84afc528-cd76-3f54-8924-6dbd213ebc7e"
+                    }
+                },
+                {
+                    "id": "ec19c094-b6aa-3d06-9a12-e194f900104a",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Kordestani",
+                        "JobTitle": "SVP, World Wide Sales/Oper.",
+                        "LastName": "Omid"
+                    }
+                },
+                {
+                    "id": "5e5d23a8-85a0-3f99-af97-c6190990cb3e",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "ec19c094-b6aa-3d06-9a12-e194f900104a"
+                    }
+                },
+                {
+                    "id": "5cbf05c2-36e8-33e4-8936-9391ce402756",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Sundar",
+                        "JobTitle": "Sr. Vice President, Products",
+                        "LastName": "Pichai"
+                    }
+                },
+                {
+                    "id": "c6200ed2-c14a-34d2-b0a5-0b2629b46bec",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "5cbf05c2-36e8-33e4-8936-9391ce402756"
+                    }
+                },
+                {
+                    "id": "58af174d-03d1-32dd-8e59-7c8ce7901571",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Alan",
+                        "JobTitle": "Executive Officer",
+                        "LastName": "C. Eustace"
+                    }
+                },
+                {
+                    "id": "68426ef6-8fa0-3ae8-8418-8e387fdd9ee0",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "58af174d-03d1-32dd-8e59-7c8ce7901571"
+                    }
+                },
+                {
+                    "id": "c845e223-2a44-3204-8982-47c9b7a0bf30",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Eric",
+                        "JobTitle": "Executive Officer",
+                        "LastName": "Schmidt"
+                    }
+                },
+                {
+                    "id": "a60f7755-8f20-3df1-b7cc-07e3f5cde3c4",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "c845e223-2a44-3204-8982-47c9b7a0bf30"
+                    }
+                },
+                {
+                    "id": "fe5ad910-c953-321e-88a7-01b7186e9981",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Rosing",
+                        "JobTitle": "SVP Engineering",
+                        "LastName": "Wayne"
+                    }
+                },
+                {
+                    "id": "4f2e9ce5-616d-31c1-9b77-a6f76f1d4290",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "fe5ad910-c953-321e-88a7-01b7186e9981"
+                    }
+                },
+                {
+                    "id": "af75cc15-91a7-3eab-9397-685123503e5a",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Brown",
+                        "JobTitle": "VP Business Oper.",
+                        "LastName": "Shona L"
+                    }
+                },
+                {
+                    "id": "93936cee-25e1-36b5-a89c-50b085459b55",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "af75cc15-91a7-3eab-9397-685123503e5a"
+                    }
+                },
+                {
+                    "id": "6ab1e84f-06cf-3508-b19b-0cbc12f5a904",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Eustace",
+                        "JobTitle": "Vice President of Engineering",
+                        "LastName": "Robert Alan"
+                    }
+                },
+                {
+                    "id": "15653366-9897-3d1a-a33e-3105f8deff27",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "6ab1e84f-06cf-3508-b19b-0cbc12f5a904"
+                    }
+                },
+                {
+                    "id": "397c3577-f4eb-3d77-b83a-95f069330552",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "REYES",
+                        "JobTitle": "Chief Financial Officer",
+                        "LastName": "GEORGE"
+                    }
+                },
+                {
+                    "id": "9f3f6a85-ec6c-38ca-b842-6343134f9aed",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "397c3577-f4eb-3d77-b83a-95f069330552"
+                    }
+                },
+                {
+                    "id": "9955ca41-22ef-3326-8c2d-09c9802c920e",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Drummond",
+                        "JobTitle": "SVP, Corporate Development",
+                        "LastName": "David C"
+                    }
+                },
+                {
+                    "id": "285b98d2-e099-37e5-bfef-d2583654fcb9",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "9955ca41-22ef-3326-8c2d-09c9802c920e"
+                    }
+                },
+                {
+                    "id": "7fe098e8-88d0-340c-bebb-08ce24ffa558",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "SCHMIDT",
+                        "JobTitle": "Executive Chairman of Board",
+                        "LastName": "ERIC E"
+                    }
+                },
+                {
+                    "id": "e37c981f-1e59-32a5-8251-55b8f7983709",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "7fe098e8-88d0-340c-bebb-08ce24ffa558"
+                    }
+                },
+                {
+                    "id": "0ee22bd8-4f75-3274-b456-3f67531621ce",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "PATRICK",
+                        "JobTitle": "Senior Vice President",
+                        "LastName": "PICHETTE"
+                    }
+                },
+                {
+                    "id": "5687d422-2c40-3a5d-b6c8-bff20c178234",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "0ee22bd8-4f75-3274-b456-3f67531621ce"
+                    }
+                },
+                {
+                    "id": "baae67fe-0f13-33a9-b241-cac89352ab26",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Larry",
+                        "JobTitle": "Executive Officer",
+                        "LastName": "Page"
+                    }
+                },
+                {
+                    "id": "d4a30c79-040b-3f2f-864b-581e7c45bd75",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "baae67fe-0f13-33a9-b241-cac89352ab26"
+                    }
+                },
+                {
+                    "id": "73c680cd-5e8f-3402-9e6d-6b9dacc49c66",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "RUTH",
+                        "JobTitle": "SVP, Chief Financial Officer",
+                        "LastName": "PORAT"
+                    }
+                },
+                {
+                    "id": "ab3bac82-e72c-3041-b299-a210f1069c18",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "73c680cd-5e8f-3402-9e6d-6b9dacc49c66"
+                    }
+                },
+                {
+                    "id": "362dba4a-d88b-3b5f-a0f5-8745afbc6b50",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Jonathan",
+                        "JobTitle": "VP Prod. Mgmt.",
+                        "LastName": "J. Rosenberg"
+                    }
+                },
+                {
+                    "id": "987498da-9fdd-31b8-a34a-eb2a4be5c743",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "362dba4a-d88b-3b5f-a0f5-8745afbc6b50"
+                    }
+                },
+                {
+                    "id": "2eb448da-18cd-36f4-83be-ede3d4499db7",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "FirstName": "Patrick",
+                        "JobTitle": "Executive Officer",
+                        "LastName": "C. Pichette"
+                    }
+                },
+                {
+                    "id": "98adcf34-6bab-342c-b516-71e5082ab3f2",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "1de63240-6265-3638-92c6-3068a1189ddc",
+                        "Title": "Officers",
+                        "ToId": "2eb448da-18cd-36f4-83be-ede3d4499db7"
+                    }
+                }
+            ],
+            "url": "https://sayari.auth0.com/u/login"
+        }
+    ]
+}
