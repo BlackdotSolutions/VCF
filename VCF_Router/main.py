@@ -7,7 +7,7 @@ E.g.
 
     uvicorn main:app --host 192.168.2.25
 """
-
+import requests
 import yaml
 from fastapi import FastAPI, status
 
@@ -24,6 +24,9 @@ def get_searchers():
     CONFIG = yaml.safe_load(file)
     searchers = []
 
+    with open('config.yml', 'r') as file:
+        CONFIG = yaml.safe_load(file)
+
     for searcher in CONFIG["searchers"].values():
         if searcher["enabled"]:
             searcher.pop("enabled", None)
@@ -37,7 +40,8 @@ def get_searchers():
          status_code=status.HTTP_200_OK)
 async def get_results(searcher_id, query: str, maxResults=50):
     with open('config.yml', 'r') as file:
-    CONFIG = yaml.safe_load(file)
+        CONFIG = yaml.safe_load(file)
+
     if searcher_id in CONFIG["searchers"]:
         if CONFIG["searchers"][searcher_id]["enabled"]:
             if "redirect" in CONFIG["searchers"][searcher_id].keys():
