@@ -5,16 +5,18 @@ searchers:
     hint: Search for a person
     tooltip: Find Gravatar profile by email address
     enabled: True # True or False
+    redirect: http://90.220.172.4:3010/searchers/Videris1/results
   gravatar:
     id: gravatar
     name: Gravatar
     hint: Search by email address
     tooltip: Find Gravatar profile by email address
     enabled: True # True or False
+    redirect: http://90.220.172.4:3011/searchers/Videris2/results
   bitcoin:
     id: bitcoin
     name: BitCoin Abuse
     hint: Check for abused BitCoin wallets
     tooltip: Search by BitCoin wallet address
     enabled: True # True or False
-    redirect: http://90.220.172.4:3010/searchers/Videris124/results
+    redirect: http://90.220.172.4:3012/searchers/Videris3/results

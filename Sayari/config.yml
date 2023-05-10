@@ -1,0 +1,13 @@
+searchers:
+  sayari_company:
+    id: sayari_company
+    name: Sayari Graph API Company Search
+    hint: Enter a company to search for
+    tooltip: Get the Sayari Graph information of a company
+    enabled: True
+  sayari_people:
+    id: sayari_people
+    name: Sayari GRpah API People Search
+    hint: Enter the name of a person to search for
+    tooltip: Get the Sayari Graph information of a person
+    enabled: True
