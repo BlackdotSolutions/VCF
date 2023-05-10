@@ -7,25 +7,21 @@ E.g.
 
     uvicorn main:app --host 192.168.2.25
 """
-import requests
+
 import yaml
-from fastapi import FastAPI, status
+import uvicorn
+from fastapi import FastAPI, HTTPException, status
 
 from vcf import *
+from sayari import *
 
 app = FastAPI()
-
-
-
 
 @app.get("/searchers/", response_model=List[Searcher], response_model_exclude_none=True)
 def get_searchers():
     with open('config.yml', 'r') as file:
-    CONFIG = yaml.safe_load(file)
-    searchers = []
-
-    with open('config.yml', 'r') as file:
         CONFIG = yaml.safe_load(file)
+    searchers = []
 
     for searcher in CONFIG["searchers"].values():
         if searcher["enabled"]:
@@ -38,10 +34,9 @@ def get_searchers():
 
 @app.get("/searchers/{searcher_id}/results", response_model=SearchResults, response_model_exclude_none=True,
          status_code=status.HTTP_200_OK)
-async def get_results(searcher_id, query: str, maxResults=50):
+async def get_results(searcher_id, query: str, maxResults: int = 50):
     with open('config.yml', 'r') as file:
         CONFIG = yaml.safe_load(file)
-
     if searcher_id in CONFIG["searchers"]:
         if CONFIG["searchers"][searcher_id]["enabled"]:
             if "redirect" in CONFIG["searchers"][searcher_id].keys():
@@ -49,9 +44,14 @@ async def get_results(searcher_id, query: str, maxResults=50):
                 print(redirect)
                 return requests.get(redirect).json()
             else:
-                return await globals()["get_" + searcher_id](query, maxResults)
-
+                results = await globals()["get_" + searcher_id](query, maxResults)
+                if 'error' in results:
+                    raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=results)
+                return results
         else:
             return {"errors": [{"message": "Searcher not enabled."}]}
     else:
         return {"errors": [{"message": "Unrecognised searcher"}]}
+
+if __name__== "__main__":
+    uvicorn.run(app)

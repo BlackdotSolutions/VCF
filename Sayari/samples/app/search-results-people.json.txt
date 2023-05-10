@@ -1,0 +1,630 @@
+{
+    "searchResults": [
+        {
+            "key": "22EF1C13-D478-40DB-8F33-2C4282C3A1CF",
+            "title": "LARRY MARRY PAGE",
+            "subTitle": "Person | USA",
+            "summary": "Address: 1600, Amphitheatre Parkway Mountain, MOUNTAIN VIEW, CA, 94104",
+            "source": "Sayari API",
+            "entities": [
+                {
+                    "id": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "Description": "",
+                        "Dob": "",
+                        "FirstName": "LARRY",
+                        "IsCompany": "False",
+                        "LastName": "MARRY PAGE",
+                        "Nationality": "",
+                        "RegistrationCountry": ""
+                    }
+                },
+                {
+                    "id": "f0561566-7c60-3784-a323-282e50cd7c68",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "94104",
+                        "Region": "CA",
+                        "Street1": "1600",
+                        "Street2": "Amphitheatre Parkway Mountain, MOUNTAIN VIEW"
+                    }
+                },
+                {
+                    "id": "3c771bd7-bb1d-3768-8357-537be32384ac",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Person Address",
+                        "ToId": "f0561566-7c60-3784-a323-282e50cd7c68"
+                    }
+                },
+                {
+                    "id": "087b9a3d-ae0b-36ec-8d14-aaae0792fc9e",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "JULIA' MR. ANSWERS SERGERY, GOOGLE QUESTIONS.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "f15a1fc0-de07-3de2-8f7d-b73806964114",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "087b9a3d-ae0b-36ec-8d14-aaae0792fc9e"
+                    }
+                },
+                {
+                    "id": "a947e762-6c08-3e35-b6e4-1788e49d1101",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "PERSONALIZED MEDICINE/GENETIC CONSULTANT CLUB, GOOGLD HEALTH",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "b82c0e49-be55-39a7-a642-8bcb22d1ecf5",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "a947e762-6c08-3e35-b6e4-1788e49d1101"
+                    }
+                },
+                {
+                    "id": "1d58d889-ed9d-3d60-92bf-8b13390f122b",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "LARRY & TIMOTHY E-FASHION SCHOOL OF PARIS, GOOGLE ART.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "698e9dec-4ab7-3b98-8970-4e6a35ed725c",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "1d58d889-ed9d-3d60-92bf-8b13390f122b"
+                    }
+                },
+                {
+                    "id": "3ac07b4c-d469-362e-84a2-8df0646dcd5e",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "PICHIA PROASNSWERS RESEARCH INSTITUTION, GOG., LOL",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "4d242f6d-fdff-37e7-b989-0e537be74575",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "3ac07b4c-d469-362e-84a2-8df0646dcd5e"
+                    }
+                },
+                {
+                    "id": "4bfa0e2b-0f74-3e3d-b970-dae8fbf4e9e8",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "J-PAGES, WWW.YOURBRAND.MAGICOM, GOOGLE.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "9517e1c9-549b-3606-a6b8-3586336cf81a",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "4bfa0e2b-0f74-3e3d-b970-dae8fbf4e9e8"
+                    }
+                },
+                {
+                    "id": "72d1ef02-73e2-300f-b4f2-c9a592a19ff2",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "SANDRA & JULIA PALM TREE NATURAL DRINKS, GOOGLE DRINKS.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "eef87c0e-3548-3c45-bc1a-46f37efe889b",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "72d1ef02-73e2-300f-b4f2-c9a592a19ff2"
+                    }
+                },
+                {
+                    "id": "213f46e4-4d07-3ba8-b3fa-0d738f2e3488",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "GOOGLE STUDENT, GO., SCHOOLS.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "970f8c7a-22be-3c44-8d26-660ba8545f56",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "213f46e4-4d07-3ba8-b3fa-0d738f2e3488"
+                    }
+                },
+                {
+                    "id": "f6bb4df2-4328-36e8-8949-4c16a3f30eb4",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "JULIA SWEETHEART MR. SEARCH, COLLEGE QUESTIONS. GO, STUDY.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "650c435c-03bf-3094-9e44-d73e415d311f",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "f6bb4df2-4328-36e8-8949-4c16a3f30eb4"
+                    }
+                },
+                {
+                    "id": "55190501-71f7-3dd6-bf11-fe83ded1aedd",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "LARRY& JULIA' FAMILY BICYCLE RIDING ALL OF THE WORLD, GOOGLE TRAVEL.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "9c7e3ade-160e-329a-a58a-1a90d79603bf",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "55190501-71f7-3dd6-bf11-fe83ded1aedd"
+                    }
+                },
+                {
+                    "id": "6115a164-8bcf-38d2-944a-7f8c6cbec974",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "JULIA APPLERING 270, GOOGLE.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "8dcce5e2-1320-3753-a760-94bd82389cde",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "6115a164-8bcf-38d2-944a-7f8c6cbec974"
+                    }
+                },
+                {
+                    "id": "fddd2790-7bc5-346d-b923-644407d7cf7a",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "BOSS BEBE SHOP BOX, GODY., DADY",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "fd1d1867-20db-3e65-8895-69de2e74dfdd",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "fddd2790-7bc5-346d-b923-644407d7cf7a"
+                    }
+                },
+                {
+                    "id": "825e5d8c-00cf-3897-a96a-b3e38aee2a1a",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "STUDENT JULIA SWEETHEART MR. SEARCH, GOOGLE COLLEGE QUESTIONS.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "fbe2122f-c849-3e1f-8e36-dbb6a3f05f4d",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "825e5d8c-00cf-3897-a96a-b3e38aee2a1a"
+                    }
+                },
+                {
+                    "id": "a91a85b0-40d4-3183-ae8a-830c6c01c361",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "LARRY & JULIA GAS STATION SNACK DATING, GOOGLEGASTATION.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "10a05efd-b030-32d4-a0f5-6e02fe49bb02",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "a91a85b0-40d4-3183-ae8a-830c6c01c361"
+                    }
+                },
+                {
+                    "id": "878bd19f-837f-34ab-81c9-14b074e5e8ff",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "GOOGLE'S TAX JULIA E-FILE, PAYTAXSERVICE.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "70aaf217-bbd9-3f6c-89e4-3066f3e5604a",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "878bd19f-837f-34ab-81c9-14b074e5e8ff"
+                    }
+                },
+                {
+                    "id": "94085f39-5325-3e1e-bdfc-8cfab491e1c6",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "JULIA & LARRY MAGIC LOVE LETTERS, GLE-SEND.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "71ffb8cd-1b1b-3b4b-be4b-b8592a155f08",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "94085f39-5325-3e1e-bdfc-8cfab491e1c6"
+                    }
+                },
+                {
+                    "id": "79d91ee5-130f-36a0-b98d-c772a409f622",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "JULIA MESSY LIFESTYLE, GOOGLE-CLEAN.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "cfba2029-2669-33ec-b22c-6f05beb8bec2",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "79d91ee5-130f-36a0-b98d-c772a409f622"
+                    }
+                },
+                {
+                    "id": "99c02331-792d-3d1f-a446-e17d540281e1",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "LARRY & JULIA FAMILIOGOLOBO CYCLIC PICNIC, GOOGLD BEAUTIFUL PICNICERS.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "4b87b6d1-3baf-3baa-84c0-b71f13be6d1d",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "99c02331-792d-3d1f-a446-e17d540281e1"
+                    }
+                },
+                {
+                    "id": "b55b2540-a210-3c80-a701-37fc7684cf4e",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "BILLIONAIRE TIMOTHY' LUXURY JULIA DIAMONDS, GOOD., STAR.",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "8422a960-7949-343d-8720-d7652ba8d054",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "b55b2540-a210-3c80-a701-37fc7684cf4e"
+                    }
+                },
+                {
+                    "id": "2c2d35b7-9fac-39f4-be3e-00dec748aca0",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Individual Agent",
+                        "Name": "GOOGLE, KNOWLEDGE., JULIA",
+                        "NumberOfShares": "",
+                        "Status": "Inactive"
+                    }
+                },
+                {
+                    "id": "099c5916-57e4-3841-97f2-9d714fe6d27a",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "f557c95e-1c28-3700-b6f4-f4a6843e80a8",
+                        "Title": "Businesses",
+                        "ToId": "2c2d35b7-9fac-39f4-be3e-00dec748aca0"
+                    }
+                }
+            ],
+            "url": "https://sayari.auth0.com/u/login"
+        },
+        {
+            "key": "97306B9D-174F-49E4-8036-B91CEDC29971",
+            "title": "Larry Page",
+            "subTitle": "Person | USA",
+            "summary": "Address: 99, Suite 2480, Wall Street, New york, NEW YORK, 10026",
+            "source": "Sayari API",
+            "entities": [
+                {
+                    "id": "7bd344ac-50ed-3b50-afef-82caad5ed490",
+                    "type": "EntityOfficerRecord",
+                    "attributes": {
+                        "Description": "",
+                        "Dob": "",
+                        "FirstName": "Larry",
+                        "IsCompany": "False",
+                        "LastName": "Page",
+                        "Nationality": "",
+                        "RegistrationCountry": ""
+                    }
+                },
+                {
+                    "id": "32fde21b-ccce-39a4-a373-5b4cfbffd80f",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "22102",
+                        "Region": "VA",
+                        "Street1": "",
+                        "Street2": "Larry Page, McLean"
+                    }
+                },
+                {
+                    "id": "9d67627b-f89c-3cb6-b14d-b03ba2338b39",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "7bd344ac-50ed-3b50-afef-82caad5ed490",
+                        "Title": "Person Address",
+                        "ToId": "32fde21b-ccce-39a4-a373-5b4cfbffd80f"
+                    }
+                },
+                {
+                    "id": "32fde21b-ccce-39a4-a373-5b4cfbffd80f",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "10026",
+                        "Region": "NEW YORK",
+                        "Street1": "99, Suite 2480",
+                        "Street2": "Wall Street, New york"
+                    }
+                },
+                {
+                    "id": "9d67627b-f89c-3cb6-b14d-b03ba2338b39",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "7bd344ac-50ed-3b50-afef-82caad5ed490",
+                        "Title": "Person Address",
+                        "ToId": "32fde21b-ccce-39a4-a373-5b4cfbffd80f"
+                    }
+                },
+                {
+                    "id": "83127d63-014b-3ead-9b75-eb9cc7382c5a",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Registered Agent",
+                        "Name": "APPOTEL CASTLE ECLIPSEDRAGONVITA CORPORATION NEW TRUMP PLAZA 22 CENTURY ITECHHOTELEX INNOVATIVE SENSIBLE APPOTEL TIM COOK AT NEWYORK & NEWYORK",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "a9853c83-2e9c-30ea-8a7c-a537b19c1548",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "7bd344ac-50ed-3b50-afef-82caad5ed490",
+                        "Title": "Businesses",
+                        "ToId": "83127d63-014b-3ead-9b75-eb9cc7382c5a"
+                    }
+                },
+                {
+                    "id": "192a5a19-9968-3232-8120-122650f2b1a7",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Registered Agent",
+                        "Name": "LUCINDA GOOGLEPLEX PHARMACE CORPORATION ROMEBEAUTIMAX: [LUCINDA-LELLE120][BEAUTIENZYMELLE-P][TIMSTEMINA99M]",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "ff581737-41e0-31f7-9908-04cfb2a20ecf",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "7bd344ac-50ed-3b50-afef-82caad5ed490",
+                        "Title": "Businesses",
+                        "ToId": "192a5a19-9968-3232-8120-122650f2b1a7"
+                    }
+                },
+                {
+                    "id": "27a47516-3548-31d2-8719-6d35d148fe81",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Registered Agent",
+                        "Name": "CHANEL WEDDINGREVOL N ONEALAIN & LARISA WEDDINGICONS CORPORATION",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "bbe49444-88e7-3e6c-b6ac-300101f352b6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "7bd344ac-50ed-3b50-afef-82caad5ed490",
+                        "Title": "Businesses",
+                        "ToId": "27a47516-3548-31d2-8719-6d35d148fe81"
+                    }
+                },
+                {
+                    "id": "59131e5a-cf0c-3387-92b4-72128906fae5",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Registered Agent",
+                        "Name": "JASMINEX VASCULA PREVENTIVEPHARMA CORPORATION [VELLA]",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "d40d8748-4816-327e-825e-e3ea503c7e67",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "7bd344ac-50ed-3b50-afef-82caad5ed490",
+                        "Title": "Businesses",
+                        "ToId": "59131e5a-cf0c-3387-92b4-72128906fae5"
+                    }
+                },
+                {
+                    "id": "acef69ff-3050-3a55-a18c-dadadbfd9a92",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Registered Agent",
+                        "Name": "LARRIMED SIENCEENT PHARMACEUTICAL CORPORATION [RINOZINE NOSE INFECTION]",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "78bcef31-398d-3458-9063-38cd83189961",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "7bd344ac-50ed-3b50-afef-82caad5ed490",
+                        "Title": "Businesses",
+                        "ToId": "acef69ff-3050-3a55-a18c-dadadbfd9a92"
+                    }
+                },
+                {
+                    "id": "001a9721-dacc-3e98-8ab3-e8087fdf5fab",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Registered Agent",
+                        "Name": "GOOGLESCHOLAR KNOWLEDGEMEDIA & INTELLIRESEARCH CORPORATION INTELLIGOOGLE SCHOLARMEDIA[IGSM ECHELON CLUB]WWW.GOOGLESCHOLARIGSM.COM",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "884d53e1-ff73-3304-bee3-38ebbb2569c8",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "7bd344ac-50ed-3b50-afef-82caad5ed490",
+                        "Title": "Businesses",
+                        "ToId": "001a9721-dacc-3e98-8ab3-e8087fdf5fab"
+                    }
+                },
+                {
+                    "id": "49358d63-6d85-3a1b-8e3a-e70ba4a4f062",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "Registered Agent",
+                        "Name": "THE KING TIM COOK OF USA & UK KINGDOM CASTLE POLITICIAN CERTIFIED PROJECT & CORPORATION",
+                        "NumberOfShares": "",
+                        "Status": "Active"
+                    }
+                },
+                {
+                    "id": "0d870484-4846-37ee-83a6-d2601defde80",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "7bd344ac-50ed-3b50-afef-82caad5ed490",
+                        "Title": "Businesses",
+                        "ToId": "49358d63-6d85-3a1b-8e3a-e70ba4a4f062"
+                    }
+                }
+            ],
+            "url": "https://sayari.auth0.com/u/login"
+        }
+    ]
+}
