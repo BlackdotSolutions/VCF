@@ -1,7 +1,7 @@
 import uuid
 from typing import Any, List, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Extra, Field, constr
 
 
 class Searcher(BaseModel):
