@@ -16,12 +16,8 @@ from vcf import *
 app = FastAPI()
 
 
-
-
 @app.get("/searchers/", response_model=List[Searcher], response_model_exclude_none=True)
 def get_searchers():
-    with open('config.yml', 'r') as file:
-    CONFIG = yaml.safe_load(file)
     searchers = []
 
     with open('config.yml', 'r') as file:
@@ -45,7 +41,8 @@ async def get_results(searcher_id, query: str, maxResults=50):
     if searcher_id in CONFIG["searchers"]:
         if CONFIG["searchers"][searcher_id]["enabled"]:
             if "redirect" in CONFIG["searchers"][searcher_id].keys():
-                redirect = CONFIG["searchers"][searcher_id]["redirect"] + f"?query={query}&maxResults={str(maxResults)}"
+                redirect = CONFIG["searchers"][searcher_id]["redirect"] + \
+                    f"?query={query}&maxResults={str(maxResults)}"
                 print(redirect)
                 return requests.get(redirect).json()
             else:
