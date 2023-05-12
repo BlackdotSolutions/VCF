@@ -12,7 +12,7 @@ class Searcher(BaseModel):
     tooltip: Optional[str] = None
 
 
-class Attributes(BaseModel):
+class Attribute(BaseModel):
     class Config:
         extra = Extra.forbid
 
