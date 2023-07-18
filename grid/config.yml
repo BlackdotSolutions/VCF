@@ -1,0 +1,13 @@
+searchers:
+  grid_company:
+    id: grid_company
+    name: Grid API Company Search
+    hint: Enter a company to search for
+    tooltip: Get the Grid API information of a company
+    enabled: True
+  grid_people:
+    id: grid_people
+    name: Grid API People Search
+    hint: Enter the name of a person to search for
+    tooltip: Get the Grid API information of a person
+    enabled: True
