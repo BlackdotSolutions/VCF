@@ -1,0 +1,1338 @@
+{
+    "data": {
+        "id": "179830095",
+        "entityId": 179830095,
+        "entityTyp": "O",
+        "entityName": "Wal-Mart Stores Inc",
+        "source": {
+            "sourceName": "RiskConnect",
+            "entityDt": "2023-06-08T00:00:00.000+0100"
+        },
+        "events": [
+            {
+                "category": {
+                    "categoryCode": "FRD",
+                    "categoryDesc": "Fraud, Scams, Swindles"
+                },
+                "eventDesc": "vice chairman convicted for fraud",
+                "eventDt": "2008-03-15",
+                "subCategory": {
+                    "categoryCode": "CVT",
+                    "categoryDesc": "Convict, Conviction"
+                },
+                "source": {
+                    "sourceName": "Factiva Article - AKDG000020080317e43f0001v",
+                    "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=AKDG000020080317e43f0001v",
+                    "entityDt": "2008-03-15",
+                    "format": "Media",
+                    "headline": "Coughlin granted pass to banquet, officer says",
+                    "publicationSource": "The Arkansas Democrat Gazette",
+                    "publisher": "Arkansas Democrat-Gazette, Inc.",
+                    "sourceKy": "5ccdc93effe6aa8c"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "BUS",
+                    "categoryDesc": "Business Crimes (Antitrust, Bankruptcy, Price Fixing)"
+                },
+                "eventDesc": "The state filed suit against Wal-Mart Stores, charging with intentionally defrauding customers by failing to post accurate prices on products -- or not posting prices at all.",
+                "eventDt": "2006-07-07",
+                "subCategory": {
+                    "categoryCode": "SAN",
+                    "categoryDesc": "Sanction"
+                },
+                "source": {
+                    "sourceName": "Factiva Article - KRTAZ00020060707e27700002",
+                    "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=KRTAZ00020060707e27700002",
+                    "entityDt": "2006-07-07",
+                    "format": "Media",
+                    "headline": "State sues AutoZone, Wal-Mart over pricing",
+                    "publicationSource": "The Arizona Daily Star (KRTBN)",
+                    "publisher": "Knight Ridder/ Tribune Business News",
+                    "sourceKy": "f09770c21fed3b1b"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "FRD",
+                    "categoryDesc": "Fraud, Scams, Swindles"
+                },
+                "eventDesc": "Wal-Mart Stores Inc. has paid $1.65 million to resolve allegations that it violated the federal False Claims Act when it knowingly submitted claims for reimbursement to California's Medi-Cal program that were not supported by applicable diagnosis and documentation requirements. The settlement resolves allegations that Walmart failed to confirm and document the requisite diagnoses, and in some instances dispensed drugs for non-approved diagnoses, then knowingly billed Medi-Cal for these prescriptions.",
+                "eventDt": "2017-07-07",
+                "subCategory": {
+                    "categoryCode": "FIM",
+                    "categoryDesc": "Fine - More than $10,000"
+                },
+                "source": {
+                    "sourceName": "DOJ US Attorneys Offices Press Releases 2017",
+                    "sourceURL": "http://www.justice.gov/usao/about/usattorneys.html",
+                    "entityDt": "2022-10-22"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "ORG",
+                    "categoryDesc": "Organized Crime, Criminal Association, Racketeering"
+                },
+                "eventDesc": "Violated racketeering laws by conspiring ,Suit Dismissed",
+                "eventDt": "2006-08-30",
+                "subCategory": {
+                    "categoryCode": "DMS",
+                    "categoryDesc": "Dismissed"
+                },
+                "source": {
+                    "sourceName": "Factiva Article - NYTF000020060830e28u0005d",
+                    "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=NYTF000020060830e28u0005d",
+                    "entityDt": "2006-08-30",
+                    "format": "Media",
+                    "headline": "National Briefing Labor: Wal-Mart Suit Dismissed",
+                    "publicationSource": "The New York Times",
+                    "publisher": "New York Times Digital (Full Text)",
+                    "sourceKy": "ae80aa91f1c95bb9"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "FRD",
+                    "categoryDesc": "Fraud, Scams, Swindles"
+                },
+                "eventDesc": "dismissed a wrongful termination suit, accusing the company of fraud",
+                "eventDt": "2007-08-22",
+                "subCategory": {
+                    "categoryCode": "DMS",
+                    "categoryDesc": "Dismissed"
+                },
+                "source": {
+                    "sourceName": "Factiva Article - DJ00000020070822e38m000i0",
+                    "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=DJ00000020070822e38m000i0",
+                    "entityDt": "2007-08-22",
+                    "format": "Media",
+                    "headline": "WSJ:Michigan Judge Dismisses Ex-Ad Chief Lawsuit Vs Wal-Mart",
+                    "publicationSource": "Theflyonthewall.com",
+                    "sourceKy": "40823b9b70a69ec1"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "BRB",
+                    "categoryDesc": "Bribery, Graft, Kickbacks, Political Corruption"
+                },
+                "eventDesc": "Walmart Inc. and its wholly owned Brazilian subsidiary, WMT Brasilia S.a.r.l. have agreed to pay a combined criminal penalty of $137 million to resolve the government's investigation into violations of the Foreign Corrupt Practices Act (FCPA).  From 2000 until 2011, certain Walmart personnel responsible for implementing and maintaining the company's internal accounting controls related to anti-corruption were aware of certain failures involving these controls, including relating to potentially improper payments to government officials in certain Walmart foreign subsidiaries. Walmart entered into a three-year non-prosecution agreement and agreed to retain an independent corporate compliance monitor for two years. The $137 million penalty includes forfeiture of $3.6 million and a fine of $724,898 from WMT Brasilia. In a related resolution with the U.S. Securities and Exchange Commission (SEC), Walmart agreed to disgorge $144 million in profits.",
+                "eventDt": "2020-06-25",
+                "endDate": "2019-06-20",
+                "subCategory": {
+                    "categoryCode": "FIM",
+                    "categoryDesc": "Fine - More than $10,000"
+                },
+                "source": {
+                    "sourceName": "DOJ US Attorneys Offices Press Releases 2019",
+                    "sourceURL": "https://www.justice.gov/usao/us-attorneys-listing",
+                    "entityDt": "2022-10-22"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "MLA",
+                    "categoryDesc": "Money Laundering"
+                },
+                "eventDesc": "money laundering charges. Coughlin, regarded once by some employees as the living embodiment of Wal-Mart founder Sam Walton, is likely to be the senior most Wal-Mart executive charged for his involvement in the episode.",
+                "eventDt": "2006-01-06",
+                "subCategory": {
+                    "categoryCode": "ASC",
+                    "categoryDesc": "Associated with, Seen with"
+                },
+                "source": {
+                    "sourceName": "Factiva Article - DJ00000020060106e216000fc",
+                    "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=DJ00000020060106e216000fc",
+                    "entityDt": "2006-01-06",
+                    "format": "Media",
+                    "headline": "WSJ: Former Wal-Mart Vice-Chmn Coughlin To Plead Guilty",
+                    "publicationSource": "Arkansas Democrat-Gazette",
+                    "publisher": " Little Rock Newspapers, Inc.",
+                    "sourceKy": "0729e781be58313e"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "FRD",
+                    "categoryDesc": "Fraud, Scams, Swindles"
+                },
+                "eventDesc": "Adopted a Consent Decree Resolving Alleged Wireless Microphone Marketing Violations. Wal-Mart.com USA, LLC subsidiary of Wal-Mart Stores, Inc. complied with the Commission's rules pertaining to the marketing of certain wireless microphones. Retailers must ensure that wireless microphones are properly authorized and include at the point of sale a consumer alert notifying consumers of specific conditions and restrictions applicable to the operation of such devices. In response to the Commission's investigation, Wal-Mart.com USA acknowledged that it had not previously included on its website the required consumer alert and that a supplier had not obtained an equipment authorization for one wireless microphone model until after it was offered for sale. It is ordered, pursuant to Sections 4(i), 4(j), and 503(b) of the Act, and Sections 0.111 and 0.311 of the Rules, the Consent Decree attached to this Order IS ADOPTED. Kelly A. Thompson is the Senior Vice President of Wal-Mart.com USA, LLC.",
+                "eventDt": "2014-03-31",
+                "subCategory": {
+                    "categoryCode": "ASC",
+                    "categoryDesc": "Associated with, Seen with"
+                },
+                "source": {
+                    "sourceName": "United States Federal Communications Commission - Enforcements and News",
+                    "sourceURL": "https://www.fcc.gov/news-events/headlines/510",
+                    "entityDt": "2023-06-26"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "FRD",
+                    "categoryDesc": "Fraud, Scams, Swindles"
+                },
+                "eventDesc": "NY Attorney General announced that his office sent letters to four major retailers, GNC, Target, Walmart, and Walgreens, for allegedly selling store brand herbal supplement products in New York that either could not be verified to contain the labeled substance, or which were found to contain ingredients not listed on the labels.",
+                "eventDt": "2015-02-03",
+                "endDate": "2015-02-03",
+                "subCategory": {
+                    "categoryCode": "ACT",
+                    "categoryDesc": "Disciplinary, Regulatory Action"
+                },
+                "source": {
+                    "sourceName": "New York Attorney General Press Releases",
+                    "sourceURL": "https://ag.ny.gov/press-releases",
+                    "entityDt": "2023-06-26"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "FRD",
+                    "categoryDesc": "Fraud, Scams, Swindles"
+                },
+                "eventDesc": "In this Notice of Apparent Liability for Forfeiture (\"NAL\"), we find that Wal-Mart Stores, Inc. and Sam's West, Inc. 1, apparently willfully and repeatedly violated Section 15.117(k) of the Commission's Rules (\"Rules\")2 by failing to place the required Consumer Alert label immediately adjacent to and clearly associated with television receiving equipment that contains an analog broadcast television tuner but does not contain a digital broadcast television tuner (hereinafter \"analog-only tuner\") that it displayed or offered for sale or rent. 3 We conclude, pursuant to Section 503(b) of the Communications Act of 1934, as amended (\"Act\"),4 that Wal-Mart is apparently liable for a forfeiture in the amount of nine hundred ninety-two thousand dollars ($992,000).",
+                "eventDt": "2008-04-10",
+                "subCategory": {
+                    "categoryCode": "ACT",
+                    "categoryDesc": "Disciplinary, Regulatory Action"
+                },
+                "source": {
+                    "sourceName": "United States Federal Communications Commission - Enforcements and News",
+                    "sourceURL": "https://www.fcc.gov/news-events/headlines/510",
+                    "entityDt": "2023-06-26"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "SEC",
+                    "categoryDesc": "SEC Violations (Insider Trading, Securities Fraud)"
+                },
+                "eventDesc": "must pay at least $78.5 million for violating Pennsylvania labor laws by forcing employees to work through rest breaks and off the clock",
+                "eventDt": "2006-10-14",
+                "subCategory": {
+                    "categoryCode": "FIM",
+                    "categoryDesc": "Fine - More than $10,000"
+                },
+                "source": {
+                    "sourceName": "Factiva Article - SUNW000020061017e2ae0003q",
+                    "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=SUNW000020061017e2ae0003q",
+                    "entityDt": "2006-10-14",
+                    "format": "Media",
+                    "headline": "NEWS TO GO // A QUICK RUN THROUGH SOME OF TODAY' TOP STORIES",
+                    "publicationSource": "The Republican",
+                    "publisher": "The Republican Company",
+                    "sourceKy": "b2f2644468596c3f"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "BRB",
+                    "categoryDesc": "Bribery, Graft, Kickbacks, Political Corruption"
+                },
+                "eventDesc": "Wal-Mart Stores Inc. announced Friday that the president and CEO of Wal-Mart Latin America, who oversaw the company's Mexico business during the time of an internal investigation of a bribery scandal.",
+                "eventDt": "2013-01-11",
+                "subCategory": {
+                    "categoryCode": "ASC",
+                    "categoryDesc": "Associated with, Seen with"
+                },
+                "source": {
+                    "sourceName": "Factiva Article - APRS000020130111e91b002i6",
+                    "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=APRS000020130111e91b002i6",
+                    "entityDt": "2013-01-11",
+                    "format": "Media",
+                    "headline": "Wal-Mart's Latin American head to retire amid bribery probe in Mexico",
+                    "publicationSource": "Associated Press Newswires",
+                    "publisher": "Press Association, Inc.",
+                    "sourceKy": "2a70c1a32b850c245d3f3d53eb346cc4"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "REG",
+                    "categoryDesc": "Regulatory Action"
+                },
+                "eventDesc": "Wal-Mart Stores, Inc. has remitted $ 50,000.00 to settled allegations of a violations of 515 Sanctions Program. Actual or Alleged Violation of Dealing in Property",
+                "eventDt": "2003-04-04",
+                "subCategory": {
+                    "categoryCode": "FIM",
+                    "categoryDesc": "Fine - More than $10,000"
+                },
+                "source": {
+                    "sourceName": "OFAC Civil Penalties List",
+                    "sourceURL": "http://www.treasury.gov/resource-center/sanctions/CivPen/Pages/civpen-index2.aspx",
+                    "entityDt": "2023-06-20"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "TFT",
+                    "categoryDesc": "Theft (Larceny, Misappropriation, Embezzlement, Extortion)"
+                },
+                "eventDesc": "Tom Coughlin was Wal-Mart Stores Inc. vice chairman was sentenced for embezzling",
+                "eventDt": "2008-06-06",
+                "subCategory": {
+                    "categoryCode": "CVT",
+                    "categoryDesc": "Convict, Conviction"
+                },
+                "source": {
+                    "sourceName": "Factiva Article - APRS000020080606e466009ku",
+                    "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=APRS000020080606e466009ku",
+                    "entityDt": "2008-06-06",
+                    "format": "Media",
+                    "headline": "In counterclaim, Coughlin accuses Wal-Mart of 'witch hunt'",
+                    "publicationSource": "Associated Press Newswires",
+                    "publisher": "Press Association, Inc.",
+                    "sourceKy": "53288b991e0340d7"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "BUS",
+                    "categoryDesc": "Business Crimes (Antitrust, Bankruptcy, Price Fixing)"
+                },
+                "eventDesc": "An Attorney General delivered on his promise to fight back against the opioid epidemic by announcing a more than $53 million agreement with Walmart for its role in furthering the opioid epidemic. The agreement resolves allegations that the company contributed to the opioid epidemic by failing to implement appropriate policies, procedures, and controls relating to the dispensing of opioids at its stores. Kentucky stands to receive over $53 million from the agreement, and most of the funding is scheduled for distribution to Kentucky and local governments in 2023. Walmart's present joint ventures, subsidiaries and\naffiliates and predecessor entities including \n\n Wal-Mart Stores, Inc.\nhad also agreed to this Agreement.",
+                "eventDt": "2022-12-21",
+                "subCategory": {
+                    "categoryCode": "FIM",
+                    "categoryDesc": "Fine - More than $10,000"
+                },
+                "source": {
+                    "sourceName": "Kentucky Attorney General - News Releases",
+                    "sourceURL": "https://ag.ky.gov/news/Pages/default.aspx",
+                    "entityDt": "2023-06-27"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "BUS",
+                    "categoryDesc": "Business Crimes (Antitrust, Bankruptcy, Price Fixing)"
+                },
+                "eventDesc": "New York Attorney General Letitia James announced a $3.1 billion multistate settlement with Walmart, resolving allegations that the company contributed to the nationwide opioid crisis by failing to regulate opioid prescriptions at its stores. The state attorneys general on the executive committee, attorneys representing local governments, Walmart and all of its respective past and present direct or indirect parents, subsidiaries, divisions, affiliates, joint ventures, predecessors, successors, and assigns, including Wal-Mart Stores Inc. had agreed to this settlement. New York state will receive up to $139 million as part of the settlement with Walmart for Failing to Regulate Opioid Prescriptions.",
+                "eventDt": "2022-11-15",
+                "endDate": "2022-11-15",
+                "subCategory": {
+                    "categoryCode": "FIM",
+                    "categoryDesc": "Fine - More than $10,000"
+                },
+                "source": {
+                    "sourceName": "New York Attorney General Press Releases",
+                    "sourceURL": "https://ag.ny.gov/press-releases",
+                    "entityDt": "2023-06-26"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "BUS",
+                    "categoryDesc": "Business Crimes (Antitrust, Bankruptcy, Price Fixing)"
+                },
+                "eventDesc": "New York Attorney General Letitia James  announced a $3.1 billion multistate settlement with Walmart, resolving allegations that the company contributed to the nationwide opioid crisis by failing to regulate opioid prescriptions at its stores. The state attorneys general on the executive committee, attorneys representing local governments, Walmart and  all of its respective past and present direct or indirect parents, subsidiaries, divisions, affiliates, joint ventures, predecessors, successors, and assigns, including Wal-Mart  had agreed to this settlement. New York state will receive up to $139 million as part of the settlement  with Walmart for Failing to Regulate Opioid Prescriptions.",
+                "eventDt": "2022-11-15",
+                "endDate": "2022-11-15",
+                "subCategory": {
+                    "categoryCode": "FIM",
+                    "categoryDesc": "Fine - More than $10,000"
+                },
+                "source": {
+                    "sourceName": "New York Attorney General Press Releases",
+                    "sourceURL": "https://ag.ny.gov/press-releases",
+                    "entityDt": "2023-06-26"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "BUS",
+                    "categoryDesc": "Business Crimes (Antitrust, Bankruptcy, Price Fixing)"
+                },
+                "eventDesc": "Wal-Mart, Inc. has agreed to pay $2.1 million for overcharging consumers in violation of a 2008 judgment against the retail chain. In December 2005, the Attorney General's office and the San Diego District Attorney's office investigated allegations that Wal-Mart stores in California were scanning items at a higher price than the prices advertised on store shelves and signs. Through random price-checking, county Departments of Weights and Measures across the state found that 164 Wal-Mart stores in 30 counties had made scanning errors. Mart has agreed to pay new penalties and costs totaling $2.1 million.",
+                "eventDt": "2012-03-21",
+                "subCategory": {
+                    "categoryCode": "FIM",
+                    "categoryDesc": "Fine - More than $10,000"
+                },
+                "source": {
+                    "sourceName": "California - Attorney General Press Releases",
+                    "sourceURL": "https://oag.ca.gov/news",
+                    "entityDt": "2023-06-22"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "HUM",
+                    "categoryDesc": "Human rights, Genocide, War crimes"
+                },
+                "eventDesc": "Wal-Mart Stores Inc. must pay at least $78 million in damages after a state jury found the retailer forces employees to work through rest breaks and off the clock, violating Pennsylvania labor laws",
+                "eventDt": "2006-10-15",
+                "subCategory": {
+                    "categoryCode": "ACT",
+                    "categoryDesc": "Disciplinary, Regulatory Action"
+                },
+                "source": {
+                    "sourceName": "Factiva Article - PPGZ000020061016e2af0005l",
+                    "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=PPGZ000020061016e2af0005l",
+                    "entityDt": "2006-10-15",
+                    "format": "Media",
+                    "headline": "[ THE WAITING GAME ]",
+                    "publicationSource": "Pittsburgh Post-Gazette",
+                    "publisher": "PG Publishing Co., Inc",
+                    "sourceKy": "9b3ab1820b356857"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "FRD",
+                    "categoryDesc": "Fraud, Scams, Swindles"
+                },
+                "eventDesc": "Tom Coughlin was Wal-Mart Stores Inc. vice chairman was pleaded guilty to wire fraud",
+                "eventDt": "2008-06-06",
+                "subCategory": {
+                    "categoryCode": "PLE",
+                    "categoryDesc": "Plea"
+                },
+                "source": {
+                    "sourceName": "Factiva Article - APRS000020080606e466009ku",
+                    "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=APRS000020080606e466009ku",
+                    "entityDt": "2008-06-06",
+                    "format": "Media",
+                    "headline": "In counterclaim, Coughlin accuses Wal-Mart of 'witch hunt'",
+                    "publicationSource": "Associated Press Newswires",
+                    "publisher": "Press Association, Inc.",
+                    "sourceKy": "53288b991e0340d7"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "REG",
+                    "categoryDesc": "Regulatory Action"
+                },
+                "eventDesc": "This entity appears on the California Air Resources Board list of Case Settlements.",
+                "eventDt": "2020-11-12",
+                "subCategory": {
+                    "categoryCode": "ACT",
+                    "categoryDesc": "Disciplinary, Regulatory Action"
+                },
+                "source": {
+                    "sourceName": "California Air Resources Board – Case Settlements",
+                    "sourceURL": "https://ww2.arb.ca.gov/our-work/programs/enforcement-policy-reports/enforcement-case-settlements",
+                    "entityDt": "2023-06-05"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "REG",
+                    "categoryDesc": "Regulatory Action"
+                },
+                "eventDesc": "This entity appears on the Hawaii Department of Commerce and Consumer Affairs list of Disciplinary Actions. Wal-Mart Stores, Inc. dba Wal-Mart Pharmacy in the states of: Oregon based on allegations related to clozapine registry and procedures; Oregon based on allegations related to management and monitoring; Iowa based on allegations related to a prescription; Oregon based on allegations Respondent aided and abetted an unlicensed pharmacy technician; Oregon based on allegations related to dispensing; Nevada based on allegations related to dispensing. ~~ Case Number: PHA 2015-73-L + 12 other cases; Sanction: $15,000 administrative costs ; Effective Date: 9-21-17",
+                "eventDt": "2017-10-13",
+                "subCategory": {
+                    "categoryCode": "ACT",
+                    "categoryDesc": "Disciplinary, Regulatory Action"
+                },
+                "source": {
+                    "sourceName": "Hawaii Department of Commerce and Consumer Affairs - Disciplinary Actions",
+                    "sourceURL": "http://cca.hawaii.gov/blog/category/news-releases/",
+                    "entityDt": "2023-06-07"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "REG",
+                    "categoryDesc": "Regulatory Action"
+                },
+                "eventDesc": "This entity appears on the Florida Health Care Administration list of Medicaid Sanctioned Providers.",
+                "eventDt": "2011-08-15",
+                "subCategory": {
+                    "categoryCode": "ACT",
+                    "categoryDesc": "Disciplinary, Regulatory Action"
+                },
+                "source": {
+                    "sourceName": "Florida Health Care Administration – Medicaid Sanctioned Providers",
+                    "sourceURL": "http://apps.ahca.myflorida.com/dm_web/(S(1dhl5zgyyovzzuxfipnxzsm4))/default.aspx",
+                    "entityDt": "2023-06-26"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "REG",
+                    "categoryDesc": "Regulatory Action"
+                },
+                "eventDesc": "The NRC issued a Notice of Violation to Wal-Mart, Inc. (Wal-Mart) for a Severity Level III problem involving the failure to: (1) appoint an individual responsible for having knowledge of appropriate regulations and requirements to comply with the general license; (2) properly transfer and dispose of generally licensed devices; and (3) transfer generally licensed devices to another general licensee only if the devices remain in use at a particular location. Specifically, between October 2000 and January 2008, Wal-Mart did not appoint a radiation safety officer or other responsible individual to manage its general license program relative to tritium exit signs, improperly transferred or disposed of up to 2,462 tritium exit signs, and also transferred 517 tritium exit signs from various Wal-Mart facilities to other Wal-Mart facilities, which were not authorized in a specific or general license.",
+                "eventDt": "2009-10-28",
+                "subCategory": {
+                    "categoryCode": "ACT",
+                    "categoryDesc": "Disciplinary, Regulatory Action"
+                },
+                "source": {
+                    "sourceName": "United States Nuclear Regulatory Commission - Enforcement Actions",
+                    "sourceURL": "https://www.nrc.gov/reading-rm/doc-collections/enforcement/actions/index.html",
+                    "entityDt": "2023-06-27"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "REG",
+                    "categoryDesc": "Regulatory Action"
+                },
+                "eventDesc": "Gas pumps are back open at Sam's Club after the Florida Department of Agriculture suspended the store for selling substandard gasoline. The Florida Department of Agriculture and Consumer Services said a customer complaint led to the inspection and closing of the pumps. The state said a new sample has been taken for inspection and all policies are being followed. FDACS said all complaints filed online are taken seriously.",
+                "eventDt": "2022-07-16",
+                "subCategory": {
+                    "categoryCode": "ACT",
+                    "categoryDesc": "Disciplinary, Regulatory Action"
+                },
+                "source": {
+                    "sourceName": "Acquire Media Article - 6c23a4e5c0ca922bb0cc0c048e776b4ed7d58318",
+                    "entityDt": "2022-07-16",
+                    "format": "Media",
+                    "headline": "Sam's Club gas pumps reopen after Florida Dept. of Agriculture shutdown",
+                    "publicationSource": "CBS - 5 WKRG (Mobile, AL)",
+                    "publisher": "NewsBank",
+                    "sourceKy": "1e10e6e508700edb5d3f3d53eb346cc4"
+                }
+            }
+        ],
+        "addresses": [
+            {
+                "city": "FRANKFORT",
+                "stateProv": "Kentucky",
+                "countryCode": "US"
+            },
+            {
+                "city": "Nezahualcóyotl",
+                "stateProv": "México",
+                "countryCode": "MX"
+            },
+            {
+                "addr1": "Store 2744",
+                "city": "Fort Smith",
+                "stateProv": "Arkansas",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "Store 1024",
+                "city": "Swainsboro",
+                "stateProv": "Georgia",
+                "countryCode": "US"
+            },
+            {
+                "city": "Williamsport",
+                "stateProv": "Maryland",
+                "countryCode": "US"
+            },
+            {
+                "city": "Hanford",
+                "stateProv": "California",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "Store 605",
+                "city": "Savannah",
+                "stateProv": "Georgia",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "Store 3802",
+                "city": "Middletown",
+                "stateProv": "Delaware",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "Store 5436",
+                "city": "Wilmington",
+                "stateProv": "Delaware",
+                "countryCode": "US"
+            },
+            {
+                "city": "Crawfordsville",
+                "stateProv": "Indiana",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "Store 2708",
+                "city": "Temecula",
+                "stateProv": "California",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "Store 5697",
+                "city": "Milwaukee",
+                "stateProv": "Wisconsin",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "Store 5047",
+                "city": "Audubon",
+                "stateProv": "New Jersey",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "Store 130",
+                "city": "Muskogee",
+                "stateProv": "Oklahoma",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "Store 147",
+                "city": "Denison",
+                "stateProv": "Texas",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "Store 1072",
+                "city": "Tifton",
+                "stateProv": "Georgia",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "Store 1560",
+                "city": "Las Vegas State",
+                "stateProv": "Nevada",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "Store 5350",
+                "city": "Salt Lake City",
+                "stateProv": "Utah",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "Store 55",
+                "city": "Booneville",
+                "stateProv": "Arkansas",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "Beal Parkway",
+                "city": "Fort Walton Beach",
+                "stateProv": "Florida",
+                "countryCode": "US"
+            },
+            {
+                "city": "Teotihuacan",
+                "stateProv": "México",
+                "countryCode": "MX"
+            },
+            {
+                "city": "Little Rock",
+                "stateProv": "Arkansas",
+                "countryCode": "US"
+            },
+            {
+                "city": "Cockeysville",
+                "stateProv": "Maryland",
+                "countryCode": "US"
+            },
+            {
+                "stateProv": "Ontario",
+                "countryCode": "CA"
+            },
+            {
+                "addr1": "508 SW 8th Street",
+                "city": "Bentonville",
+                "stateProv": "Arkansas",
+                "postalCode": "72716-0605",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "850 Cherry Ave.",
+                "city": "San Bruno",
+                "stateProv": "California",
+                "postalCode": "94066",
+                "countryCode": "US"
+            },
+            {
+                "city": "DECATUR",
+                "stateProv": "Illinois",
+                "countryCode": "US"
+            },
+            {
+                "city": "DES MOINES",
+                "stateProv": "Iowa",
+                "countryCode": "US"
+            },
+            {
+                "city": "Honolulu",
+                "stateProv": "Hawaii",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "877 Freeport Road",
+                "city": "Pittsburgh",
+                "stateProv": "Pennsylvania",
+                "countryCode": "US"
+            },
+            {
+                "city": "Mexico City",
+                "stateProv": "México",
+                "countryCode": "MX"
+            },
+            {
+                "countryCode": "BR"
+            },
+            {
+                "city": "Mabelvale",
+                "stateProv": "Arkansas",
+                "countryCode": "US"
+            },
+            {
+                "city": "Ochelata",
+                "stateProv": "Oklahoma",
+                "countryCode": "US"
+            },
+            {
+                "city": "Rogers",
+                "stateProv": "Arkansas",
+                "countryCode": "US"
+            },
+            {
+                "city": "Rapid City",
+                "stateProv": "South Dakota",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "702 SW 8th Street",
+                "city": "Bentonville",
+                "stateProv": "Arkansas",
+                "postalCode": "72716",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "No. 3083",
+                "addr2": "665 North Murray Boulevard",
+                "city": "Colorado Springs",
+                "stateProv": "Colorado",
+                "countryCode": "US"
+            },
+            {
+                "city": "Jersey City",
+                "stateProv": "New Jersey",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "702 Southwest 8th Street",
+                "city": "Bentonville",
+                "stateProv": "Arkansas",
+                "postalCode": "72716-8611",
+                "countryCode": "US"
+            },
+            {
+                "city": "Beloit",
+                "stateProv": "Wisconsin",
+                "countryCode": "US"
+            },
+            {
+                "city": "MADISON",
+                "stateProv": "Wisconsin",
+                "countryCode": "US"
+            },
+            {
+                "city": "Washington",
+                "stateProv": "District of Columbia",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "7219 Walton St.",
+                "city": "Rockford",
+                "stateProv": "Illinois",
+                "countryCode": "US"
+            },
+            {
+                "countryCode": "JO"
+            },
+            {
+                "city": "New Delhi",
+                "stateProv": "Delhi",
+                "countryCode": "IN"
+            },
+            {
+                "city": "Fresno",
+                "stateProv": "California",
+                "countryCode": "US"
+            },
+            {
+                "city": "Bakersfield",
+                "stateProv": "California",
+                "countryCode": "US"
+            },
+            {
+                "city": "San Juan Teotihuacan",
+                "stateProv": "State of Mexico",
+                "countryCode": "MX"
+            },
+            {
+                "city": "Buffalo",
+                "stateProv": "New York",
+                "countryCode": "US"
+            },
+            {
+                "city": "Hodgkins",
+                "stateProv": "Illinois",
+                "countryCode": "US"
+            },
+            {
+                "city": "Albuquerque",
+                "stateProv": "New Mexico",
+                "countryCode": "US"
+            },
+            {
+                "addr1": "930 Mount Prospect Plaza,Rand and Central roads",
+                "city": "chicago",
+                "stateProv": "Illinois",
+                "countryCode": "US"
+            },
+            {
+                "city": "Placerville",
+                "stateProv": "California",
+                "countryCode": "US"
+            },
+            {
+                "city": "Carlsbad",
+                "stateProv": "New Mexico",
+                "countryCode": "US"
+            },
+            {
+                "city": "Colville",
+                "stateProv": "Washington",
+                "countryCode": "US"
+            },
+            {
+                "stateProv": "Morelos",
+                "countryCode": "MX"
+            },
+            {
+                "city": "St. Paul",
+                "stateProv": "Minnesota",
+                "countryCode": "US"
+            },
+            {
+                "city": "Kansas City",
+                "stateProv": "Missouri",
+                "countryCode": "US"
+            },
+            {
+                "city": "MONTGOMERY",
+                "stateProv": "Alabama",
+                "countryCode": "US"
+            },
+            {
+                "city": "PHOENIX",
+                "stateProv": "Arizona",
+                "countryCode": "US"
+            },
+            {
+                "city": "SEATTLE",
+                "stateProv": "Washington",
+                "countryCode": "US"
+            },
+            {
+                "city": "Los Angeles",
+                "stateProv": "California",
+                "countryCode": "US"
+            },
+            {
+                "city": "SAN FRANCISCO",
+                "stateProv": "California",
+                "countryCode": "US"
+            },
+            {
+                "city": "Orlando",
+                "stateProv": "Florida",
+                "countryCode": "US"
+            },
+            {
+                "stateProv": "Massachusetts",
+                "countryCode": "US"
+            },
+            {
+                "city": "ALEXANDRIA",
+                "stateProv": "Virginia",
+                "countryCode": "US"
+            },
+            {
+                "stateProv": "Oregon",
+                "countryCode": "US"
+            },
+            {
+                "city": "DALLAS",
+                "stateProv": "Texas",
+                "countryCode": "US"
+            },
+            {
+                "city": "SACRAMENTO",
+                "stateProv": "California",
+                "countryCode": "US"
+            },
+            {
+                "city": "Nashville",
+                "stateProv": "Tennessee",
+                "countryCode": "US"
+            },
+            {
+                "city": "Longview",
+                "stateProv": "Texas",
+                "countryCode": "US"
+            }
+        ],
+        "birthDt": [],
+        "attributes": [
+            {
+                "code": "URL",
+                "value": "http://www.journaldequebec.com/2018/02/01/cartel-du-pain-tranche-metro-contredit-les-allegations-du-bureau-de-la-concurrence"
+            },
+            {
+                "code": "URL",
+                "value": "http://online.wsj.com/article/SB10001424052702304887904576395832981860412.html?KEYWORDS=sex+abuse"
+            },
+            {
+                "code": "URL",
+                "value": "http://globalnews.ca/news/3152235/run-dmc-co-founder-sues-amazon-wal-mart-for-trademark-infringement/"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.fbi.gov/sanfrancisco/press-releases/2013/walmart-pleads-guilty-to-federal-environmental-crimes-admits-civil-violations-and-will-pay-more-than-81-million"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.justice.gov/usao/can/news/2014/2014_01_09_394m.collected.press.html"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.treasury.gov/resource-center/sanctions/OFAC-Enforcement/Documents/04042003.pdf"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.treasury.gov/resource-center/sanctions/CivPen/Pages/2003.aspx"
+            },
+            {
+                "code": "URL",
+                "value": "http://ago.mo.gov/newsreleases/2012/AG_Koster_announces_settlement_with_WalMart/"
+            },
+            {
+                "code": "URL",
+                "value": "http://ag.ca.gov/cms_attachments/press/pdfs/n2648_final_judgment.pdf?"
+            },
+            {
+                "code": "URL",
+                "value": "http://oag.ca.gov/news/press_release?id=2648&y=&m="
+            },
+            {
+                "code": "URL",
+                "value": "http://www.eeoc.gov/eeoc/newsroom/release/1-27-10-b.cfm"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.eeoc.gov/eeoc/newsroom/release/9-19-11a.cfm"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.eeoc.gov/eeoc/newsroom/release/12-16-11b.cfm"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.eeoc.gov/eeoc/newsroom/release/12-15-11c.cfm"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.eeoc.gov/eeoc/newsroom/release/8-21-12.cfm"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.eeoc.gov/eeoc/newsroom/release/1-27-14a.cfm"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.eeoc.gov/eeoc/newsroom/release/7-2-14.cfm"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.eeoc.gov/eeoc/newsroom/release/7-1-15d.cfm"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.ag.ny.gov/pdfs/2015_05_22_Executed_AOD_15_111_WalMart_Stores_Inc.pdf"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.ag.ny.gov/press-release/ag-schneiderman-announces-agreement-gnc-implement-landmark-reforms-herbal-supplements"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.ag.ny.gov/press-release/ag-schneiderman-announces-false-advertising-settlement-wal-mart"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.ag.ny.gov/press-release/ag-schneiderman-announces-settlement-walmart-over-alleged-violations-nys-water"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.ag.ny.gov/press-release/ag-schneiderman-asks-major-retailers-halt-sales-certain-herbal-supplements-dna-tests"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.ag.ny.gov/press-release/ag-schneiderman-cracks-down-illegal-toy-guns-sales-announces-settlements-amazon"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.ag.ny.gov/press-release/ag-schneiderman-investigation-reveals-major-retailers-illegally-selling-prohibited-toy"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.ag.ny.gov/press-release/ag-schneiderman-issues-cease-and-desist-letters-13-makers-devil%E2%80%99s-claw-supplements"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.ag.ny.gov/press-release/ag-schneiderman-reaches-settlement-30-online-retailers-used-amazoncom-sell-realistic"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.ag.ny.gov/press-release/ag-schneiderman-announces-settlement-home-depot-and-lowes-over-alleged-widespread"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.eeoc.gov/eeoc/newsroom/release/4-14-11.cfm"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.eeoc.gov/eeoc/newsroom/release/8-12-16.cfm"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.eeoc.gov/eeoc/newsroom/release/12-12-16.cfm"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.justice.gov/usao-edca/pr/wal-mart-pays-165m-settle-false-claims-act-allegations-improper-medi-cal-billings"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.eeoc.gov/eeoc/newsroom/release/9-26-17c.cfm"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.ftc.gov/enforcement/cases-proceedings/0210090/wal-mart-stores-inc-supermercados-amigo-inc"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.ftc.gov/enforcement/cases-proceedings/992-3007/wal-mart-stores-inc"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.ftc.gov/sites/default/files/documents/cases/1999/06/ftc.gov-walmartcmp.htm"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.justice.gov/usao-mn/pr/walmart-sam-s-club-pay-825000-resolve-fraud-allegations-concerning-auto-refilling"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.justice.gov/opa/pr/2013/May/13-enrd-611.html"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.justice.gov/usao/can/news/2013/docs/WAL-MART%20PLEA%20AGREEMENT.pdf"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.justice.gov/usao/can/news/2013/2013_05_27_conservationfund.created.press.html"
+            },
+            {
+                "code": "URL",
+                "value": "http://www.justice.gov/usao/can/news/2013/2013_05_27_walmart.guiltyplea.press.html"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.justice.gov/usao-edva/pr/walmart-inc-and-brazil-based-subsidiary-agree-pay-137-million-resolve-foreign-corrupt"
+            },
+            {
+                "code": "URL",
+                "value": "https://en.wikipedia.org/wiki/Easyday"
+            },
+            {
+                "code": "URL",
+                "value": "https://ww2.arb.ca.gov/wal-mart-stores-inc-2006"
+            },
+            {
+                "code": "URL",
+                "value": "https://ww2.arb.ca.gov/wal-mart-settlement-2004"
+            },
+            {
+                "code": "URL",
+                "value": "https://ww2.arb.ca.gov/wal-mart-stores-settlement-2003"
+            },
+            {
+                "code": "URL",
+                "value": "https://ww2.arb.ca.gov/wal-mart-stores-inc-settlement-2016"
+            },
+            {
+                "code": "URL",
+                "value": "https://ww2.arb.ca.gov/mvp-group-international-case-settlement"
+            },
+            {
+                "code": "URL",
+                "value": "https://ww2.arb.ca.gov/wal-mart-stores-inc-settlement-2015"
+            },
+            {
+                "code": "URL",
+                "value": "https://ww2.arb.ca.gov/walmart-stores-inc-kik-international-llc-settlement"
+            },
+            {
+                "code": "URL",
+                "value": "https://ww2.arb.ca.gov/wal-mart-stores-inc-settlement"
+            },
+            {
+                "code": "URL",
+                "value": "https://ww2.arb.ca.gov/wal-mart-stores-inc-vi-jon-inc-settlement"
+            },
+            {
+                "code": "URL",
+                "value": "https://ww2.arb.ca.gov/walmart-stores-inc-settlement"
+            },
+            {
+                "code": "URL",
+                "value": "https://ww2.arb.ca.gov/wal-mart-stores-inc-2007"
+            },
+            {
+                "code": "URL",
+                "value": "http://cca.hawaii.gov/blog/release-dcca-disciplinary-actions-through-september-2017/"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.iowaattorneygeneral.gov/newsroom/walmart-commits-to-eliminate-verification-statement-from-spring-valley-supplements"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.iowaattorneygeneral.gov/media/cms/201696_Walmart_Spring_Valley_supple_4A9E7C1FB9F59.pdf"
+            },
+            {
+                "code": "URL",
+                "value": "https://ww2.arb.ca.gov/walmart-incorporated-case-settlement"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.eeoc.gov/newsroom/eeoc-sues-walmart-disability-discrimination-0"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.fcc.gov/document/wal-mart-stores-inc-and-sams-west-inc"
+            },
+            {
+                "code": "URL",
+                "value": "https://docs.fcc.gov/public/attachments/FCC-08-106A1.pdf"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.fcc.gov/document/wal-martcom-pay-120k-resolve-wireless-mic-marketing-probe"
+            },
+            {
+                "code": "URL",
+                "value": "https://docs.fcc.gov/public/attachments/DA-14-381A1.pdf"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.nrc.gov/docs/ML0930/ML093050018.pdf"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.justice.gov/opa/pr/department-justice-files-nationwide-lawsuit-against-walmart-inc-controlled-substances-act"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.justice.gov/opa/press-release/file/1347906/download"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.kentucky.gov/Pages/Activity-stream.aspx?n=AttorneyGeneral&prId=1300 "
+            },
+            {
+                "code": "URL",
+                "value": "https://ag.ky.gov/Press%20Release%20Attachments/Walmart%20Settlement%20Agreement%20(2022.12.02)_FINAL.pdf"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.atg.wa.gov/news/news-releases/ag-data-breach-report-data-breaches-remain-historic-highs-2022"
+            },
+            {
+                "code": "URL",
+                "value": "https://www.atg.wa.gov/data-breach-notifications?page=7"
+            },
+            {
+                "code": "URL",
+                "value": "https://agportal-s3bucket.s3.amazonaws.com/databreach/BreachM10344.pdf"
+            },
+            {
+                "code": "URL",
+                "value": "https://ag.ny.gov/press-release/2022/attorney-general-james-secures-31-billion-walmart-communities-nationwide-combat"
+            },
+            {
+                "code": "URL",
+                "value": "https://ag.ny.gov/sites/default/files/walmart_settlement_agreement_2022.11.14.pdf"
+            },
+            {
+                "code": "RID",
+                "value": "R2266461"
+            },
+            {
+                "code": "RGP",
+                "value": "Wal-Mart agreed to pay $282 million in June 2019 to settle allegations by U.S. authorities that it violated the U.S. Foreign Corrupt Practices Act by failing to ensure subsidiaries in Brazil, China, India, and Mexico had adequate anti-corruption programs, according to public media sources. In August 2019, the company was also named in a lawsuit filed over ongoing opioid epidemic in Myrtle Beach, North Carolina that violated the South Carolina Unfair Trade Practices Act, engaged in fraud, unjust enrichment, negligence, negligent misrepresentation, and constructive fraud. In September 2019, it was accused by the Equal Employment Opportunity Commission of discriminating against 178 female workers by paying less or denying promotions because of their gender. In 2020, it was named on the Maine Regulatory Licensing & Permitting Disciplinary Actions site. The company was also named on the California Air Resources Board list of Case Settlements. In 2018, it was named in a lawsuit filed for being engaged in deceptive acts and practices, false advertising, unjust enrichment and negligence among its seven causes of action. It was fined by the Chilean anti-trust court with $12.4 million for colluding to fix the price of fresh chicken. In 2014, Wal-Mart was sentenced to pay a $40 million criminal fine and an additional $20 million. In 2013, Wal-Mart agreed to pay $207,000 to cities and towns across the Commonwealth for overcharging public agencies for prescription drugs through the workers compensation insurance system. In 2011, Wal-Mart was fined $575,000 for fraudulently labeling 60 tons of ordinary pork as organic. In 2008, Wal-Mart agreed to pay $2.1 million and stop selling refrigerants that contain ozone-depleting substances for 20 violations of the Clean Air Act. Wal-Mart Stores Inc. was accused in 2006 of not having a program in place and failing to train its employees on proper hazardous waste management and disposal practices at the store level. Wal-Mart pleaded guilty to six counts of violating the Clean Water Act, violating the Federal Insecticide, Fungicide and Rodenticide Act."
+            },
+            {
+                "code": "RMK",
+                "value": "A consent order settled Commission concerns that Wal-Mart's proposed acquisition of the largest supermarket chain in Puerto Rico, Supermercados Amigo, Inc., would eliminate competition between supercenters and club stores owned or controlled by Wal-Mart and supermarkets owned or controlled by Arnigo. While the consent order permits the acquisition, it requires Wal-Mart to divest four Amigo supermarkets in Cidra, Ponce, Manati, and Vega Baja, Puerto Rico to Supermercados Maximo."
+            },
+            {
+                "code": "RMK",
+                "value": "Associate: Sam's West, Inc."
+            },
+            {
+                "code": "RMK",
+                "value": "Associate: Wal-Mart.com USA, LLC, Kelly A. Thompson"
+            },
+            {
+                "code": "RMK",
+                "value": "https://www.stock.walmart.com              \n            "
+            }
+        ],
+        "sysId": "65d4dfc725d95c4b7b0d54d45213b770",
+        "rdcURL": "https://grid.rdc.eu.com/wss/entity.html?entityId=65d4dfc725d95c4b7b0d54d45213b770",
+        "aliases": [
+            {
+                "type": "AKA",
+                "name": "Sam's Club"
+            },
+            {
+                "type": "AKA",
+                "name": "Walmart"
+            },
+            {
+                "type": "AKA",
+                "name": "Walmart Incorporated"
+            },
+            {
+                "type": "DBA",
+                "name": "Wal-Mart Pharmacy #10-3883"
+            },
+            {
+                "type": "AKA",
+                "name": "Wal-Mart Canada"
+            },
+            {
+                "type": "DBA",
+                "name": "Walmart Store #835"
+            },
+            {
+                "type": "AKA",
+                "name": "Supercenters"
+            }
+        ],
+        "sources": [
+            {
+                "sourceName": "New York Attorney General Press Releases",
+                "sourceURL": "http://www.ag.ny.gov/media_center/media_center.html"
+            },
+            {
+                "sourceName": "The Republican",
+                "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=SUNW000020061017e2ae0003q"
+            },
+            {
+                "sourceName": "OFAC Civil Penalties List",
+                "sourceURL": "http://www.treasury.gov/resource-center/sanctions/CivPen/Pages/civpen-index2.aspx"
+            },
+            {
+                "sourceName": "DOJ US Attorneys Offices Press Releases 2017",
+                "sourceURL": "http://www.justice.gov/usao/about/usattorneys.html"
+            },
+            {
+                "sourceName": "The Arkansas Democrat Gazette",
+                "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=AKDG000020080317e43f0001v"
+            },
+            {
+                "sourceName": "Dow Jones News Service",
+                "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=DJ00000020060106e216000fc"
+            },
+            {
+                "sourceName": "Associated Press Newswires",
+                "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=APRS000020080606e466009ku"
+            },
+            {
+                "sourceName": "Dow Jones News Service",
+                "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=DJ00000020070822e38m000i0"
+            },
+            {
+                "sourceName": "CA Attorney General Press Releases",
+                "sourceURL": "http://ag.ca.gov/newsalerts/index.php"
+            },
+            {
+                "sourceName": "Pittsburgh Post-Gazette",
+                "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=PPGZ000020061016e2af0005l"
+            },
+            {
+                "sourceName": "Associated Press Newswires",
+                "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=APRS000020130111e91b002i6"
+            },
+            {
+                "sourceName": "Florida Health Care Administration – Medicaid Sanctioned Providers",
+                "sourceURL": "http://apps.ahca.myflorida.com/dm_web/(S(1dhl5zgyyovzzuxfipnxzsm4))/default.aspx"
+            },
+            {
+                "sourceName": "DOJ US Attorneys Offices Press Releases 2019",
+                "sourceURL": "https://www.justice.gov/usao/us-attorneys-listing"
+            },
+            {
+                "sourceName": "The New York Times",
+                "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=NYTF000020060830e28u0005d"
+            },
+            {
+                "sourceName": "California Air Resources Board – Case Settlements",
+                "sourceURL": "https://ww2.arb.ca.gov/our-work/programs/enforcement-policy-reports/enforcement-case-settlements"
+            },
+            {
+                "sourceName": "The Arizona Daily Star (KRTBN)",
+                "sourceURL": "http://global.factiva.com/en/du/article.asp?NAPC=S&AccessionNo=KRTAZ00020060707e27700002"
+            },
+            {
+                "sourceName": "Hawaii Department of Commerce and Consumer Affairs - Disciplinary Actions",
+                "sourceURL": "http://cca.hawaii.gov/blog/category/news-releases/"
+            },
+            {
+                "sourceName": "United States Federal Communications Commission - Enforcements and News",
+                "sourceURL": "https://www.fcc.gov/news-events/headlines/510"
+            },
+            {
+                "sourceName": "United States Nuclear Regulatory Commission - Enforcement Actions",
+                "sourceURL": "https://www.nrc.gov/reading-rm/doc-collections/enforcement/actions/index.html"
+            },
+            {
+                "sourceName": "CBS - 5 WKRG (Mobile, AL)"
+            },
+            {
+                "sourceName": "Kentucky Attorney General - News Releases",
+                "sourceURL": "https://ag.ky.gov/news/Pages/default.aspx"
+            },
+            {
+                "sourceName": "New York Attorney General Press Releases",
+                "sourceURL": "https://ag.ny.gov/press-releases"
+            },
+            {
+                "sourceName": "Chile Financial Analysis Unit",
+                "sourceURL": "http://www.uaf.cl/descargas/legislacion/resoluciones/2013_03/N089-2012.pdf"
+            },
+            {
+                "sourceName": "Chile Financial Analysis Unit",
+                "sourceURL": "http://www.uaf.cl/legislacion/sanciones_2012.aspx"
+            }
+        ],
+        "relations": [
+            {
+                "relDir": "FROM",
+                "relTyp": "EMPLOYEE",
+                "sysId": "3d01c0ca9a4f21e324cc7c5d2db6a913",
+                "entityName": "MICHAEL T. DUKE"
+            }
+        ],
+        "identifications": []
+    },
+    "status": {
+        "code": 0
+    }
+}
