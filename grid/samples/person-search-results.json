@@ -1,0 +1,1144 @@
+{
+    "searchResults": [
+        {
+            "key": "619DB9CD-6A89-428C-9B43-1EAF773FC823",
+            "title": "Viktoria Valerievna Romanyuk",
+            "subTitle": "",
+            "summary": "",
+            "source": "Grid API",
+            "entities": [
+                {
+                    "id": "9320125a-19ea-3010-ac93-c86f6093285f",
+                    "type": "EntityPerson",
+                    "attributes": {
+                        "Dob": "1985-01-22T00:00:00.000+0000",
+                        "FirstName": "Viktoria",
+                        "LastName": "Valerievna Romanyuk",
+                        "Nationality": ""
+                    }
+                },
+                {
+                    "id": "d65911de-d903-3c5f-83c1-8ca88d864626",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "",
+                        "Region": "",
+                        "Street1": ""
+                    }
+                },
+                {
+                    "id": "d22cc859-0c77-3b6a-96cc-87c782e2a6d0",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "9320125a-19ea-3010-ac93-c86f6093285f",
+                        "Title": "Person Address",
+                        "ToId": "d65911de-d903-3c5f-83c1-8ca88d864626"
+                    }
+                },
+                {
+                    "id": "67E9A486-44BD-4B72-9739-BFAF8EEAAC6D",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "ASSOCIATE",
+                        "LocalName": "Donetsk Republic (Public organisation)",
+                        "Name": "Donetsk Republic (Public organisation)"
+                    }
+                },
+                {
+                    "id": "51f3bf73-f375-3882-b4a2-1f8673e8cd10",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "9320125a-19ea-3010-ac93-c86f6093285f",
+                        "Title": "Company",
+                        "ToId": "67E9A486-44BD-4B72-9739-BFAF8EEAAC6D"
+                    }
+                },
+                {
+                    "id": "E79E79B9-EC6E-4616-A8BC-46D7220D3829",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Ukraine National Security and Defense Council - Sanctioned Entities"
+                    }
+                },
+                {
+                    "id": "260c4626-688f-3831-83f3-9086b4660b2a",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "9320125a-19ea-3010-ac93-c86f6093285f",
+                        "Title": "Sanctioned by",
+                        "ToId": "E79E79B9-EC6E-4616-A8BC-46D7220D3829"
+                    }
+                },
+                {
+                    "id": "EAD49374-2873-4304-B866-3602247F06BE",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Ukraine National Security and Defense Council - Sanctioned Entities"
+                    }
+                },
+                {
+                    "id": "1c52afe6-0734-303c-aa41-c31705dacdad",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "9320125a-19ea-3010-ac93-c86f6093285f",
+                        "Title": "Sanctioned by",
+                        "ToId": "EAD49374-2873-4304-B866-3602247F06BE"
+                    }
+                },
+                {
+                    "id": "FCAA6620-4790-481C-BCDC-5C717FA61130",
+                    "type": "EntityEvent",
+                    "attributes": {
+                        "Description": "Category: Associated with, Seen with",
+                        "Title": "Victoria Valeryevna Romanyuk is an associate of Donetsk People's Republic. On July 16, 2014, Donetsk People's Republic was sanctioned by the United States Department of the Treasury's Office of Foreign Assets Control (OFAC) pursuant to Executive Order 13660​ for Blocking Property of Certain Persons Contributing to the Situation in Ukraine under UKRAINE sanction program and was added as Specially Designated Nationals (SDN).",
+                        "Url": "https://www.moodys.com/web/en/us/kyc/products/grid/grid-dataset-descriptions.html/#sanctions-connect"
+                    }
+                },
+                {
+                    "id": "c0345ed6-31d7-3f9a-a60a-d1cba70c90cc",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "9320125a-19ea-3010-ac93-c86f6093285f",
+                        "Title": "",
+                        "ToId": "FCAA6620-4790-481C-BCDC-5C717FA61130"
+                    }
+                },
+                {
+                    "id": "8EF80AD7-24F2-453E-972B-45665B4B7F3A",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "f486c03b-3de9-30f1-850f-4ac700246b11",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "9320125a-19ea-3010-ac93-c86f6093285f",
+                        "Title": "",
+                        "ToId": "8EF80AD7-24F2-453E-972B-45665B4B7F3A"
+                    }
+                },
+                {
+                    "id": "EB879B5B-8DA7-492A-9A59-A2AF484D18FD",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "f12b0749-8d79-30c0-883e-943075ec64ec",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "9320125a-19ea-3010-ac93-c86f6093285f",
+                        "Title": "",
+                        "ToId": "EB879B5B-8DA7-492A-9A59-A2AF484D18FD"
+                    }
+                },
+                {
+                    "id": "B4D97D99-0D6E-4406-8403-1F6A0A8CB345",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "23f1e82c-61a3-3bc3-9d53-28a2102bfbb4",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "9320125a-19ea-3010-ac93-c86f6093285f",
+                        "Title": "",
+                        "ToId": "B4D97D99-0D6E-4406-8403-1F6A0A8CB345"
+                    }
+                },
+                {
+                    "id": "8FEF2CA0-04AF-4007-B414-782D51931DCF",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "8cc7fea1-f1c4-3bab-98cf-b4b355d85509",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "9320125a-19ea-3010-ac93-c86f6093285f",
+                        "Title": "",
+                        "ToId": "8FEF2CA0-04AF-4007-B414-782D51931DCF"
+                    }
+                }
+            ],
+            "url": "https://grid.rdc.eu.com/wss/entity.html?entityId=458507dbcf26b6f18e0d964f8e0f48e4"
+        },
+        {
+            "key": "76723099-D20E-4A0F-B6A3-18E81F7499B9",
+            "title": "Victoria Sergeevna RODINA",
+            "subTitle": "",
+            "summary": "",
+            "source": "Grid API",
+            "entities": [
+                {
+                    "id": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                    "type": "EntityPerson",
+                    "attributes": {
+                        "Dob": "1989-10-29T00:00:00.000+0100",
+                        "FirstName": "Victoria",
+                        "LastName": "Sergeevna RODINA",
+                        "Nationality": "RU"
+                    }
+                },
+                {
+                    "id": "0b599d05-708b-3a50-a472-54f48c31551a",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "361045",
+                        "Region": "Kabardino-Balkar Republic",
+                        "Street1": "St. Gagarina 47"
+                    }
+                },
+                {
+                    "id": "a29ad713-9aa9-3f6f-b6f5-3ff09d86c891",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Person Address",
+                        "ToId": "0b599d05-708b-3a50-a472-54f48c31551a"
+                    }
+                },
+                {
+                    "id": "dc813aa9-204c-354f-8f8f-45020e712cdf",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "",
+                        "Region": "Kabardino-Balkar Republic",
+                        "Street1": ""
+                    }
+                },
+                {
+                    "id": "efb42671-f531-3069-9adb-4781aa90eb6f",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Person Address",
+                        "ToId": "dc813aa9-204c-354f-8f8f-45020e712cdf"
+                    }
+                },
+                {
+                    "id": "4fb49e85-ffc1-317f-958c-a1464ca8432f",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "",
+                        "Region": "",
+                        "Street1": ""
+                    }
+                },
+                {
+                    "id": "b99fca93-f016-3fcb-a289-9efcfe67fb5e",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Person Address",
+                        "ToId": "4fb49e85-ffc1-317f-958c-a1464ca8432f"
+                    }
+                },
+                {
+                    "id": "3099cdf5-ef00-3ad9-aae7-116dda7d9ddf",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "103265",
+                        "Region": "",
+                        "Street1": "1 Okhotny Ryad str"
+                    }
+                },
+                {
+                    "id": "051025e7-cb32-35ee-a08a-d052a54fdacf",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Person Address",
+                        "ToId": "3099cdf5-ef00-3ad9-aae7-116dda7d9ddf"
+                    }
+                },
+                {
+                    "id": "4fb49e85-ffc1-317f-958c-a1464ca8432f",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "",
+                        "Region": "",
+                        "Street1": "Kaliningrad"
+                    }
+                },
+                {
+                    "id": "b99fca93-f016-3fcb-a289-9efcfe67fb5e",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Person Address",
+                        "ToId": "4fb49e85-ffc1-317f-958c-a1464ca8432f"
+                    }
+                },
+                {
+                    "id": "a06eb44a-be73-3755-896b-0792fb91213e",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "",
+                        "Region": "Kaliningradskaja oblast'",
+                        "Street1": ""
+                    }
+                },
+                {
+                    "id": "197a4940-5638-3aed-a8bb-fa0bea458dde",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Person Address",
+                        "ToId": "a06eb44a-be73-3755-896b-0792fb91213e"
+                    }
+                },
+                {
+                    "id": "6147f469-e6a2-307f-8235-01cdec40b5ac",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "103265",
+                        "Region": "Moskva",
+                        "Street1": "1 Okhotny Ryad street"
+                    }
+                },
+                {
+                    "id": "5c22fe08-c9b4-323b-b097-870291de91e6",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Person Address",
+                        "ToId": "6147f469-e6a2-307f-8235-01cdec40b5ac"
+                    }
+                },
+                {
+                    "id": "d65911de-d903-3c5f-83c1-8ca88d864626",
+                    "type": "EntityAddress",
+                    "attributes": {
+                        "Postcode": "",
+                        "Region": "",
+                        "Street1": ""
+                    }
+                },
+                {
+                    "id": "d2ee1344-65bb-3d6a-8db5-dc93496e86f9",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Person Address",
+                        "ToId": "d65911de-d903-3c5f-83c1-8ca88d864626"
+                    }
+                },
+                {
+                    "id": "5AA152C7-F68E-45A8-956F-03DF857601F3",
+                    "type": "EntityBusiness",
+                    "attributes": {
+                        "JobTitle": "ASSOCIATE",
+                        "LocalName": "State Duma of the Federal Assembly of the Russian Federation",
+                        "Name": "State Duma of the Federal Assembly of the Russian Federation"
+                    }
+                },
+                {
+                    "id": "1782a3c2-cec2-3e08-81b2-5b8f4bfd78bf",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Company",
+                        "ToId": "5AA152C7-F68E-45A8-956F-03DF857601F3"
+                    }
+                },
+                {
+                    "id": "E91447E0-A1F6-4CC7-9EE8-0F0144046465",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Switzerland State Secretariat for Economic Affairs (SECO) Sanctions List"
+                    }
+                },
+                {
+                    "id": "6b225e1e-b8cd-378c-a758-cb7b49637763",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "E91447E0-A1F6-4CC7-9EE8-0F0144046465"
+                    }
+                },
+                {
+                    "id": "0D878455-DA45-4BAF-B4BD-E0A02FEA1813",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Australia DFAT Consolidated Sanctions List"
+                    }
+                },
+                {
+                    "id": "39e3317d-f4a0-3b88-ba16-6ebf34ca9424",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "0D878455-DA45-4BAF-B4BD-E0A02FEA1813"
+                    }
+                },
+                {
+                    "id": "B6B19EC6-F358-4257-8F74-15211FBC6143",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Ukraine National Agency for the Prevention of Corruption - Sanctions"
+                    }
+                },
+                {
+                    "id": "66fa10d0-a78e-3130-913b-654bc0982cb0",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "B6B19EC6-F358-4257-8F74-15211FBC6143"
+                    }
+                },
+                {
+                    "id": "1438257C-636F-4353-BE17-DE8D10CD26FC",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Ukraine National Security and Defense Council - Sanctioned Entities"
+                    }
+                },
+                {
+                    "id": "76344b08-1643-30e0-a8f8-f62ab05fc1d4",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "1438257C-636F-4353-BE17-DE8D10CD26FC"
+                    }
+                },
+                {
+                    "id": "D37C2347-0781-4008-B68F-55D81B66E3A0",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Canada Consolidated Autonomous Sanctions List"
+                    }
+                },
+                {
+                    "id": "9bc76e53-94b5-3246-973f-875a56986a54",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "D37C2347-0781-4008-B68F-55D81B66E3A0"
+                    }
+                },
+                {
+                    "id": "DC2A934D-533E-4ED6-A90E-8380BEC3389B",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Japan Finance Ministry Asset Freeze List"
+                    }
+                },
+                {
+                    "id": "1278fbcb-0372-3afb-9e27-5fddd06b7ceb",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "DC2A934D-533E-4ED6-A90E-8380BEC3389B"
+                    }
+                },
+                {
+                    "id": "872783F9-1244-4596-914D-F9857E5FAFE0",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Ukraine National Agency for the Prevention of Corruption - Sanctions"
+                    }
+                },
+                {
+                    "id": "222a7049-3462-3db5-a1c4-46041ba845e8",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "872783F9-1244-4596-914D-F9857E5FAFE0"
+                    }
+                },
+                {
+                    "id": "9BE57607-D591-4AED-A155-C69A7274FDB2",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Treasury Dept. OFAC Specially Designated Nationals List"
+                    }
+                },
+                {
+                    "id": "d75c52a5-3ed9-3fb1-b93f-cb0dbdcc627c",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "9BE57607-D591-4AED-A155-C69A7274FDB2"
+                    }
+                },
+                {
+                    "id": "8D73FADD-DD9C-4443-AFDE-86F905B4A71A",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Ukraine National Agency for the Prevention of Corruption - Sanctions"
+                    }
+                },
+                {
+                    "id": "9a03a51c-7c33-3c5b-ac87-7660cc6fe239",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "8D73FADD-DD9C-4443-AFDE-86F905B4A71A"
+                    }
+                },
+                {
+                    "id": "FDD91852-9C3E-4893-AC90-01E275F71B2F",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "New Zealand Ministry of Foreign Affairs and Trade - Russian Sanctions"
+                    }
+                },
+                {
+                    "id": "d7ad4def-16bf-337d-b7f2-7f7c0d0952cf",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "FDD91852-9C3E-4893-AC90-01E275F71B2F"
+                    }
+                },
+                {
+                    "id": "D2E23F38-C658-48AE-A42C-613B8DC98426",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Ukraine National Agency for the Prevention of Corruption - Sanctions"
+                    }
+                },
+                {
+                    "id": "14af427a-084c-3e3a-a0bb-72fe3a794b77",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "D2E23F38-C658-48AE-A42C-613B8DC98426"
+                    }
+                },
+                {
+                    "id": "80DCD2BA-8BE7-4A0F-9E59-ECD184892C15",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Ukraine National Agency for the Prevention of Corruption - Sanctions"
+                    }
+                },
+                {
+                    "id": "469ed446-7978-3d0a-845c-fe49af72c38e",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "80DCD2BA-8BE7-4A0F-9E59-ECD184892C15"
+                    }
+                },
+                {
+                    "id": "B7BC0C14-4074-4A5D-9B41-16C3D581A6C9",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "UK HM Treasury Sanctions Target List"
+                    }
+                },
+                {
+                    "id": "d0ff95e1-ba3e-3707-b3e7-a4db3b948beb",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "B7BC0C14-4074-4A5D-9B41-16C3D581A6C9"
+                    }
+                },
+                {
+                    "id": "CA2BD1F1-B93D-407E-B103-FE4460D4E96C",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "UK HM Treasury Financial Sanctions Target List"
+                    }
+                },
+                {
+                    "id": "36ed9167-6c7b-359c-af6b-ee85c4b15db4",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "CA2BD1F1-B93D-407E-B103-FE4460D4E96C"
+                    }
+                },
+                {
+                    "id": "14618E67-7172-4120-834C-B20ABB097C40",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Ukraine National Agency for the Prevention of Corruption - Sanctions"
+                    }
+                },
+                {
+                    "id": "2d4aa4f6-ecbd-3ec5-b814-b4b79337624e",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "14618E67-7172-4120-834C-B20ABB097C40"
+                    }
+                },
+                {
+                    "id": "F532D743-663C-40B3-9119-C1D0EC9521B6",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Ukraine National Agency for the Prevention of Corruption - Sanctions"
+                    }
+                },
+                {
+                    "id": "8012dfcb-d3a1-3ad3-a836-900af21cb500",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "F532D743-663C-40B3-9119-C1D0EC9521B6"
+                    }
+                },
+                {
+                    "id": "74A80783-58C5-4EE3-9BF7-54E947FC5021",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Ukraine National Agency for the Prevention of Corruption - Sanctions"
+                    }
+                },
+                {
+                    "id": "bab3e4c7-8fc8-3ee1-80ed-1fb99c726d10",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "74A80783-58C5-4EE3-9BF7-54E947FC5021"
+                    }
+                },
+                {
+                    "id": "8BE2297C-0FCF-4516-A96F-D9F0E543FCE2",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Official Journal of the European Union - EU International, Economic, Military Sanctions"
+                    }
+                },
+                {
+                    "id": "4a33844a-1892-39cf-8117-29a1c1076075",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "8BE2297C-0FCF-4516-A96F-D9F0E543FCE2"
+                    }
+                },
+                {
+                    "id": "77627050-9FB5-4889-9E26-E9CDBDB27077",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "France Directorate General of the Treasury - Terrorism"
+                    }
+                },
+                {
+                    "id": "62c36571-90da-31a0-a83c-9f61cfa350bf",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "77627050-9FB5-4889-9E26-E9CDBDB27077"
+                    }
+                },
+                {
+                    "id": "7694564A-6DF5-4AD6-B107-5157711D42EB",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "EU Consolidated List of Sanctioned Persons, Groups, & Entities"
+                    }
+                },
+                {
+                    "id": "9daca099-b5b9-3a4f-a128-6954f4273ce2",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "7694564A-6DF5-4AD6-B107-5157711D42EB"
+                    }
+                },
+                {
+                    "id": "8F93573F-B208-493C-8441-B1DB31DBB8C0",
+                    "type": "EntityOrganisation",
+                    "attributes": {
+                        "Name": "Ukraine National Agency for the Prevention of Corruption - Sanctions"
+                    }
+                },
+                {
+                    "id": "6fe466e4-673d-39c6-8800-8511f5e56aa0",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "Sanctioned by",
+                        "ToId": "8F93573F-B208-493C-8441-B1DB31DBB8C0"
+                    }
+                },
+                {
+                    "id": "5AFFCC25-0C60-4146-9D23-83851908B182",
+                    "type": "EntityEvent",
+                    "attributes": {
+                        "Description": "Category: Associated with, Seen with",
+                        "Title": "On List [PEP Connect - Russia]",
+                        "Url": "https://www.moodys.com/web/en/us/kyc/products/grid/grid-dataset-descriptions.html/#pep-connect"
+                    }
+                },
+                {
+                    "id": "6c24f00a-e1fa-3c5d-ab99-62d7d7ee9136",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "5AFFCC25-0C60-4146-9D23-83851908B182"
+                    }
+                },
+                {
+                    "id": "A5201D5B-C6B4-4E30-9FDD-596A2B06A605",
+                    "type": "EntityEvent",
+                    "attributes": {
+                        "Description": "Category: Associated with, Seen with",
+                        "Title": "On March 24th, 2022, Victoria Sergeyevna Rodina was sanctioned by the United States Treasury Department's Office of Foreign Assets Control (OFAC) pursuant to EO 14024 for \"Blocking Property With Respect To Specified Harmful Foreign Activities of the Government of the Russian Federation\" under RUSSIA-EO14024 sanction program and was added as Specially Designated Nationals (SDN).",
+                        "Url": "https://www.moodys.com/web/en/us/kyc/products/grid/grid-dataset-descriptions.html/#sanctions-connect"
+                    }
+                },
+                {
+                    "id": "4ba49635-dfdf-3a4e-aaec-635208f7df7c",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "A5201D5B-C6B4-4E30-9FDD-596A2B06A605"
+                    }
+                },
+                {
+                    "id": "BEFAFD06-2C14-493D-9961-ED26158297D2",
+                    "type": "EntityEvent",
+                    "attributes": {
+                        "Description": "Category: Associated with, Seen with",
+                        "Title": "On March 11th, 2022, Victoria Sergeyevna Rodina was sanctioned by the UK HMT pursuant to consolidated list of financial sanctions targets in the UK.",
+                        "Url": "https://www.moodys.com/web/en/us/kyc/products/grid/grid-dataset-descriptions.html/#sanctions-connect"
+                    }
+                },
+                {
+                    "id": "e575719b-d788-3520-9ed5-c062eaa94259",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "BEFAFD06-2C14-493D-9961-ED26158297D2"
+                    }
+                },
+                {
+                    "id": "66172285-8400-48F1-85E5-8B191F2B01A6",
+                    "type": "EntityEvent",
+                    "attributes": {
+                        "Description": "Category: Associated with, Seen with",
+                        "Title": "On February 25th, 2022, Victoria Sergeyevna Rodina was sanctioned by the Australian Government's Department of Foreign Affairs and Trade (DFAT) pursuant to Autonomous Sanctions (Designated Persons and Entities and Declared Persons—Ukraine) Amendment (No. 4) Instrument 2022.",
+                        "Url": "https://www.moodys.com/web/en/us/kyc/products/grid/grid-dataset-descriptions.html/#sanctions-connect"
+                    }
+                },
+                {
+                    "id": "331177eb-295b-3279-9e44-ef269aaf9288",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "66172285-8400-48F1-85E5-8B191F2B01A6"
+                    }
+                },
+                {
+                    "id": "3566D675-AB8C-4447-BC18-D35F15E3B008",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "d8f2d903-fb11-37c9-9232-6138085d296f",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "3566D675-AB8C-4447-BC18-D35F15E3B008"
+                    }
+                },
+                {
+                    "id": "E5E2B64E-0124-4494-BE07-901AEC635EBE",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "8e8dcb41-bbd6-3b95-9a77-3346b9e5832f",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "E5E2B64E-0124-4494-BE07-901AEC635EBE"
+                    }
+                },
+                {
+                    "id": "301C0094-1763-4666-837C-F2E49F6AB6EA",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "cf595d1e-8f13-3ea1-abfa-0c8f48fff384",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "301C0094-1763-4666-837C-F2E49F6AB6EA"
+                    }
+                },
+                {
+                    "id": "7046F3DF-D774-440B-9B67-361E0279E1C7",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "04c15e84-4c21-398b-a2ae-29a9e0c3feee",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "7046F3DF-D774-440B-9B67-361E0279E1C7"
+                    }
+                },
+                {
+                    "id": "E89E68FF-A8FA-4FD9-AFF4-B1BD821C9846",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "331f92c6-4afe-3cd2-a21a-4ce67e08ae31",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "E89E68FF-A8FA-4FD9-AFF4-B1BD821C9846"
+                    }
+                },
+                {
+                    "id": "AF764F50-A26A-4D1B-9ECD-64A13C80130D",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "1b6f81bb-588d-3a64-bff2-9f2b1a88fe1d",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "AF764F50-A26A-4D1B-9ECD-64A13C80130D"
+                    }
+                },
+                {
+                    "id": "AD779C4F-2715-450D-B360-F869D0D15334",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "ad958b65-c694-3d99-b47b-3f30e5321646",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "AD779C4F-2715-450D-B360-F869D0D15334"
+                    }
+                },
+                {
+                    "id": "F3E4FAAB-D2C1-4A59-91E0-4052E31551A1",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "e7db4773-3dd1-374b-b47d-8230240dd21f",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "F3E4FAAB-D2C1-4A59-91E0-4052E31551A1"
+                    }
+                },
+                {
+                    "id": "BE926D57-D421-44B2-A129-2588DA181895",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "a0b45e05-573b-39d5-b0b8-916b24661994",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "BE926D57-D421-44B2-A129-2588DA181895"
+                    }
+                },
+                {
+                    "id": "8B10B9FD-4864-452F-AB51-85C6B7E691CF",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "60bd0557-cdeb-32e3-8c49-9498607a68a7",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "8B10B9FD-4864-452F-AB51-85C6B7E691CF"
+                    }
+                },
+                {
+                    "id": "ECA4F1B2-FD96-4331-A608-855F6403675E",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "e9d07867-8158-343b-975c-571d4bba9fdd",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "ECA4F1B2-FD96-4331-A608-855F6403675E"
+                    }
+                },
+                {
+                    "id": "F288C7A1-3B3B-4A82-80C8-51FC13E6E2B8",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "546b1e4d-1af6-3216-9abc-9cbdfcc6613f",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "F288C7A1-3B3B-4A82-80C8-51FC13E6E2B8"
+                    }
+                },
+                {
+                    "id": "89E9E06F-917F-4399-8AB6-78DF237A9767",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "ddb18890-44dc-3ff2-9930-8e66758ba502",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "89E9E06F-917F-4399-8AB6-78DF237A9767"
+                    }
+                },
+                {
+                    "id": "94B505BE-552A-490D-83CF-CCBA26F029A7",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "5433a27d-95fd-35de-a361-48c275dff8e9",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "94B505BE-552A-490D-83CF-CCBA26F029A7"
+                    }
+                },
+                {
+                    "id": "673E656A-98F7-49C4-9B98-32FDAD5A3C4A",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "215a40bb-af82-312b-a70b-8e2df452ff5e",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "673E656A-98F7-49C4-9B98-32FDAD5A3C4A"
+                    }
+                },
+                {
+                    "id": "EC5C10BD-B687-4ED3-8982-6C4BFFDA3644",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "e83fe3d4-64b4-32fa-8d7c-0c95dd41745b",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "EC5C10BD-B687-4ED3-8982-6C4BFFDA3644"
+                    }
+                },
+                {
+                    "id": "9860F870-DA8B-43F3-90F1-4CA060E8DDB0",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "20245d37-9594-3a2f-b177-ba399ea20875",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "9860F870-DA8B-43F3-90F1-4CA060E8DDB0"
+                    }
+                },
+                {
+                    "id": "6E10D81A-5A01-46AB-8154-79D3468E39B0",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "d057bacd-7d8b-35c6-a88d-fc3c839a7a51",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "6E10D81A-5A01-46AB-8154-79D3468E39B0"
+                    }
+                },
+                {
+                    "id": "CC6E198A-486F-4737-A0D0-E2B90DF0FB49",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "2da6b26e-8d2c-39ce-b5b5-967f7bb81956",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "CC6E198A-486F-4737-A0D0-E2B90DF0FB49"
+                    }
+                },
+                {
+                    "id": "1F3D4B21-4B8C-409F-AA24-B134070C594C",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "327177c9-1d1e-3fb5-851c-5d3f6799bd81",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "1F3D4B21-4B8C-409F-AA24-B134070C594C"
+                    }
+                },
+                {
+                    "id": "0012B61F-6A1E-49BE-A55E-429867A21296",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "4f0ff0e6-8bcf-378f-94b1-e7c1730abdb2",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "0012B61F-6A1E-49BE-A55E-429867A21296"
+                    }
+                },
+                {
+                    "id": "1B4E3319-0E5F-4E4C-9228-E9A2F32F08F2",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "034a9e94-fb11-3aaf-a798-419ee83267d1",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "1B4E3319-0E5F-4E4C-9228-E9A2F32F08F2"
+                    }
+                },
+                {
+                    "id": "DFB64042-D4C9-4CF3-90DC-2C699557BB06",
+                    "type": "EntityNote",
+                    "attributes": {}
+                },
+                {
+                    "id": "b9137b56-e6cd-35af-a8d2-d47d4418f7f4",
+                    "type": "RelationshipRelationship",
+                    "attributes": {
+                        "Direction": "FromTo",
+                        "FromId": "685fbbeb-c4f3-3ca0-bba4-52bbf0eb6b6d",
+                        "Title": "",
+                        "ToId": "DFB64042-D4C9-4CF3-90DC-2C699557BB06"
+                    }
+                }
+            ],
+            "url": "https://grid.rdc.eu.com/wss/entity.html?entityId=e9a2f204e3a08de6cb388b875f920597"
+        }
+    ]
+}

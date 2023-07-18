@@ -1,0 +1,466 @@
+{
+    "data": {
+        "id": "180832777",
+        "entityId": 180832777,
+        "entityTyp": "P",
+        "entityName": "William Yakutumba",
+        "source": {
+            "sourceName": "RiskConnect",
+            "entityDt": "2023-06-22T00:00:00.000+0100"
+        },
+        "events": [
+            {
+                "category": {
+                    "categoryCode": "WLT",
+                    "categoryDesc": "Watch List"
+                },
+                "eventDesc": "This entity appears on the UK HM Treasury Office of Financial Sanctions Implementation published list of all asset freeze targets.",
+                "eventDt": "2023-06-19",
+                "subCategory": {
+                    "categoryCode": "SAN",
+                    "categoryDesc": "Sanction"
+                },
+                "source": {
+                    "sourceName": "UK HM Treasury Financial Sanctions Target List",
+                    "sourceURL": "https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets/consolidated-list-of-targets",
+                    "entityDt": "2023-06-23"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "WLT",
+                    "categoryDesc": "Watch List"
+                },
+                "eventDesc": "This entity appears on the UK HM Treasury Office of Financial Sanctions Implementation published list of designations specified under Sanctions Regulations or the Anti-Money Laundering Act 2018.",
+                "eventDt": "2023-06-19",
+                "subCategory": {
+                    "categoryCode": "SAN",
+                    "categoryDesc": "Sanction"
+                },
+                "source": {
+                    "sourceName": "UK HM Treasury Sanctions Target List",
+                    "sourceURL": "https://www.gov.uk/government/publications/the-uk-sanctions-list",
+                    "entityDt": "2023-06-23"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "WLT",
+                    "categoryDesc": "Watch List"
+                },
+                "eventDesc": "William YAKUTUMBA was added to the list set out in Section A ('Persons') of Annex Ia to Regulation (EC) No 1183/2005 to Council Implementing Regulation (EU) 2022/2397 of 8 December 2022 implementing Regulation (EC) No 1183/2005 and to the list set out in Section A ('Persons') of Annex II to Decision 2010/788/CFSP Council Implementing Decision (CFSP) 2022/2398 of 8 December 2022 implementing Decision 2010/788/CFSP, respectively concerning restrictive measures in view of the situation in the Democratic Republic of the Congo.",
+                "eventDt": "2022-12-08",
+                "subCategory": {
+                    "categoryCode": "SAN",
+                    "categoryDesc": "Sanction"
+                },
+                "source": {
+                    "sourceName": "Official Journal of the European Union - EU International, Economic, Military Sanctions",
+                    "sourceURL": "http://eur-lex.europa.eu/content/welcome/about.html",
+                    "entityDt": "2023-06-27"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "WLT",
+                    "categoryDesc": "Watch List"
+                },
+                "eventDesc": "Entity appears on the consolidated list of persons, groups and entities subject to EU financial sanctions to help prevent the financing of terrorism.",
+                "eventDt": "2022-12-08",
+                "subCategory": {
+                    "categoryCode": "SAN",
+                    "categoryDesc": "Sanction"
+                },
+                "source": {
+                    "sourceName": "EU Consolidated List of Sanctioned Persons, Groups, & Entities",
+                    "sourceURL": "https://www.eeas.europa.eu/eeas/european-union-sanctions_en",
+                    "entityDt": "2023-06-20"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "WLT",
+                    "categoryDesc": "Watch List"
+                },
+                "eventDesc": "Designated by Regulation 2481, (UE) 2022/2397 du 08/12/2022 (ONU République démocratique du Congo - RCSNU 1533 (2004) et R (CE) 1183/2005)",
+                "eventDt": "2022-12-08",
+                "subCategory": {
+                    "categoryCode": "SAN",
+                    "categoryDesc": "Sanction"
+                },
+                "source": {
+                    "sourceName": "France Directorate General of the Treasury - Terrorism",
+                    "sourceURL": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees",
+                    "entityDt": "2023-06-26"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "HUM",
+                    "categoryDesc": "Human rights, Genocide, War crimes"
+                },
+                "eventDesc": "The UK announced new sanctions against Syria's defence minister and its head of the armed forces, as part of new curbs targeting conflict-related sexual violence. Abbas has a \"commanding role of the Syrian military and armed forces, who have systematically used rape and other forms of sexual and gender-based violence against civilians\", it said. Ibrahim, who is chief of the general staff of the Army and Armed Forces, \"has been involved in the repression of the population through commanding military forces where there has been systematic use of rape and other forms of sexual and gender-based violence. The slapped a similar ban on two rebel leaders from the restive eastern Democratic. Desire Londroma Ndjukpa and William Yakutumba. Both groups have used rape and mass rape, breaking international humanitarian law, the.Threats of sexual violence as a weapon in conflict must stop and survivors must be supported to come forward,\" said junior foreign minister Tariq Ahmad.",
+                "eventDt": "2023-06-19",
+                "subCategory": {
+                    "categoryCode": "SAN",
+                    "categoryDesc": "Sanction"
+                },
+                "source": {
+                    "sourceName": "Acquire Media Article - 99241605edbf79b20462bb3ed6e1c3d98640e65b",
+                    "entityDt": "2023-06-19",
+                    "format": "Media",
+                    "headline": "Syrian leaders, Congolese rebels hit with UK sanctions",
+                    "publicationSource": "AFP World News",
+                    "publisher": "Agence France Presse",
+                    "sourceKy": "478a18041be8c0c95d3f3d53eb346cc4"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "ORG",
+                    "categoryDesc": "Organized Crime, Criminal Association, Racketeering"
+                },
+                "eventDesc": "William Yakutumba, a militia leader, occupied a pocket of territory while running rackets based on gold smuggling, arms trafficking and taxing civilians abandoned by an absent state.",
+                "eventDt": "2017-10-01",
+                "subCategory": {
+                    "categoryCode": "ASC",
+                    "categoryDesc": "Associated with, Seen with"
+                },
+                "source": {
+                    "sourceName": "Reuters Article - L8N1MA2OT",
+                    "entityDt": "2017-10-01",
+                    "format": "Media",
+                    "headline": "Congo warlord seeks to unite rebel factions in anti-Kabila alliance",
+                    "publicationSource": "Reuters",
+                    "publisher": "Reuters",
+                    "sourceKy": "58567c9dd84c39aa5d3f3d53eb346cc4"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "SEX",
+                    "categoryDesc": "Sex Offenses (Rape, Sodomy, Sexual Abuse, Pedophilia)"
+                },
+                "eventDesc": "The UK announced new sanctions against Syria's defence minister and its head of the armed forces, as part of new curbs targeting conflict-related sexual violence. Abbas has a \"commanding role of the Syrian military and armed forces, who have systematically used rape and other forms of sexual and gender-based violence against civilians\", it said. Ibrahim, who is chief of the general staff of the Army and Armed Forces, \"has been involved in the repression of the population through commanding military forces where there has been systematic use of rape and other forms of sexual and gender-based violence. The slapped a similar ban on two rebel leaders from the restive eastern Democratic. Desire Londroma Ndjukpa and William Yakutumba. Both groups have used rape and mass rape, breaking international humanitarian law, the.Threats of sexual violence as a weapon in conflict must stop and survivors must be supported to come forward,\" said junior foreign minister Tariq Ahmad.",
+                "eventDt": "2023-06-19",
+                "subCategory": {
+                    "categoryCode": "SAN",
+                    "categoryDesc": "Sanction"
+                },
+                "source": {
+                    "sourceName": "Acquire Media Article - 99241605edbf79b20462bb3ed6e1c3d98640e65b",
+                    "entityDt": "2023-06-19",
+                    "format": "Media",
+                    "headline": "Syrian leaders, Congolese rebels hit with UK sanctions",
+                    "publicationSource": "AFP World News",
+                    "publisher": "Agence France Presse",
+                    "sourceKy": "478a18041be8c0c95d3f3d53eb346cc4"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "SNX",
+                    "categoryDesc": "Sanctions Connect"
+                },
+                "eventDesc": "On December 08, 2022, William Yakutumba was sanctioned by the European Union (EU) pursuant to implementing Decision 2010/788/CFSP concerning restrictive measures in view of the situation in the Democratic Republic of the Congo.",
+                "eventDt": "2022-12-08",
+                "subCategory": {
+                    "categoryCode": "ASC",
+                    "categoryDesc": "Associated with, Seen with"
+                },
+                "source": {
+                    "sourceName": "Sanctions Connect",
+                    "sourceURL": "https://www.moodys.com/web/en/us/kyc/products/grid/grid-dataset-descriptions.html/#sanctions-connect",
+                    "entityDt": "2023-06-26"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "TFT",
+                    "categoryDesc": "Theft (Larceny, Misappropriation, Embezzlement, Extortion)"
+                },
+                "eventDesc": "William Yakutumba, a warlord and leader of a rebel faction, was accused of occupying a pocket of territory in eastern Congo while running rackets based on gold smuggling, arms trafficking and taxing civilians abandoned by an absent state. William's uprising began in June 2017 with an attack on an army base that killed dozens of soldiers and forced tens of thousands of civilians to flee their homes.",
+                "eventDt": "2017-10-01",
+                "subCategory": {
+                    "categoryCode": "ACC",
+                    "categoryDesc": "Accuse"
+                },
+                "source": {
+                    "sourceName": "Reuters Article - M1L8N1MA2OT",
+                    "entityDt": "2017-10-01",
+                    "format": "Media",
+                    "headline": "Congo warlord seeks to unite rebel factions in anti-Kabila alliance",
+                    "publicationSource": "Reuters",
+                    "publisher": "Reuters",
+                    "sourceKy": "62b200f0496931105d3f3d53eb346cc4"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "SPY",
+                    "categoryDesc": "Espionage, Spying, Treason"
+                },
+                "eventDesc": "William Yakutumba, a warlord and leader of a rebel faction, was accused of occupying a pocket of territory in eastern Congo while running rackets based on gold smuggling, arms trafficking and taxing civilians abandoned by an absent state. William's uprising began in June 2017 with an attack on an army base that killed dozens of soldiers and forced tens of thousands of civilians to flee their homes.",
+                "eventDt": "2017-10-01",
+                "subCategory": {
+                    "categoryCode": "ACC",
+                    "categoryDesc": "Accuse"
+                },
+                "source": {
+                    "sourceName": "Reuters Article - M1L8N1MA2OT",
+                    "entityDt": "2017-10-01",
+                    "format": "Media",
+                    "headline": "Congo warlord seeks to unite rebel factions in anti-Kabila alliance",
+                    "publicationSource": "Reuters",
+                    "publisher": "Reuters",
+                    "sourceKy": "62b200f0496931105d3f3d53eb346cc4"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "SEX",
+                    "categoryDesc": "Sex Offenses (Rape, Sodomy, Sexual Abuse, Pedophilia)"
+                },
+                "eventDesc": "Ft.com listed an article on 19 June 2023, re: The UK government has imposed new sanctions on officials accused of perpetrating widespread sexual violence in Syria and the Democratic Republic of Congo. A series of asset freezes and travel bans were unveiled. Abdel Karim Mahmoud Ibrahim, the Syrian army's chief of staff, and Ali Mahmoud Abbas, the country's minister of defence, were both sanctioned for what the UK alleges is the systematic use of sexual and gender-based violence against civilians. Britain also announced it had blacklisted two Congolese militia chiefs for allegedly commanding groups to carry out acts of sexual brutality: Désiré Londroma Ndjukpa, leader of the coalition of militia groups known as the Cooperative for the Development of the Congo (Codeco), and William Yakutumba, leader of the Mai-Mai Yakutumba armed rebel group.",
+                "eventDt": "2023-06-19",
+                "subCategory": {
+                    "categoryCode": "ACC",
+                    "categoryDesc": "Accuse"
+                },
+                "source": {
+                    "sourceName": "Global Online Media",
+                    "sourceURL": "https://www.ft.com/content/db7c82cc-a48e-4751-b862-96c9abf0669b",
+                    "entityDt": "2023-06-27"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "SMG",
+                    "categoryDesc": "Smuggling (Does not include Drugs, Money, People or Guns)"
+                },
+                "eventDesc": "William Yakutumba, a militia leader, occupied a pocket of territory while running rackets based on gold smuggling, arms trafficking and taxing civilians abandoned by an absent state.",
+                "eventDt": "2017-10-01",
+                "subCategory": {
+                    "categoryCode": "ACC",
+                    "categoryDesc": "Accuse"
+                },
+                "source": {
+                    "sourceName": "Reuters Article - L8N1MA2OT",
+                    "entityDt": "2017-10-01",
+                    "format": "Media",
+                    "headline": "Congo warlord seeks to unite rebel factions in anti-Kabila alliance",
+                    "publicationSource": "Reuters",
+                    "publisher": "Reuters",
+                    "sourceKy": "58567c9dd84c39aa5d3f3d53eb346cc4"
+                }
+            },
+            {
+                "category": {
+                    "categoryCode": "IGN",
+                    "categoryDesc": "Possession or Sale of Guns, Weapons and Explosives"
+                },
+                "eventDesc": "William Yakutumba, a militia leader, occupied a pocket of territory while running rackets based on gold smuggling, arms trafficking and taxing civilians abandoned by an absent state.",
+                "eventDt": "2017-10-01",
+                "subCategory": {
+                    "categoryCode": "ACC",
+                    "categoryDesc": "Accuse"
+                },
+                "source": {
+                    "sourceName": "Reuters Article - L8N1MA2OT",
+                    "entityDt": "2017-10-01",
+                    "format": "Media",
+                    "headline": "Congo warlord seeks to unite rebel factions in anti-Kabila alliance",
+                    "publicationSource": "Reuters",
+                    "publisher": "Reuters",
+                    "sourceKy": "58567c9dd84c39aa5d3f3d53eb346cc4"
+                }
+            }
+        ],
+        "addresses": [
+            {},
+            {
+                "addr1": "Lunbondia",
+                "stateProv": "Sud-Kivu",
+                "countryCode": "CD",
+                "locatorTyp": "BIRTH"
+            },
+            {
+                "addr1": "Lunbondia",
+                "stateProv": "South Kivu",
+                "countryCode": "CD",
+                "locatorTyp": "BIRTH"
+            },
+            {
+                "locatorTyp": "CITIZEN"
+            },
+            {
+                "city": "Lunbondia",
+                "stateProv": "South Kivu",
+                "countryCode": "CD",
+                "locatorTyp": "BIRTH"
+            },
+            {
+                "city": "Fizi",
+                "stateProv": "South Kivu",
+                "countryCode": "CD"
+            },
+            {
+                "city": "Uvira",
+                "stateProv": "South Kivu",
+                "countryCode": "CD"
+            }
+        ],
+        "birthDt": [
+            "1970-01-01T00:00:00.000+0100"
+        ],
+        "attributes": [
+            {
+                "code": "URL",
+                "value": "https://www.ft.com/content/db7c82cc-a48e-4751-b862-96c9abf0669b"
+            },
+            {
+                "code": "URL",
+                "value": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022D2398&qid=1670521920217"
+            },
+            {
+                "code": "URL",
+                "value": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2397&qid=1670521920217"
+            },
+            {
+                "code": "URL",
+                "value": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022D2398&qid=1670521920217&from=EN"
+            },
+            {
+                "code": "URL",
+                "value": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022R2397&qid=1670521920217&from=EN"
+            },
+            {
+                "code": "URL",
+                "value": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022D2398&qid=1670521920217&from=EN"
+            },
+            {
+                "code": "URL",
+                "value": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R2397&qid=1670521920217&from=EN"
+            },
+            {
+                "code": "URL",
+                "value": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022R2397"
+            },
+            {
+                "code": "SEX",
+                "value": "M"
+            },
+            {
+                "code": "SEX",
+                "value": "Male"
+            },
+            {
+                "code": "RID",
+                "value": "R133706221"
+            },
+            {
+                "code": "RMK",
+                "value": "William Yakutumba is the Secretary-General and Commander of the Coalition Nationale du Peuple pour la Souverainité du Congo (CNPSC), a coalition of the so-called Mai-Mai militias in South Kivu province of the DRC. He is the founder and leader of one of the largest militias of that coalition, the Mai-Mai Yakutumba.\n\nThe Mai-Mai Yakutumba contributes to the armed conflict, instability and insecurity in the DRC, in particular through violence and serious human rights abuses, including massacres of village populations, attacks on civilians, rapes and other acts of sexual violence.\n\nThe Mai-Mai Yakutumba also controls gold mines in the Eastern DRC, together with CNPSC members who control the mining routes. They profit from the illicit exploitation of and trade in gold. The Mai-Mai Yakutumba uses profits gained through that trade to finance its armed activities.\n\nOwing to his leading position in the CNPSC and in the Mai-Mai Yakutumba militia, William Yakutumba is therefore involved in planning, directing or committing acts that constitute serious human rights violations or abuses in the DRC. He is also responsible for sustaining and exploiting the armed conflict, instability and insecurity in the DRC, including through the illicit exploitation and trade of natural resources."
+            },
+            {
+                "code": "RMK",
+                "value": "William Yakutumba is the secretary general and commander of the National People's Coalition for the Sovereignty of the Congo (CNPSC), a coalition of Mai Mai militias in the South Kivu province of the DRC. He is the founder and leader of one of the largest militias in this coalition, the Mayi-Mayi Yakutumba. The Mayi-Mayi Yakutumba contribute to armed conflict, instability, and insecurity in the RDC through violence and serious human rights abuses, including massacres of village populations, attacks on civilians, rape, and other acts of sexual violence. The Mayi-Mayi Yakutumba also control gold mines in eastern RDC in conjunction with the CNSPC. They profit from the illegal exploitation and trade of gold. The Mayi-Mayi Yakutumba use the profits from this trade to finance their armed activities. As a result of his leadership of the CNSPC and the Mai Mai Yakutumba militia, William Yakutumba has contributed to, planned, directed, or committed acts of serious human rights violations and abuses in the RDC. He is also responsible for fuelling armed conflict, instability and insecurity in the RDC, including by engaging in the illicit exploitation and trade of natural resources."
+            },
+            {
+                "code": "RMK",
+                "value": "Regime Name: The Democratic Republic of the Congo (Sanctions) (EU Exit) Regulations 2019"
+            },
+            {
+                "code": "RMK",
+                "value": "Sanctions Imposed: Asset freeze|Travel Ban"
+            },
+            {
+                "code": "RMK",
+                "value": "Other Info: (UK Sanctions List Ref):DRC0062. (UK Statement of Reasons):William YAKUTUMBA is an \"involved person\" under the Democratic Republic of the Congo (Sanctions) (EU Exit) Regulations 2019 because he is or has been involved in the commission of violations of international humanitarian law in the Democratic Republic of the Congo, including rape, mass rape and other forms of sexual and gender-based violence, through his role as leader of the Mai-Mai Yakutumba."
+            }
+        ],
+        "sysId": "5e7749ec0c76b79f8e0d964f8e0f48e4",
+        "rdcURL": "https://grid.rdc.eu.com/wss/entity.html?entityId=5e7749ec0c76b79f8e0d964f8e0f48e4",
+        "aliases": [
+            {
+                "type": "AKA",
+                "name": "William Amuri Yakutumba"
+            }
+        ],
+        "sources": [
+            {
+                "sourceName": "UK HM Treasury Financial Sanctions Target List",
+                "sourceURL": "https://www.gov.uk/government/publications/financial-sanctions-consolidated-list-of-targets/consolidated-list-of-targets"
+            },
+            {
+                "sourceName": "Reuters",
+                "sourceURL": ""
+            },
+            {
+                "sourceName": "UK HM Treasury Sanctions Target List",
+                "sourceURL": "https://www.gov.uk/government/publications/the-uk-sanctions-list"
+            },
+            {
+                "sourceName": "Global Online Media",
+                "sourceURL": "https://www.moodys.com/web/en/us/kyc/products/grid/grid-dataset-descriptions.html/#global-online-media"
+            },
+            {
+                "sourceName": "Reuters"
+            },
+            {
+                "sourceName": "Official Journal of the European Union - EU International, Economic, Military Sanctions",
+                "sourceURL": "http://eur-lex.europa.eu/content/welcome/about.html"
+            },
+            {
+                "sourceName": "EU Consolidated List of Sanctioned Persons, Groups, & Entities",
+                "sourceURL": "https://www.eeas.europa.eu/eeas/european-union-sanctions_en"
+            },
+            {
+                "sourceName": "Sanctions Connect",
+                "sourceURL": "https://www.moodys.com/web/en/us/kyc/products/grid/grid-dataset-descriptions.html/#sanctions-connect"
+            },
+            {
+                "sourceName": "France Directorate General of the Treasury - Terrorism",
+                "sourceURL": "https://www.tresor.economie.gouv.fr/services-aux-entreprises/sanctions-economiques/tout-savoir-sur-les-personnes-et-entites-sanctionnees"
+            },
+            {
+                "sourceName": "AFP World News"
+            },
+            {
+                "sourceName": "eur-lex.europa.eu, 12/08/2022, Official Journal of the European Union",
+                "sourceURL": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32022D2398"
+            }
+        ],
+        "relations": [
+            {
+                "relDir": "FROM",
+                "relTyp": "ASSOCIATE",
+                "sysId": "7ed401f4aacce65a0914e508159681f8",
+                "entityName": "National Coalition of the People for the Sovereignty of Congo"
+            },
+            {
+                "relDir": "FROM",
+                "relTyp": "ASSOCIATE",
+                "sysId": "98d33736411865ed8e0d964f8e0f48e4",
+                "entityName": "Mai-Mai Mazembe"
+            }
+        ],
+        "identifications": [
+            {
+                "idNumber": "15988",
+                "idType": "HM Treasury Group ID"
+            },
+            {
+                "idNumber": "15988",
+                "idType": "UK HM Treasury Group ID"
+            },
+            {
+                "idNumber": "146115",
+                "idType": "EU Logical ID"
+            }
+        ]
+    },
+    "status": {
+        "code": 0
+    }
+}
