@@ -242,7 +242,7 @@ async def get_grid_company(query: str, max_results: int = 50):
                     'type': 'EntityEvent',
                     'attributes': {
                         'Title': event.get('eventDesc') or '',
-                        'Date': event.get('eventDt') or '',
+                        'Date': event.get('eventDt')+'T00:00:00.000+0000' or '',
                         'Url': event.get('source', {}).get('sourceURL') or '',
                         'Description': _description.strip() or '',
                     }

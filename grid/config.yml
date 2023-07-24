@@ -1,13 +1,13 @@
 searchers:
   grid_company:
     id: grid_company
-    name: Grid API Company Search
-    hint: Enter a company to search for
-    tooltip: Get the Grid API information of a company
+    name: Moody's GRID - Companies
+    hint: Search by name
+    tooltip: Moody's GRID company search
     enabled: True
   grid_people:
     id: grid_people
-    name: Grid API People Search
-    hint: Enter the name of a person to search for
-    tooltip: Get the Grid API information of a person
+    name: Moody's GRID - People
+    hint: Search by name
+    tooltip: Moody's GRID person search
     enabled: True
