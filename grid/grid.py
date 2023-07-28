@@ -27,6 +27,9 @@ GRID_API_BASE_URL = 'https://service.rdc.eu.com/api/grid-service/v2/'
 def log(message):
     print(datetime.now().isoformat(), message)
 
+def sentence(input:str = ""):
+    return input.replace("_"," ").capitalize()
+
 
 # ============================ Grid API Client ===========================
 class GridAPIClient:
@@ -138,7 +141,7 @@ async def get_grid_company(query: str, max_results: int = 50):
     except:
         traceback.print_exc()
         return {'error': [{'message': 'Error querying the Grid API.'}]}
-    log(response.json())
+    # log(response.json())
     for company in company_list:
         company_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, company['id']))
 
@@ -146,37 +149,45 @@ async def get_grid_company(query: str, max_results: int = 50):
         # Address
         possible_addresses = company.get('addresses') or []
         address_entities = []
+        count = 0
         for company_address in possible_addresses:
-            street1 = (company_address.get('addr1') or '').strip()
-            city = (company_address.get('city') or '').strip()
-            region = (company_address.get('stateProv') or '').strip()
-            postcode = (company_address.get('postalCode') or '').strip()
-            country = (company_address.get('countryCode') or '').strip()
+            if count < 10:
+                street1 = (company_address.get('addr1') or '').strip()
+                city = (company_address.get('city') or '').strip()
+                region = (company_address.get('stateProv') or '').strip()
+                postcode = (company_address.get('postalCode') or '').strip()
+                country = (company_address.get('countryCode') or '').strip()
 
-            full_address = ', '.join([
-                _fragment for _fragment in [
-                    street1, city, region, postcode, country,
-                ] if _fragment
-            ]) or '-'
+                full_address = ', '.join([
+                    _fragment for _fragment in [
+                        street1, city, region, postcode, country,
+                    ] if _fragment
+                ]) or None
 
-            address_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(
-                # Make sure address has a reproducible uuid that's unique (i.e. doesn't depend on null values
-                # in case record is not present).
-                full_address or
-                company_uuid
-            )))
-            address_entity = {
-                'id': address_uuid,
-                'type': 'EntityAddress',
-                'attributes': {
-                    'Street1': street1,
-                    'City': city,
-                    'Region': region,
-                    'Postcode': postcode,
-                    'Country': country,
+                address_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(
+                    # Make sure address has a reproducible uuid that's unique (i.e. doesn't depend on null values
+                    # in case record is not present).
+                    full_address 
+                )))
+                address_entity = {
+                    'id': address_uuid,
+                    'type': 'EntityAddress',
+                    'attributes': {
+                        'Street1': street1,
+                        'City': city,
+                        'Region': region,
+                        'Postcode': postcode,
+                        'Country': country,
+                        'Nationality': country,
+                        'FullAddress': full_address
+                    }
                 }
-            }
-            address_entities.append(address_entity)
+                address_entities.append(address_entity)
+                # log(str(address_entity))
+            else:
+                break
+
+            count += 1
 
         result = {
             'key': str(uuid.uuid4()).upper(),
@@ -200,56 +211,68 @@ async def get_grid_company(query: str, max_results: int = 50):
         }
 
         # Relationship: Address
-        for address_entity in address_entities[:9]: # VCF truncates the response beyond a certain size so restrict each result to containing a max of 10 addresses
+        for address_entity in address_entities:  # VCF truncates the response beyond a certain size so restrict each result to containing a max of 10 addresses
             result['entities'].append(address_entity)
             result['entities'].append(create_relationship(company_uuid, address_entity['id'], 'Company Address'))
 
         # Relationship: Persons
+        count = 0
         for relation in company.get('relations') or []:
-            if relation.get('relTyp') in ('EMPLOYEE', 'ASSOCIATE',):
-                # Construct First Name and Last Name
-                person_name_words = (relation['entityName'] or '').split(' ')
-                relation_entity = {
-                    'id': str(uuid.uuid4()).upper(),
-                    'type': 'EntityPerson',
-                    'attributes': {
-                        'FirstName': (person_name_words[0] if person_name_words else '').strip(),
-                        'LastName': (' '.join(person_name_words[1:]) if person_name_words else '').strip(),
-                        'JobTitle': relation.get('relTyp') or '',
+            if count < 10:
+                relType = relation.get('relTyp') or ""
+                if relType in ['EMPLOYEE', 'ASSOCIATE']:
+                    # Construct First Name and Last Name
+                    person_name_words = (relation['entityName'] or '').split(' ')
+                    relation_entity = {
+                        'id': str(uuid.uuid4()).upper(),
+                        'type': 'EntityPerson',
+                        'attributes': {
+                            'FirstName': (person_name_words[0] if person_name_words else '').strip(),
+                            'LastName': (' '.join(person_name_words[1:]) if person_name_words else '').strip()
+                        }
                     }
-                }
-                result['entities'].append(relation_entity)
-                result['entities'].append(create_relationship(company_uuid, relation_entity['id'], 'Person'))
-                
-                
-        # Relationship: Events
-        for event in company.get('events')[:9] or []:  # VCF truncates the response beyond a certain size so restrict each result to containing a max of 10 events
-            if event.get('category', {}).get('categoryCode') == 'WLT':
-                event_entity = {
-                    'id': str(uuid.uuid4()).upper(),
-                    'type': 'EntityOrganisation',
-                    'attributes': {
-                        'Name': event.get('source', {}).get('sourceName') or '',
-                    }
-                }
-                result['entities'].append(event_entity)
-                result['entities'].append(create_relationship(company_uuid, event_entity['id'], 'Sanctioned by'))
+                    result['entities'].append(relation_entity)
+                    result['entities'].append(create_relationship(company_uuid, relation_entity['id'], sentence(relType)))
             else:
-                _description = (event.get('source', {}).get('headline') or '') + \
-                    '\n Category: ' + event.get('subCategory', {}).get('categoryDesc')
-                event_entity = {
-                    'id': str(uuid.uuid4()).upper(),
-                    'type': 'EntityEvent',
-                    'attributes': {
-                        'Title': event.get('eventDesc') or '',
-                        'Date': event.get('eventDt')+'T00:00:00.000+0000' or '',
-                        'Url': event.get('source', {}).get('sourceURL') or '',
-                        'Description': _description.strip() or '',
-                    }
-                }
-                result['entities'].append(event_entity)
-                result['entities'].append(create_relationship(company_uuid, event_entity['id'], ''))
+                break
 
+            count += 1
+
+        # Relationship: Events
+        count = 0
+        # VCF truncates the response beyond a certain size so restrict each result to containing a max of 10 events
+        for event in company.get('events') or []:
+            if count < 10:
+                if event.get('category', {}).get('categoryCode') == 'WLT':
+                    event_entity = {
+                        'id': str(uuid.uuid4()).upper(),
+                        'type': 'EntityOrganisation',
+                        'attributes': {
+                            'Name': event.get('source', {}).get('sourceName') or '',
+                        }
+                    }
+                    result['entities'].append(event_entity)
+                    result['entities'].append(create_relationship(company_uuid, event_entity['id'], 'Sanctioned by'))
+                else:
+                    _description = (event.get('source', {}).get('headline') or '') + \
+                        '\n Category: ' + event.get('subCategory', {}).get('categoryDesc')
+                    event_entity = {
+                        'id': str(uuid.uuid4()).upper(),
+                        'type': 'EntityEvent',
+                        'attributes': {
+                            'Title': event.get('eventDesc') or '',
+                            'Date': event.get('eventDt')+'T00:00:00.000+0000' or '',
+                            'Url': event.get('source', {}).get('sourceURL') or '',
+                            'Description': _description.strip() or '',
+                        }
+                    }
+                    result['entities'].append(event_entity)
+                    result['entities'].append(create_relationship(company_uuid, event_entity['id'], ''))
+
+            else:
+                break
+
+            count += 1
 
         search_results.append(result)
         if len(search_results) >= max_results:
@@ -282,49 +305,59 @@ async def get_grid_people(query: str, max_results: int = 50):
     except:
         traceback.print_exc()
         return {'error': [{'message': 'Error querying the Grid API.'}]}
-    log(response.json())
+    # log(response.json())
     for entity in entities_list:
         entity_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, entity['id']))
 
         # Create search result
         # Address
         nationality = ''
-        possible_addresses = entity.get('addresses')[:9] or [] # VCF truncates the response beyond a certain size so restrict each result to containing a max of 10 addresses
+        # VCF truncates the response beyond a certain size so restrict each result to containing a max of 10 addresses
+        possible_addresses = entity.get('addresses') or []
         address_entities = []
+        count = 0
         for entity_address in possible_addresses:
-            street1 = (entity_address.get('addr1') or '').strip()
-            city = (entity_address.get('city') or '').strip()
-            region = (entity_address.get('stateProv') or '').strip()
-            postcode = (entity_address.get('postalCode') or '').strip()
-            country = (entity_address.get('countryCode') or '').strip()
+            if count < 10:
+                street1 = (entity_address.get('addr1') or '').strip()
+                city = (entity_address.get('city') or '').strip()
+                region = (entity_address.get('stateProv') or '').strip()
+                postcode = (entity_address.get('postalCode') or '').strip()
+                country = (entity_address.get('countryCode') or '').strip()
 
-            full_address = ', '.join([
-                _fragment for _fragment in [
-                    street1, city, region, postcode, country,
-                ] if _fragment
-            ]) or '-'
+                full_address = ', '.join([
+                    _fragment for _fragment in [
+                        street1, city, region, postcode, country,
+                    ] if _fragment
+                ]) or None
+                if full_address:
+                    address_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(
+                        # Make sure address has a reproducible uuid that's unique (i.e. doesn't depend on null values
+                        # in case record is not present).
+                        full_address 
+                    )))
+                    address_entity = {
+                        'id': address_uuid,
+                        'type': 'EntityAddress',
+                        'attributes': {
+                            'Street1': street1,
+                            'City': city,
+                            'Region': region,
+                            'Postcode': postcode,
+                            'Country': country,
+                            'Nationality': country,
+                            'FullAddress': full_address
+                        }
+                    }
+                    address_entities.append(address_entity)
+                    
+                    if entity_address.get('locatorTyp') == 'BIRTH':
+                        nationality = entity_address.get('countryCode') or ''
+                    
+                    count += 1
+            else:
+                break
 
-            address_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(
-                # Make sure address has a reproducible uuid that's unique (i.e. doesn't depend on null values
-                # in case record is not present).
-                full_address or
-                entity_uuid
-            )))
-            address_entity = {
-                'id': address_uuid,
-                'type': 'EntityAddress',
-                'attributes': {
-                    'Street1': street1,
-                    'City': city,
-                    'Region': region,
-                    'Postcode': postcode,
-                    'Country': country,
-                }
-            }
-            address_entities.append(address_entity)
-
-            if entity_address.get('locatorTyp') == 'BIRTH':
-                nationality = entity_address.get('countryCode') or ''
+            
 
         # Construct First Name and Last Name
         person_name_words = (entity['entityName'] or '').split(' ')
@@ -365,62 +398,92 @@ async def get_grid_people(query: str, max_results: int = 50):
             result['entities'].append(create_relationship(entity_uuid, address_entity['id'], 'Person Address'))
 
         # Relationship: Company
+        count = 0
         for relation in entity.get('relations') or []:
-            if relation.get('relTyp') in ('EMPLOYEE', 'ASSOCIATE',):
-                relation_entity = {
-                    'id': str(uuid.uuid4()).upper(),
-                    'type': 'EntityBusiness',
-                    'attributes': {
-                        'Name': relation.get('entityName') or '',
-                        'LocalName': relation.get('entityName') or '',
-                        'JobTitle': relation.get('relTyp') or '',
+            if count < 10:
+                relType = relation.get('relTyp') or ""
+
+                if relType in ['EMPLOYEE', 'ASSOCIATE']:
+                    relation_entity = {
+                        'id': str(uuid.uuid4()).upper(),
+                        'type': 'EntityBusiness',
+                        'attributes': {
+                            'Name': relation.get('entityName') or '',
+                            'LocalName': relation.get('entityName') or ''
+                        }
                     }
-                }
-                result['entities'].append(relation_entity)
-                result['entities'].append(create_relationship(entity_uuid, relation_entity['id'], 'Company'))
+                    result['entities'].append(relation_entity)
+                    result['entities'].append(create_relationship(entity_uuid, relation_entity['id'], sentence(relType)))
+                else:
+                    # Construct First Name and Last Name
+                    person_name_words = (relation['entityName'] or '').split(' ')
+                    relation_entity = {
+                        'id': str(uuid.uuid4()).upper(),
+                        'type': 'EntityPerson',
+                        'attributes': {
+                            'FirstName': (person_name_words[0] if person_name_words else '').strip(),
+                            'LastName': (' '.join(person_name_words[1:]) if person_name_words else '').strip(),
+                        }
+                    }
+                    result['entities'].append(relation_entity)
+                    result['entities'].append(create_relationship(entity_uuid, relation_entity['id'], sentence(relType)))
+            else:
+                break
+            count += 1
 
         # Relationship: Events
-        for event in entity.get('events')[:9] or []: # VCF truncates the response beyond a certain size so restrict each result to containing a max of 10 events
-            if event.get('category', {}).get('categoryCode') == 'WLT':
-                event_entity = {
-                    'id': str(uuid.uuid4()).upper(),
-                    'type': 'EntityOrganisation',
-                    'attributes': {
-                        'Name': event.get('source', {}).get('sourceName') or '',
+        # VCF truncates the response beyond a certain size so restrict each result to containing a max of 10 events
+        count = 0
+        for event in entity.get('events') or []:
+            if count < 10:
+                if event.get('category', {}).get('categoryCode') == 'WLT':
+                    event_entity = {
+                        'id': str(uuid.uuid4()).upper(),
+                        'type': 'EntityOrganisation',
+                        'attributes': {
+                            'Name': event.get('source', {}).get('sourceName') or '',
+                        }
                     }
-                }
-                result['entities'].append(event_entity)
-                result['entities'].append(create_relationship(entity_uuid, event_entity['id'], 'Sanctioned by'))
+                    result['entities'].append(event_entity)
+                    result['entities'].append(create_relationship(entity_uuid, event_entity['id'], 'Sanctioned by'))
+                else:
+                    _description = (event.get('source', {}).get('headline') or '') + \
+                        '\n Category: ' + event.get('subCategory', {}).get('categoryDesc')
+                    event_entity = {
+                        'id': str(uuid.uuid4()).upper(),
+                        'type': 'EntityEvent',
+                        'attributes': {
+                            'Title': event.get('eventDesc') or '',
+                            'Date': event.get('eventDt') or '',
+                            'Url': event.get('source', {}).get('sourceURL') or '',
+                            'Description': _description.strip() or '',
+                        }
+                    }
+                    result['entities'].append(event_entity)
+                    result['entities'].append(create_relationship(entity_uuid, event_entity['id'], ''))
             else:
-                _description = (event.get('source', {}).get('headline') or '') + \
-                    '\n Category: ' + event.get('subCategory', {}).get('categoryDesc')
-                event_entity = {
-                    'id': str(uuid.uuid4()).upper(),
-                    'type': 'EntityEvent',
-                    'attributes': {
-                        'Title': event.get('eventDesc') or '',
-                        'Date': event.get('eventDt') or '',
-                        'Url': event.get('source', {}).get('sourceURL') or '',
-                        'Description': _description.strip() or '',
-                    }
-                }
-                result['entities'].append(event_entity)
-                result['entities'].append(create_relationship(entity_uuid, event_entity['id'], ''))
+                break
+            count += 1
 
         # Relationship: Attributes
-        for attribute in entity.get('attributes')[:9] or []: # VCF truncates the response beyond a certain size so restrict each result to containing a max of 10 attributes
-            # Ideally SEX would populate a gender attribute but can live without
-            if attribute.get('code') not in ['URL', 'SEX']:
-                attribute_entity = {
-                    'id': str(uuid.uuid4()).upper(),
-                    'type': 'EntityNote',
-                    'attributes': {
-                        'Description': attribute.get('value') or '',  # Seems like `Text` is not accepted by Videris
+        # VCF truncates the response beyond a certain size so restrict each result to containing a max of 10 attributes
+        count = 0
+        for attribute in entity.get('attributes') or []:
+            if count < 10:
+                # Ideally SEX would populate a gender attribute but can live without
+                if attribute.get('code') not in ['URL', 'SEX']:
+                    attribute_entity = {
+                        'id': str(uuid.uuid4()).upper(),
+                        'type': 'EntityNote',
+                        'attributes': {
+                            'Description': attribute.get('value') or '',  # Seems like `Text` is not accepted by Videris
+                        }
                     }
-                }
-                result['entities'].append(attribute_entity)
-                result['entities'].append(create_relationship(entity_uuid, attribute_entity['id'], ''))
-
+                    result['entities'].append(attribute_entity)
+                    result['entities'].append(create_relationship(entity_uuid, attribute_entity['id'], ''))
+            else:
+                break
+            count += 1
         search_results.append(result)
         if len(search_results) >= max_results:
             break
