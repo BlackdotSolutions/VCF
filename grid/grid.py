@@ -12,10 +12,16 @@ import os
 import traceback
 import uuid
 from datetime import datetime
+import logging
 
 import requests
 
 from vcf import create_relationship
+
+logger = logging.getLogger("gridlogger")
+handler = logging.FileHandler('grid.log')
+logger.addHandler(handler)
+logger.setLevel(logging.DEBUG)
 
 
 GRID_API_USERNAME = os.getenv('GRID_API_USERNAME')
@@ -25,7 +31,8 @@ GRID_API_BASE_URL = 'https://service.rdc.eu.com/api/grid-service/v2/'
 
 
 def log(message):
-    print(datetime.now().isoformat(), message)
+#    print(datetime.now().isoformat(), message)
+    logger.warning(message)
 
 def sentence(input:str = ""):
     return input.replace("_"," ").capitalize()
@@ -105,13 +112,17 @@ class GridAPIClient:
     def make_request(self, method, _url, **kwargs):
         log(f'Request: {method} Url: {self.url(_url)}')
         response = getattr(self.client, method.lower())(self.url(_url), **kwargs)
+
         if response.status_code in (401, 403,):
             log(f'Got {response.status_code} response. Refetching token')
             self.refetch_token()
             self.make_client()
             response = getattr(self.client, method.lower())(self.url(_url), **kwargs)
+
         if not response.ok:
             log(f'Got error response {response}: {response.content}')
+        else:
+            log(f"Successful response: {response}: {response.content}")
 
         return response
 
@@ -167,7 +178,7 @@ async def get_grid_company(query: str, max_results: int = 50):
                 address_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(
                     # Make sure address has a reproducible uuid that's unique (i.e. doesn't depend on null values
                     # in case record is not present).
-                    full_address 
+                    full_address
                 )))
                 address_entity = {
                     'id': address_uuid,
@@ -333,7 +344,7 @@ async def get_grid_people(query: str, max_results: int = 50):
                     address_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(
                         # Make sure address has a reproducible uuid that's unique (i.e. doesn't depend on null values
                         # in case record is not present).
-                        full_address 
+                        full_address
                     )))
                     address_entity = {
                         'id': address_uuid,
@@ -349,15 +360,15 @@ async def get_grid_people(query: str, max_results: int = 50):
                         }
                     }
                     address_entities.append(address_entity)
-                    
+
                     if entity_address.get('locatorTyp') == 'BIRTH':
                         nationality = entity_address.get('countryCode') or ''
-                    
+
                     count += 1
             else:
                 break
 
-            
+
 
         # Construct First Name and Last Name
         person_name_words = (entity['entityName'] or '').split(' ')
