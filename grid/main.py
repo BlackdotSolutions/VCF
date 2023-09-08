@@ -17,8 +17,6 @@ from grid import *
 app = FastAPI()
 
 
-
-
 @app.get("/searchers/", response_model=List[Searcher], response_model_exclude_none=True)
 def get_searchers():
     with open('config.yml', 'r') as file:
