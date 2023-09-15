@@ -14,9 +14,14 @@ class Searcher(BaseModel):
 
 class Attribute(BaseModel):
     """All possible attributes that entities Videris accepts (not yet complete)"""
+    Category: Optional[str]
+    City: Optional[str]
     CompaniesHouseId: Optional[str]
     CompanyNumber: Optional[str]
+    Compliance: Optional[str]
+    Country: Optional[str]
     Data: Optional[str]  # Images
+    Date: Optional[str]
     DateOfDeath: Optional[str]
     Description: Optional[str]
     Direction: Optional[str]
@@ -52,6 +57,7 @@ class Attribute(BaseModel):
     Street1: Optional[str]
     Street2: Optional[str]
     Street3: Optional[str]
+    Text: Optional[str]
     Title: Optional[str]  # Relationships
     ToId: Optional[str]  # Relationships
     TradeDescription: Optional[str]
@@ -62,6 +68,7 @@ class Attribute(BaseModel):
     Username: Optional[str]
     VatNumber: Optional[str]
     Verified: Optional[str]
+    WorldCompliance: Optional[str]
 
 
 class Entity(BaseModel):
@@ -94,7 +101,7 @@ class SearchResults(BaseModel):
 
 
 # ============================ Shared functions ============================
-def create_relationship(from_id: str, to_id: str, title: str = "", rel_type:str="Relationship",start_time="",end_time="") -> dict:
+def create_relationship(from_id: str, to_id: str, title: str = "") -> dict:
     """
     Creates a relationship "entity" between the specified entity ids with an optional description.
 
@@ -108,25 +115,16 @@ def create_relationship(from_id: str, to_id: str, title: str = "", rel_type:str=
     :rtype: dict
     """
 
-    attributes= {
+    relationship = {
+        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, from_id + to_id)),
+        "type": "RelationshipRelationship",
+        "attributes": {
             "FromId": from_id,
             "ToId": to_id,
             "Direction": "FromTo",
             "Title": title
         }
-    
-    if rel_type in ["Location","Nameserver","Registrant","Action","Owns","Met","Officership","Shareholding"]:
-        attributes["StartTime"]=start_time
-        attributes["EndTime"]=end_time
-    else:
-        rel_type="Relationship"
-
-    relationship = {
-        "id": str(uuid.uuid3(uuid.NAMESPACE_DNS, from_id + to_id)),
-        "type": "Relationship"+rel_type,
-        "attributes": attributes
     }
-
     return relationship
 
 
