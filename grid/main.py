@@ -10,13 +10,11 @@ E.g.
 
 import yaml
 from fastapi import FastAPI, HTTPException, status
-
+import uvicorn
 from vcf import *
 from grid import *
 
 app = FastAPI()
-
-
 
 
 @app.get("/searchers/", response_model=List[Searcher], response_model_exclude_none=True)
@@ -54,3 +52,6 @@ async def get_results(searcher_id, query: str, maxResults: int = 50):
             return {"errors": [{"message": "Searcher not enabled."}]}
     else:
         return {"errors": [{"message": "Unrecognised searcher"}]}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="127.0.0.1", port=8000)
