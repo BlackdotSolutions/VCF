@@ -20,6 +20,7 @@ from vcf import create_relationship
 
 GRID_API_USERNAME = os.getenv('GRID_API_USERNAME')
 GRID_API_PASSWORD = os.getenv('GRID_API_PASSWORD')
+
 GRID_TOKEN_FILE_PATH = (os.getenv('GRID_TOKEN_FILE_PATH') or 'grid-token.json')
 GRID_API_BASE_URL = 'https://service.rdc.eu.com/api/grid-service/v2/'
 
@@ -174,12 +175,10 @@ async def get_grid_company(query: str, max_results: int = 50):
                 ] if _fragment
             ]) or '-'
 
-            address_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(
-                # Make sure address has a reproducible uuid that's unique (i.e. doesn't depend on null values
-                # in case record is not present).
-                full_address or
-                ('address-' + str(company_address_index) + '-' + company_uuid)
-            )))
+            address_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(full_address or (
+                'address-' + str(company_address_index) + '-' + company_uuid))))
+            # Make sure address has a reproducible uuid that's unique (i.e. doesn't depend on null values
+            # in case record is not present).
             address_entity = {
                 'id': address_uuid,
                 'type': 'EntityAddress',
@@ -212,7 +211,7 @@ async def get_grid_company(query: str, max_results: int = 50):
             summary_chunks.append('Riskography: ' + riskcographies_display)
 
         result = {
-            'key': str(uuid.uuid4()).upper(),
+            'key': str(uuid.uuid4()),
             'title': company['entityName'],
             'subTitle': '',
             'summary': ' | '.join(summary_chunks),
@@ -225,39 +224,92 @@ async def get_grid_company(query: str, max_results: int = 50):
                     'attributes': {
                         'Name': company['entityName'] or '',
                         'LocalName': company['entityName'] or '',
-                        'Description': '',
-                        'WorldCompliance': True,
+                        # 'Description': '',
+                        'Worldcompliance': 'True',
                     }
                 }
             ]
         }
-
+        count = 0
         # Relationship: Address
         for address_entity in address_entities:
-            result['entities'].append(address_entity)
-            result['entities'].append(create_relationship(company_uuid, address_entity['id'], 'Company Address'))
+            if count < 10:
+                result['entities'].append(address_entity)
+                result['entities'].append(create_relationship(company_uuid, address_entity['id'], 'Company Address'))
+                count += 1
+            else:
+                break
 
+        count = 0
         # Relationship: Persons
-        for relation in company.get('relations') or []:
-            if relation.get('relTyp') in ('EMPLOYEE', 'ASSOCIATE',):
-                # Construct First Name and Last Name
-                person_name_words = (relation['entityName'] or '').split(' ')
-                relation_entity = {
-                    'id': str(uuid.uuid4()).upper(),
-                    'type': 'EntityPerson',
-                    'attributes': {
-                        'FirstName': (person_name_words[0] if person_name_words else '').strip(),
-                        'LastName': (' '.join(person_name_words[1:]) if person_name_words else '').strip(),
-                        'JobTitle': relation.get('relTyp') or '',
+        for relation in company.get('rels', {}).get('rel') or []:
+            if count < 10:
+                if relation.get('relTyp') in ('EMPLOYEE', 'ASSOCIATE',):
+                    # Construct First Name and Last Name
+                    person_name_words = (relation['entityName'] or '').split(' ')
+                    relation_entity = {
+                        'id': str(uuid.uuid4()),
+                        'type': 'EntityPerson',
+                        'attributes': {
+                            'FirstName': (person_name_words[0] if person_name_words else '').strip(),
+                            'LastName': (' '.join(person_name_words[1:]) if person_name_words else '').strip(),
+                            # 'JobTitle': relation.get('relTyp') or '',
+                        }
                     }
-                }
-                result['entities'].append(relation_entity)
-                result['entities'].append(create_relationship(company_uuid, relation_entity['id'], 'Person'))
+                    result['entities'].append(relation_entity)
+                    result['entities'].append(create_relationship(
+                        company_uuid, relation_entity['id'], relation.get('relTyp') or 'Person'))
+                    count += 1
+            else:
+                break
+
+        # Relationship: Events
+        count = 0
+        for event in company.get('event') or []:
+            if count < 10:
+                _category_code = event.get('category', {}).get('categoryCode') or ''
+                _category = event.get('category', {}).get('categoryDesc') or ''
+                if _category_code:
+                    _category = _category + ' (' + _category_code + ')'
+                _category = _category.strip()
+
+                if event.get('category', {}).get('categoryCode') == 'WLT':
+                    event_entity = {
+                        'id': str(uuid.uuid4()),
+                        'type': 'EntityOrganisation',
+                        'attributes': {
+                            'Name': event.get('source', {}).get('sourceName') or '',
+                            # 'Category': _category,
+                        }
+                    }
+                    result['entities'].append(event_entity)
+                    result['entities'].append(create_relationship(company_uuid, event_entity['id'], 'Sanctioned by'))
+                else:
+                    _description = (event.get('source', {}).get('headline') or '') + \
+                        '\n Category: ' + event.get('subCategory', {}).get('categoryDesc')
+                    event_entity = {
+                        'id': str(uuid.uuid4()),
+                        'type': 'EntityEvent',
+                        'attributes': {
+                            'Title': event.get('eventDesc') or '',
+                            'Date': event.get('eventDt') or '',
+                            'Url': event.get('source', {}).get('sourceURL') or '',
+                            'Description': _description.strip() or '',
+                            # 'Category': _category,
+                        }
+                    }
+                    result['entities'].append(event_entity)
+                    result['entities'].append(create_relationship(company_uuid, event_entity['id'], ''))
+                    
+                count += 1
+                
+            else:
+                break
 
         search_results.append(result)
         if len(search_results) >= max_results:
             break
-
+    log(json.dumps({'searchResults': search_results}))
     return {'searchResults': search_results}
 
 
@@ -321,12 +373,10 @@ async def get_grid_people(query: str, max_results: int = 50):
                 ] if _fragment
             ]) or '-'
 
-            address_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(
-                # Make sure address has a reproducible uuid that's unique (i.e. doesn't depend on null values
-                # in case record is not present).
-                full_address or
-                ('address-' + str(entity_address_index) + '-' + entity_uuid)
-            )))
+            address_uuid = str(uuid.uuid3(uuid.NAMESPACE_DNS, str(full_address or (
+                'address-' + str(entity_address_index) + '-' + entity_uuid))))
+            # Make sure address has a reproducible uuid that's unique (i.e. doesn't depend on null values
+            # in case record is not present).
             address_entity = {
                 'id': address_uuid,
                 'type': 'EntityAddress',
@@ -373,7 +423,7 @@ async def get_grid_people(query: str, max_results: int = 50):
             summary_chunks.append('Riskography: ' + riskcographies_display)
 
         result = {
-            'key': str(uuid.uuid4()).upper(),
+            'key': str(uuid.uuid4()),
             'title': entity['entityName'],
             'subTitle': '',
             'summary': ' | '.join(summary_chunks),
@@ -395,72 +445,95 @@ async def get_grid_people(query: str, max_results: int = 50):
         }
 
         # Relationship: Address
+        count = 0
         for address_entity in address_entities:
-            result['entities'].append(address_entity)
-            result['entities'].append(create_relationship(entity_uuid, address_entity['id'], 'Person Address'))
+            if count < 10:
+                result['entities'].append(address_entity)
+                result['entities'].append(create_relationship(entity_uuid, address_entity['id'], 'Person Address'))
+                count += 1
+            else:
+                break
 
         # Relationship: Company
+        count = 0
         for relation in entity.get('relations') or []:
-            if relation.get('relTyp') in ('EMPLOYEE', 'ASSOCIATE',):
-                relation_entity = {
-                    'id': str(uuid.uuid4()).upper(),
-                    'type': 'EntityBusiness',
-                    'attributes': {
-                        'Name': relation.get('entityName') or '',
-                        'LocalName': relation.get('entityName') or '',
-                        'JobTitle': relation.get('relTyp') or '',
+            if count < 10:
+                if relation.get('relTyp') in ('EMPLOYEE', 'ASSOCIATE',):
+                    relation_entity = {
+                        'id': str(uuid.uuid4()),
+                        'type': 'EntityBusiness',
+                        'attributes': {
+                            'Name': relation.get('entityName') or '',
+                            # 'LocalName': relation.get('entityName') or '',
+                            # 'JobTitle': relation.get('relTyp') or '',
+                        }
                     }
-                }
-                result['entities'].append(relation_entity)
-                result['entities'].append(create_relationship(entity_uuid, relation_entity['id'], 'Company'))
-
-        # Relationship: Events
-        for event in entity.get('events') or []:
-            _category_code = event.get('category', {}).get('categoryCode') or ''
-            _category = event.get('category', {}).get('categoryDesc') or ''
-            if _category_code:
-                _category = _category + ' (' + _category_code + ')'
-            _category = _category.strip()
-
-            if event.get('category', {}).get('categoryCode') == 'WLT':
-                event_entity = {
-                    'id': str(uuid.uuid4()).upper(),
-                    'type': 'EntityOrganisation',
-                    'attributes': {
-                        'Name': event.get('source', {}).get('sourceName') or '',
-                        'Category': _category,
-                    }
-                }
-                result['entities'].append(event_entity)
-                result['entities'].append(create_relationship(entity_uuid, event_entity['id'], 'Sanctioned by'))
+                    result['entities'].append(relation_entity)
+                    result['entities'].append(create_relationship(
+                        entity_uuid, relation_entity['id'], relation.get('relTyp') or 'Company'))
+                    count += 1
             else:
-                _description = (event.get('source', {}).get('headline') or '') + '\n Category: ' + event.get('subCategory', {}).get('categoryDesc')
-                event_entity = {
-                    'id': str(uuid.uuid4()).upper(),
-                    'type': 'EntityEvent',
-                    'attributes': {
-                        'Title': event.get('eventDesc') or '',
-                        'Date': event.get('eventDt') or '',
-                        'Url': event.get('source', {}).get('sourceURL') or '',
-                        'Description': _description.strip() or '',
-                        'Category': _category,
+                break
+        # Relationship: Events
+        count = 0
+        for event in entity.get('event') or []:
+            if count < 10:
+                _category_code = event.get('category', {}).get('categoryCode') or ''
+                _category = event.get('category', {}).get('categoryDesc') or ''
+                if _category_code:
+                    _category = _category + ' (' + _category_code + ')'
+                _category = _category.strip()
+
+                if event.get('category', {}).get('categoryCode') == 'WLT':
+                    event_entity = {
+                        'id': str(uuid.uuid4()),
+                        'type': 'EntityOrganisation',
+                        'attributes': {
+                            'Name': event.get('source', {}).get('sourceName') or '',
+                            # 'Category': _category,
+                        }
                     }
-                }
-                result['entities'].append(event_entity)
-                result['entities'].append(create_relationship(entity_uuid, event_entity['id'], ''))
+                    result['entities'].append(event_entity)
+                    result['entities'].append(create_relationship(entity_uuid, event_entity['id'], 'Sanctioned by'))
+                else:
+                    _description = (event.get('source', {}).get('headline') or '') + \
+                        '\n Category: ' + event.get('subCategory', {}).get('categoryDesc')
+                    event_entity = {
+                        'id': str(uuid.uuid4()),
+                        'type': 'EntityEvent',
+                        'attributes': {
+                            'Title': event.get('eventDesc') or '',
+                            'Date': event.get('eventDt') or '',
+                            'Url': event.get('source', {}).get('sourceURL') or '',
+                            'Description': _description.strip() or '',
+                            # 'Category': _category,
+                        }
+                    }
+                    result['entities'].append(event_entity)
+                    result['entities'].append(create_relationship(entity_uuid, event_entity['id'], ''))
+                    
+                count += 1
+                
+            else:
+                break
 
         # Relationship: Attributes
+        count = 0
         for attribute in entity.get('attributes') or []:
-            if attribute.get('code') != 'URL':
-                attribute_entity = {
-                    'id': str(uuid.uuid4()).upper(),
-                    'type': 'EntityNote',
-                    'attributes': {
-                        'Text': attribute.get('value') or '',
+            if count < 10:
+                if attribute.get('code') != 'URL':
+                    attribute_entity = {
+                        'id': str(uuid.uuid4()),
+                        'type': 'EntityNote',
+                        'attributes': {
+                            'Text': attribute.get('value') or '',
+                        }
                     }
-                }
-                result['entities'].append(attribute_entity)
-                result['entities'].append(create_relationship(entity_uuid, attribute_entity['id'], ''))
+                    result['entities'].append(attribute_entity)
+                    result['entities'].append(create_relationship(entity_uuid, attribute_entity['id'], ''))
+                    count += 1
+            else:
+                break
 
         search_results.append(result)
         if len(search_results) >= max_results:
