@@ -1,0 +1,7 @@
+fastapi==0.78.0
+pydantic==1.9.1
+PyYAML~=6.0
+requests==2.27.1
+uvicorn==0.17.6
+requests==2.27.1
+piplapis-python==5.2.3

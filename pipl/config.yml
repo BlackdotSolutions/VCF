@@ -1,0 +1,7 @@
+searchers:
+  pipl_people:
+    id: pipl_people
+    name: Pipl Search API
+    hint: Enter the name of a person to search for
+    tooltip: Get the Pipl Search API information of a person
+    enabled: True
